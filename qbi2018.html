@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>QBI-2018</title>
+		<title>Nico, QBI-2018</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -26,24 +26,109 @@
 			<div class="slides">
             <section  data-background-image="images/2ColorBeads.jpg">
                <h4>Nanometer accuracy measurements of distances between fluorophores</h4>
-               <br><br><br><br><br><br>
-               <p style="text-align: right; font-size:24px"><i>QBI 2018<br>Nico Stuurman, Vale lab, UCSF</i></p>
+               <br><br><br><br><br><br><br>
+               <p style="text-align: right; font-size: 24px"><i>QBI 2018<br>Nico Stuurman, Vale lab, UCSF</i></p>
             </section>
             <section>
                <h4>How do Molecular Machines Work?</h4>
+               <br>
                <table align="center">
-                  <tr><td align="center">Ribosome</td><td align="center">Chromatin</td><td align="center">Dynein</td><td align="center">Kinesin</td></tr>
-               <tr><td valign="center"><img style="border: 0px;" width="282" height="225" src="images/Ribosome.jpg"</td>
-                  <td><img style="border: 0px;" width="225" height="271" src="images/Chromatin.jpg"</td>
-                  <td><img style="border: 0px;" width="228" height="309" src="images/Dynein.jpg"</td>
-                  <td><img style="border: 0px;" width="338" height="233" src="images/Kinesin.jpg"</td>
+                  <tr><td align="center">Ribosome</td><td align="center">Chromatin</td><td align="center">Dynein</td><!--<td align="center">Kinesin</td>--></tr>
+               <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="282" height="225" src="images/Ribosome.jpg"</td>
+                  <td style="vertical-align: middle;"><img style="border: 0px;" width="225" height="271" src="images/Chromatin.jpg"</td>
+                  <td style="vertical-align: middle;"><img style="border: 0px;" width="228" height="309" src="images/Dynein.jpg"</td>
+                  <!--<td><img style="border: 0px;" width="338" height="233" src="images/Kinesin.jpg"</td>  -->
                </tr>
                <tr><td>&nbsp;</td></tr>
             </table>
             </section>
 
+            <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Targeted Fluorescent Labeling of Molecular Machines</h4>
+               <br>
+               <ul>
+                  <li class="fragment highlight-current-green">Fluorescent Proteins</li>
+                  <li class="fragment highlight-current-red">Cystein Chemistry (Cys-light constructs)</li>
+                  <li class="fragment highlight-current-blue">Amino-terminus</li>
+                  <li  class="fragment highlight-current-green">Covalent Binders (Snap-CLIP-Halo)</li>
+                  <li  class="fragment highlight-current-red">Unnatural Amino Acids</li>
+               </ul>
+               <br><br>
+               <p style="text-align: left;"> Need bright, photostable fluorescent dyes</p>
+            </section>
+
+            <section data-background-image="images/2ColorBeads.jpg">
+               <h4>How To Measure Distances?</h4>
+               <br>
+               <br>
+               <ul>
+                  <li class="fragment">F&ouml;rster Resonance Energy Transfer (FRET)
+                     <ul>
+                        <li>~2-8nm, Sensitive to fluorophore orientation</li>
+                        <br>
+                        <br>
+                     </ul>
+                  </li>
+                  <li class="fragment">Direct distance measurement
+                     <ul>
+                        <li>Difficult/unreliable, not widely used</li>
+                     </ul>
+                  </li>
+               </ul>
+            </section>
+
             <section>
-            
+               <h4>How To Measure Distances?</h4>
+               <svg width="100%" height="20%" style="overflow: visible;">
+                  <defs>
+                     <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                     </filter>
+                  </defs>
+                  <circle cx="100" cy="100" r="18" stroke-width="0" fill="red" filter="url(#blur)" />
+                  <circle cx="800" cy="100" r="18" stroke-width="0" fill="blue" filter="url(#blur)" />
+                  <g class="fragment">
+                  <text x="400" y="90" fill="white"><tspan>d<tspan dy="4">1</tspan></tspan></text>
+                     <line x1="100" y1="100" x2="800" y2="100" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+                  <g class="fragment">
+                  <text x="450" y="90" fill="white"><tspan>d<tspan dy="4">2</tspan></tspan></text>
+                     <line x1="102" y1="98" x2="804" y2="105" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+                  <g class="fragment">
+                  <text x="500" y="90" fill="white"><tspan>d<tspan dy="4">3</tspan></tspan></text>
+                     <line x1="92" y1="108" x2="788" y2="96" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+               </svg>
+               <div class="fragment">$$d=\left(\dfrac{\sum_{n=1}^{\infty} d_n}{n}\right)$$</div>
+
+               <svg width="100%" height="20%" style="overflow: visible;">
+                  <defs>
+                     <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="100" />
+                     </filter>
+                     <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(255,0,0); stop-opacity:0" />
+                        <stop offset="100%" style="stop-color:rgb(222,222,222);stop-opacity:1" />
+    </radialGradient> 
+                  </defs>
+                  <g class="fragment">
+                     <circle cx="400" cy="150" r="150" stroke-width="0" fill="url(#grad1)"  />
+                     <circle cx="600" cy="150" r="150" stroke-width="0" fill="blue" fill-opacity="0.5" filter="url(#blur)" />
+                     </g>
+                  <g class="fragment">
+                  <text x="350" y="90" fill="white"><tspan>d<tspan dy="4">1</tspan></tspan></text>
+                     <line x1="300" y1="100" x2="700" y2="150" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+                  <g class="fragment">
+                  <text x="550" y="90" fill="white"><tspan>d<tspan dy="4">2</tspan></tspan></text>
+                     <line x1="450" y1="98" x2="650" y2="105" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+                  <g class="fragment">
+                  <text x="500" y="130" fill="white"><tspan>d<tspan dy="4">3</tspan></tspan></text>
+                     <line x1="375" y1="175" x2="675" y2="85" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  </g>
+               </svg>
             </section>
 
             <section>$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$</section>
@@ -58,9 +143,10 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-            // configuration settinsg
+            // configuration settings
             controls: false,
             transition: 'none',
+            center: false,
             // other options ...
             math: {
                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
