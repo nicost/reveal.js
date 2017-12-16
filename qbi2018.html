@@ -137,19 +137,22 @@
                <h4>How To Measure Distances?</h4>
                <svg width="100%" height="50%" style="overflow: visible;">
                   <g>
-                     <circle cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
+                     <circle class="fragment current-visible" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
                      <circle cx="600" cy="150" r="200" stroke-width="0" fill="url(#gradBlue)" />
+                  </g>
+                  <g class="fragment">
                      <!-- build a cross in the center -->
-                     <line x1="380" y1="150" x2="420" y2="150" stroke="black" stroke-width="5" />
-                     <line x1="400" y1="130" x2="400" y2="170" stroke="black" stroke-width="5" />
+                     <line x1="380" y1="150" x2="420" y2="150" stroke="white" stroke-width="5" />
+                     <line x1="400" y1="130" x2="400" y2="170" stroke="white" stroke-width="5" />
                      <!--                     <circle cx="400" cy="150" r="200" stroke="black" stroke-width="5" stroke-dasharray="10,10" fill="none"  -->
-                     <path d="M541 9 A 200 200, 0, 0, 1, 541 291" fill="none" stroke="black" stroke-width="5" stroke-dasharray="10,10" />
+                     <path d="M541 9 A 200 200, 0, 0, 1, 541 291" fill="none" stroke="white" stroke-width="5" stroke-dasharray="10,10" />
                   </g>
 
                   <line class="fragment" x1="400" y1="150" x2="603" y2="125" style="stroke:rgb(255,255,255);stroke-width:2" />
                   <line class="fragment" x1="400" y1="150" x2="643" y2="185" style="stroke:rgb(255,255,255);stroke-width:2" />
                   <line class="fragment" x1="400" y1="150" x2="586" y2="55" style="stroke:rgb(255,255,255);stroke-width:2" />
                   <line class="fragment" x1="400" y1="150" x2="657" y2="288" style="stroke:rgb(255,255,255);stroke-width:2" />
+                  <circle class="fragment" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
                </svg>
                <br><br><br><br>
                <div class="fragment" style="font-size: 28px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
@@ -161,6 +164,25 @@
                </div>
                </div>
                </section>
+
+               <section>
+                  <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN &mu; <= &sigma;<sub>d</sub></p>
+                  <table>
+                  <tr>
+                  <td style="vertical-align: middle;"><img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" /></td>
+                  <td style="vertical-align: middle;"><img class="fragment" style="border: 0px;" width="699" height="453" src="images/Figure_2b.jpg" /></td>
+                  </tr>
+                  </table>
+               </section>
+
+               <section>
+                  <h4>Use Uncertainty Information to improve distance estimate</h4>
+                  <div>
+                  $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loca_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
+                  </div>
+
+               </section>
+
 			</div>
 		</div>
 
