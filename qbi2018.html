@@ -20,7 +20,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="lib/js/plotly-latest.min.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -174,8 +174,8 @@
                   <tr>
                   <td style="vertical-align: middle;"><img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" /></td>
                   <td style="vertical-align: middle;">
-                  <div id="plotChP2D" style="width:499px; height:450px;"></div>
-                  <!--<img class="fragment" style="border: 0px;" width="699" height="453" src="images/Figure_2b.jpg" /> -->
+                  <div class="fragment" id="plotChP2D" style="width:499px; height:450px;"></div> 
+                  <!-- <img class="fragment" style="border: 0px;" width="699" height="453" src="images/Figure_2b.jpg" /> -->
                   </td>
                   </tr>
                   </table>
@@ -184,7 +184,7 @@
                <section>
                   <h4>Use Uncertainty Information to improve distance estimate</h4>
                   <div>
-                  $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loca_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
+                  $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
                   </div>
                   <div id="plotChP2D" style="width:800px; height:450px;"></div>
 
