@@ -20,6 +20,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -166,7 +167,7 @@
                </section>
 
                <section>
-                  <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN &mu; <= &sigma;<sub>d</sub></p>
+                  <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN <br> &mu; <= &sigma;<sub>d</sub></p>
                   <table>
                   <tr>
                   <td style="vertical-align: middle;"><img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" /></td>
@@ -180,6 +181,7 @@
                   <div>
                   $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loca_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
                   </div>
+                  <div id="myDiv" style="width:800px; height:450px;"></div>
 
                </section>
 
@@ -188,6 +190,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+      <script src="js/plot-chp2d.js"></script> 
 
 		<script>
 			// More info about config & dependencies:
