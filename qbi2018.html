@@ -35,9 +35,9 @@
                <br>
                <table align="center">
                   <tr><td align="center">Ribosome</td><td align="center">Chromatin</td><td align="center">Dynein</td><!--<td align="center">Kinesin</td>--></tr>
-               <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="282" height="225" src="images/Ribosome.jpg"</td>
-                  <td style="vertical-align: middle;"><img style="border: 0px;" width="225" height="271" src="images/Chromatin.jpg"</td>
-                  <td style="vertical-align: middle;"><img style="border: 0px;" width="228" height="309" src="images/Dynein.jpg"</td>
+                  <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="282" height="225" src="images/Ribosome.jpg"></td>
+                     <td style="vertical-align: middle;"><img style="border: 0px;" width="225" height="271" src="images/Chromatin.jpg"></td>
+                     <td style="vertical-align: middle;"><img style="border: 0px;" width="228" height="309" src="images/Dynein.jpg"></td>
                   <!--<td><img style="border: 0px;" width="338" height="233" src="images/Kinesin.jpg"</td>  -->
                </tr>
                <tr><td>&nbsp;</td></tr>
@@ -194,15 +194,30 @@
                   <div class="fragment" id="plot3c"></div>
                </section>
 
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <img style="border: 0px;" width="350" height="281" src="images/Vector.jpg" />
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <div class="fragment" id="plot4" style="margin: auto; width:500px; height:400px;"></div>
+               <div class="fragment" id="plot4b"></div>
+               <div class="fragment" id="plot4c"></div>
+               </section>
+
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-      <script src="js/plot3.js"></script> 
       <script src="js/plot1.js"></script> 
       <script src="js/plot2.js"></script> 
       <script src="js/plot-chp2d.js"></script> 
+      <script src="js/plot3.js"></script> 
+      <script src="js/plot4.js"></script> 
 
 		<script>
 			// More info about config & dependencies:
@@ -253,6 +268,12 @@
             if (event.fragment.id == "plot3c") {
                plot3b(); 
             } 
+            if (event.fragment.id == "plot4b") {
+               plot4a(); 
+            } 
+            if (event.fragment.id == "plot4c") {
+               plot4b(); 
+            } 
          });
 
          Reveal.addEventListener('fragmentshown', function(event) {
@@ -270,6 +291,15 @@
             }
             else if (event.fragment.id == "plot3c") {
                plot3c();
+            }
+            else if (event.fragment.id == "plot4") {
+               plot4a();
+            }
+            else if (event.fragment.id == "plot4b") {
+               plot4b();
+            }
+            else if (event.fragment.id == "plot4c") {
+               plot4c();
             }
          } );
 
