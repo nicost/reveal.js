@@ -174,7 +174,7 @@
                <div class="fragment" id="plot2b"></div>
                </section>
 
-               <section>
+               <section data-background-image="images/2ColorBeads.jpg">
                   <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN <br> &mu; <= &sigma;<sub>d</sub></p>
                   <table>
                   <tr>
@@ -184,13 +184,14 @@
                   </table>
                </section>
 
-               <section>
+               <section data-background-image="images/2ColorBeads.jpg">
                   <h4>Use Uncertainty Information to improve distance estimate</h4>
                   <div>
                   $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
                   </div>
-                  <div id="plotChP2D" style="width:800px; height:450px;"></div>
-
+                  <div class="fragment" id="plot3" style="margin: auto; width:500px; height:400px;"></div>
+                  <div class="fragment" id="plot3b"></div>
+                  <div class="fragment" id="plot3c"></div>
                </section>
 
 			</div>
@@ -198,6 +199,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+      <script src="js/plot3.js"></script> 
       <script src="js/plot1.js"></script> 
       <script src="js/plot2.js"></script> 
       <script src="js/plot-chp2d.js"></script> 
@@ -245,14 +247,29 @@
             if (event.fragment.id == "plot2b") {
                plotAvg(); 
             } 
+            if (event.fragment.id == "plot3b") {
+               plot3a(); 
+            } 
+            if (event.fragment.id == "plot3c") {
+               plot3b(); 
+            } 
          });
 
          Reveal.addEventListener('fragmentshown', function(event) {
             if (event.fragment.id == "plot2b") {
                plotP2D(); 
             } 
-            if (event.fragment.id == "plot2") {
+            else if (event.fragment.id == "plot2") {
                plotAvg();
+            }
+            else if (event.fragment.id == "plot3") {
+               plot3a();
+            }
+            else if (event.fragment.id == "plot3b") {
+               plot3b();
+            }
+            else if (event.fragment.id == "plot3c") {
+               plot3c();
             }
          } );
 
