@@ -30,7 +30,7 @@ var layout = {
      }
   },
   yaxis: {
-     title: 'Error (nm)',
+     title: '[Error] (nm)',
      titlefont: std_font,
      tickfont: {
         size: '16',

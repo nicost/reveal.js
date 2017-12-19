@@ -173,7 +173,7 @@
                </div>
                <div class="fragment" id="plotAvg2" style="margin: auto; width:500px; height:400px">
                </div> 
-               <div class="fragment" id="somesome"></div>
+               <div class="fragment" id="plotP2D2"></div>
                </section>
 
                <section>
@@ -247,11 +247,17 @@
                Reveal.prev();
              }
            }
+            if (event.fragment.id == "plotP2D2") {
+               plotAvg(); 
+            } 
          });
 
          Reveal.addEventListener('fragmentshown', function(event) {
-            if (event.fragment.id == "somesome") {
-               plotP2D();
+            if (event.fragment.id == "plotP2D2") {
+               plotP2D(); 
+            } 
+            if (event.fragment.id == "plotAvg2") {
+               plotAvg();
             }
          } );
 

@@ -30,7 +30,7 @@ var layout = {
      }
   },
   yaxis: {
-     title: 'Error (nm)',
+     title: '[Error] (nm)',
      titlefont: std_font,
      tickfont: {
         size: '16',
@@ -60,6 +60,29 @@ function plotP2D() {
       error_y: {
         type: 'data',
         array: [0.13, 1.08, 2.66, 0.09, 0.16, 0.12],
+        color: '#AAA',
+        visible: true
+      }
+    }
+    ],
+      layout:  [{
+      }]
+  }, {
+    transition: {
+      duration: 500,
+      easing: 'cubic-in-out'
+    }
+  })
+}
+
+function plotAvg() {
+  Plotly.animate('plotAvg2', {
+    data: [
+    {
+      y: [0.68, 3.08, 6.51, 10.51, 14.36, 18.7],
+      error_y: {
+        type: 'data',
+        array: [0.11, 0.13, 0.26, 0.57, 0.39, 0.43],
         color: '#AAA',
         visible: true
       }
