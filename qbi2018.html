@@ -140,7 +140,7 @@
                <h4>How To Measure Distances?</h4>
                <svg width="100%" height="50%" style="overflow: visible;">
                   <g>
-                     <circle class="fragment current-visible" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
+                     <circle class="fragment current-visible preload" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
                      <circle cx="600" cy="150" r="200" stroke-width="0" fill="url(#gradBlue)" />
                   </g>
                   <g class="fragment">
@@ -157,15 +157,23 @@
                   <line class="fragment" x1="400" y1="150" x2="657" y2="288" style="stroke:rgb(255,255,255);stroke-width:2" />
                   <circle class="fragment" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
                </svg>
-               <br><br><br><br>
-               <div class="fragment" style="font-size: 28px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
+               <br><br>
+               <div class="fragment" id="plotAvg" style="margin: auto; width:500px; height:400px"></div> 
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>How To Measure Distances?</h4>
+               <div style="font-size: 28px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
                   <br>
                   <div style="font-size: 24px; text-align: left;">
                      r (measured distance), &mu; (calculated distance), &sigma;<sub>d</sub> (distance uncertainty), <br>I<sub>0</sub> (Bessel function of integer order zero).
-                     <br><br>
+                  <br>
                   Churchman et al, PNAS 102 (2005)
+                  </div>
                </div>
-               </div>
+               <div class="fragment" id="plotAvg2" style="margin: auto; width:500px; height:400px">
+               </div> 
+               <div class="fragment" id="somesome"></div>
                </section>
 
                <section>
@@ -195,6 +203,8 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+      <script src="js/plot-avg.js"></script> 
+      <script src="js/plot-avg2.js"></script> 
       <script src="js/plot-chp2d.js"></script> 
 
 		<script>
@@ -219,6 +229,32 @@
                { src: 'plugin/math/math.js', async: true }
 				]
 			});
+
+         // from: https://github.com/hakimel/reveal.js/issues/1784
+         // automatically load the initial fragment on a slide if the fragment
+         // has been defined with the 'preload' class
+         Reveal.addEventListener('slidechanged', function(event) {
+           if (event.currentSlide.querySelectorAll('.preload[data-fragment-index="0"]').length > 0) {
+             Reveal.nextFragment();
+           }
+         });
+
+         // if the initial fragment on a slide has been defined with a 'preload' class
+         // then transition to the previous slide if the fragment is hidden
+         Reveal.addEventListener('fragmenthidden', function(event) {
+           if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+             if (event.fragment.attributes['data-fragment-index'].value == "0") {
+               Reveal.prev();
+             }
+           }
+         });
+
+         Reveal.addEventListener('fragmentshown', function(event) {
+            if (event.fragment.id == "somesome") {
+               plotP2D();
+            }
+         } );
+
 		</script>
 	</body>
 </html>
