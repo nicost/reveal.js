@@ -1,6 +1,6 @@
 var trace1 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-0.03, -0.05, -0.04],
+  y: [0.03, 0.05, 0.04],
   name: '\u03C3<sub>d</sub> 3.5 nm',
   error_y: {
     type: 'data',
@@ -12,7 +12,7 @@ var trace1 = {
 };
 var trace2 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-0.66, 0.05, -0.01],
+  y: [0.66, 0.05, 0.01],
   name: '\u03C3<sub>d</sub> 7 nm',
   error_y: {
     type: 'data',
@@ -24,7 +24,7 @@ var trace2 = {
 };
 var trace3 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-8.8, -0.38, -0.07],
+  y: [8.8, 0.38, 0.07],
   name: '\u03C3<sub>d</sub> 10.5 nm',
   error_y: {
     type: 'data',
@@ -36,7 +36,7 @@ var trace3 = {
 };
 var trace4 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-9.66, -2.39, -0.10],
+  y: [9.66, 2.39, 0.10],
   name: '\u03C3<sub>d</sub> 14 nm',
   error_y: {
     type: 'data',
@@ -48,7 +48,7 @@ var trace4 = {
 };
 var trace5 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-9.59, -15.34, 0.13],
+  y: [9.59, 15.34, 0.13],
   name: '\u03C3<sub>d</sub> 17.5 nm',
   error_y: {
     type: 'data',
@@ -60,7 +60,7 @@ var trace5 = {
 };
 var trace6 = {
   x: ['10nm', '20nm', '40nm'],
-  y: [-9.52, -17.56, 0.15],
+  y: [9.52, 17.56, 0.15],
   name: '\u03C3<sub>d</sub> 21 nm',
   error_y: {
     type: 'data',
@@ -88,7 +88,7 @@ var layout = {barmode: 'group',
      }
   },
   yaxis: {
-     title: 'Error (nm)',
+     title: '[Error] (nm)',
      titlefont: std_font,
      tickfont: {
         size: '16',
@@ -98,7 +98,7 @@ var layout = {barmode: 'group',
   legend: {
     traceorder: 'normal',
     x: 0.70,
-    y: 0.80,
+    y: 0.90,
     bgcolor: '#222',
     font: {
         size: '16',
