@@ -72,7 +72,12 @@ function plotP2D() {
       duration: 500,
       easing: 'cubic-in-out'
     }
-  })
+  });
+
+  var update = {
+       title: 'Churchman-P2D'
+  };
+  Plotly.relayout('plotAvg2', update) 
 }
 
 function plotAvg() {
@@ -95,5 +100,10 @@ function plotAvg() {
       duration: 500,
       easing: 'cubic-in-out'
     }
-  })
+  });
+
+  var update = {
+       title: 'Average'
+  };
+  Plotly.relayout('plotAvg2', update) 
 }
