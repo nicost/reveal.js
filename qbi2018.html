@@ -158,7 +158,7 @@
                   <circle class="fragment" cx="400" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
                </svg>
                <br><br>
-               <div class="fragment" id="plotAvg" style="margin: auto; width:500px; height:400px"></div> 
+               <div class="fragment" id="plot1" style="margin: auto; width:500px; height:400px"></div> 
                </section>
 
                <section data-background-image="images/2ColorBeads.jpg">
@@ -169,9 +169,9 @@
                      r (measured distance), &mu; (calculated distance), &sigma;<sub>d</sub> (distance uncertainty), <br>I<sub>0</sub> (Bessel function of integer order zero), Churchman et al, PNAS 102 (2005)
                   </div>
                </div>
-               <div class="fragment" id="plotAvg2" style="margin: auto; width:500px; height:400px">
+               <div class="fragment" id="plot2" style="margin: auto; width:500px; height:400px">
                </div> 
-               <div class="fragment" id="plotP2D2"></div>
+               <div class="fragment" id="plot2b"></div>
                </section>
 
                <section>
@@ -198,8 +198,8 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-      <script src="js/plot-avg.js"></script> 
-      <script src="js/plot-avg2.js"></script> 
+      <script src="js/plot1.js"></script> 
+      <script src="js/plot2.js"></script> 
       <script src="js/plot-chp2d.js"></script> 
 
 		<script>
@@ -242,16 +242,16 @@
                Reveal.prev();
              }
            }
-            if (event.fragment.id == "plotP2D2") {
+            if (event.fragment.id == "plot2b") {
                plotAvg(); 
             } 
          });
 
          Reveal.addEventListener('fragmentshown', function(event) {
-            if (event.fragment.id == "plotP2D2") {
+            if (event.fragment.id == "plot2b") {
                plotP2D(); 
             } 
-            if (event.fragment.id == "plotAvg2") {
+            if (event.fragment.id == "plot2") {
                plotAvg();
             }
          } );

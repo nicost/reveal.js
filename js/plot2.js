@@ -50,10 +50,10 @@ var layout = {
   titlefont: std_font
 };
 
-Plotly.newPlot('plotAvg2', data, layout);
+Plotly.newPlot('plot2', data, layout);
 
 function plotP2D() {
-  Plotly.animate('plotAvg2', {
+  Plotly.animate('plot2', {
     data: [
     {
       y: [0.03, 0.66, 8.80, 9.66, 9.59, 9.52],
@@ -75,13 +75,13 @@ function plotP2D() {
   });
 
   var update = {
-       title: 'Churchman-P2D'
+     title: 'Churchman-P2D (\u03BC = 10 nm)'
   };
-  Plotly.relayout('plotAvg2', update) 
+  Plotly.relayout('plot2', update) 
 }
 
 function plotAvg() {
-  Plotly.animate('plotAvg2', {
+  Plotly.animate('plot2', {
     data: [
     {
       y: [0.68, 3.08, 6.51, 10.51, 14.36, 18.7],
@@ -103,7 +103,7 @@ function plotAvg() {
   });
 
   var update = {
-       title: 'Average'
+       title: 'Average (\u03BC = 10 nm)'
   };
-  Plotly.relayout('plotAvg2', update) 
+  Plotly.relayout('plot2', update) 
 }

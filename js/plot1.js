@@ -49,4 +49,4 @@ var layout = {
   }
 };
 
-Plotly.newPlot('plotAvg', data, layout);
+Plotly.newPlot('plot1', data, layout);
