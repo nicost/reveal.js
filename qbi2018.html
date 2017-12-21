@@ -7,6 +7,7 @@
 		<title>Nico, QBI-2018</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -27,19 +28,12 @@
 			<div class="slides">
             <section  data-background-image="images/IMG_6952.jpg">
                <h4>Nanometer accuracy measurements of distances between fluorophores</h4>
-               <table><tr>
-                     <td style="margin: auto; align: left;">
-                        <div class="fragment fade-up"><img src="images/Stefan.jpg" style="border: 0px;" width="296" height="360" /><br>Stefan Niekamp
+                  <div class="fragment fade-up" style="position: absolute; left: 30px; top: 150px;">
+                    <img src="images/Stefan.jpg" style="border: 0px;" width="296" height="360" /><br>Stefan Niekamp
+                  </div>
+                  <div class="fragment fade-left" style="position: absolute; right: 30px; top: 150px;"><img src="images/Ron.jpg" style="border: 0px;" width="296" height="360" /><br>Ron Vale
                      </div>
-                     </td>
-                     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</td>
-                     <td style="margin: auto; text-align: center;">
-                       <div class="fragment fade-left"><img src="images/Ron.jpg" style="border: 0px;" width="296" height="360" /><br>Ron Vale
-                     </div>
-                  </td>
-                  </tr>
-               </table>
-               <p style="text-align: right; font-size: 24px"><i>QBI 2018<br>Nico Stuurman, Vale lab, UCSF</i></p>
+               <p style="text-align: right; font-size: 24px; position: absolute; top: 610px; right: 15px;"><i>QBI 2018<br>Nico Stuurman, Vale lab, UCSF</i></p>
             </section>
             <section>
                <h4>How do Molecular Machines Work?</h4>
@@ -177,14 +171,23 @@
                <div style="font-size: 28px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
                   <br>
                   <div style="font-size: 24px;">
-                     r (measured distance), &mu; (calculated distance), &sigma;<sub>d</sub> (distance uncertainty), <br>I<sub>0</sub> (Bessel function of integer order zero), Churchman et al, PNAS 102 (2005)
+                     r (measured distance), &mu; (actual distance), &sigma;<sub>d</sub> (distance uncertainty), <br>I<sub>0</sub> (modified Bessel function of integer order zero), Churchman et al, PNAS 102 (2005)
                   </div>
                </div>
-               <div class="fragment" id="plot2" style="margin: auto; width:500px; height:400px">
-               </div> 
-               <div class="fragment" id="plot2b"></div>
+                  <table>
+                  <tr>
+                  <td style="vertical-align: middle;">
+                  <div class="fragment" id="plot2" style="margin: auto; width:500px; height:400px">
+                  </div> 
+                  <div class="fragment" id="plot2b"></div>
+                  </td>
+                  <td class="fragment" style="vertical-align: middle;">
+                    <img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" />
+                  </td>
+                  </tr>
+                  </table>
                </section>
-
+<!--
                <section data-background-image="images/2ColorBeads.jpg">
                   <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN <br> &mu; <= &sigma;<sub>d</sub></p>
                   <table>
@@ -194,14 +197,14 @@
                   </tr>
                   </table>
                </section>
+               -->
 
                <section data-background-image="images/2ColorBeads.jpg">
                   <h4>Use Uncertainty Information to improve distance estimate</h4>
                   <div>
                   $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
                   </div>
-                  <br><br>
-                  <div class="fragment" id="plot3" style="margin: auto; width:500px; height:400px;"></div>
+                  <div class="fragment" id="plot3" style="margin: auto; width:550px; height:450px;"></div>
                   <div class="fragment" id="plot3b"></div>
                   <div class="fragment" id="plot3c"></div>
                </section>
@@ -221,7 +224,7 @@
                </section>
 
                <section data-background-image="images/2ColorBeads.jpg">
-               <h4>Registration: Piece-Wise Affine Transform"</h4>
+               <h4>Registration: Piece-Wise Affine Transform</h4>
                <table align="center">
                   <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="255" height="85" src="images/Slide.jpg"></td>
                      <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="571" height="450" src="images/paff-20.jpg"></td>
@@ -230,7 +233,7 @@
                </section>
 
                <section data-background-image="images/2ColorBeads.jpg">
-               <h4>Registration: Piece-Wise Affine Transform"</h4>
+               <h4>Registration: Piece-Wise Affine Transform</h4>
                <table align="center">
                   <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="255" height="85" src="images/Slide.jpg"></td>
                      <td style="vertical-align: middle;"><img style="border: 0px;" width="571" height="450" src="images/paff.jpg"></td>
@@ -309,9 +312,8 @@
               <img  style="border: 0px;" width="960px" height="350px" src="images/labPic.jpg" /> 
 <!--              <img style="border: 0px; position: absolute; left: 0px; top:100px; bootom: 0px;" width="960px" height="700px" src="images/labPic.jpg" /> 
 -->
-              <img class="fragment grow" style="border: 0px; position: absolute; left: 492px; top:251px;" width="74" height="85" src="images/Jongmin.jpg" /> 
-               <img class="fragment grow" style="border: 0px; position: absolute; left: 331px; top:327px;" width="87" height="94" src="images/Walter.jpg" /> 
-
+              <img class="fragment grow jongmin" style="border: 0px; position: absolute; left: 496px; top:250px;" width="74" height="85" src="images/Jongmin.jpg" /> 
+               <img class="fragment grow walter" style="border: 0px; position: absolute; left: 328px; top:325px;" width="87" height="94" src="images/Walter.jpg" /> 
               </section>
 
 			</div>
