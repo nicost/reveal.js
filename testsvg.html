@@ -20,17 +20,88 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+      <script src="lib/js/snap.svg-min.js"></script>
 	</head>
 	<body>
       <svg>
+			<defs>
+				<radialGradient id="gradRed" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+					<stop offset="0%" style="stop-color:rgb(255,0,0); stop-opacity:1" />
+					<stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+				</radialGradient>
+				<radialGradient id="gradBlue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+					<stop offset="0%" style="stop-color:rgb(0,0,255); stop-opacity:1" />
+					<stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+</radialGradient>
+			</defs>
+
         <symbol id="nscross" viewBox="0 0 100 100" style="stroke:rgb(255,255,255);stroke-width:20;">
            <line x1="0" y1="50" x2="100" y2="50" />
            <line x1="50" y1="0" x2="50" y2="100" /> 
+        </symbol>
+        <symbol id="dvec"  style="stroke:rgb(255,255,255);stroke-width:3;">
+           <line x1="280" y1="80" x2="320" y2="120" />
+           <line x1="320" y1="80" x2="280" y2="120" /> 
+           <!-- connecting line-->
+           <line x1="300" y1= "100" x2="600" y2="100" />
+           <line x1="580" y1="80" x2="620" y2="120" />
+           <line x1="620" y1="80" x2="580" y2="120" /> 
         </symbol>
         </svg>
            
 		<div class="reveal">
 			<div class="slides">
+
+				<section>
+				<svg id="svgslide1" width="100%" height="100%" style="overflow: visible;">
+				 <g class="fragment">
+					<circle cx="300" cy="0" r="300" stroke-width="0" fill="url(#gradRed)" />
+					<circle cx="600" cy="0" r="300" stroke-width="0" fill="url(#gradBlue)" />
+				 </g>
+               <use class="fragment" xlink:href="#dvec" transform="translate(20,-100)" />
+               <use class="fragment" xlink:href="#dvec" transform="rotate(15 450,0) translate(45, -136) scale(1.1)" />
+            </svg>
+            <script src="lib/js/snap-ext.svg.js"></script> 
+            <script>
+               var paper = Snap("#svgslide1");
+               var r = paper.rect(100, 100, 200, 200);
+               r.attr( {
+                  fill: "#ddd",
+                  class: "fragment"
+                  });
+               var atr = {
+                 class: "fragment",
+                 stroke: "#ddd"
+               };
+               atr['data-fragment-index'] =  "1";
+               atr['stroke-width'] = "4";
+               var x1 = 300, y1 = 0, x2 = 600, y2 = 0, radius = 300;
+               var pair1 = [];
+               var pair2 = [];
+               for (var i = 0; i < 5; i++) {
+                  var angle1 = Math.random() * 2 * Math.PI;
+                  var dist1 = Math.random();
+                  dist1 = Math.floor ( radius * (0.5 - (dist1 * dist1)) );
+                  pair1.push( [x1 + dist1 * Math.sin(angle1), 
+                     y1 + dist1 * Math.cos(angle1)] );
+                  var angle2 = Math.random() * 2 * Math.PI;
+                  var dist2 = Math.random();
+                  dist2 = Math.floor ( radius * (0.5 - (dist2 * dist2)) );
+                  pair2.push( [x2 + dist2 * Math.sin(angle2), 
+                     y2 + dist2 * Math.cos(angle2)] );
+               }
+               console.log(pair1, pair2);
+               for (var i = 0; i < 5; i++) {
+                 atr['data-fragment-index'] =  i;
+                 paper.cross.call(paper, pair1[i][0], pair1[i][1], 40, atr);
+                 paper.cross.call(paper, pair2[i][0], pair2[i][1], 40, atr);
+                 var line = paper.line(pair1[i][0], pair1[i][1], pair2[i][0], pair2[i][1]);
+                 line.attr(atr);
+               }
+
+              </script>
+				</section>
+
             <section>
             <h4> Hello </h4>
             <svg width="100%" height="20%" style="overflow: visible;">
