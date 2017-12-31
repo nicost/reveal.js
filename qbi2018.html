@@ -29,10 +29,10 @@
             <section  data-background-image="images/IMG_6952.jpg">
                <h4>Nanometer accuracy measurements of distances between fluorophores</h4>
                   <div class="fragment fade-up" style="position: absolute; left: 50px; top: 150px;">
-                    <img src="images/Stefan.jpg" style="border: 0px;" width="296" height="360" /><br>Stefan Niekamp
+                     <img src="images/Ron.jpg" style="border: 0px;" width="296" height="360" /><br>Ron Vale
                   </div>
                   <div class="fragment fade-left" style="position: absolute; right: 50px; top: 150px;">
-                     <img src="images/Ron.jpg" style="border: 0px;" width="296" height="360" /><br>Ron Vale
+                    <img src="images/Stefan.jpg" style="border: 0px;" width="296" height="360" /><br>Stefan Niekamp
                   </div>
                <p style="text-align: right; font-size: 24px; position: absolute; top: 610px; right: 15px;"><i>QBI 2018<br>Nico Stuurman, Vale lab, UCSF</i></p>
             </section>
@@ -87,7 +87,7 @@
                </ul>
             </section>
 
-            <section>
+            <section data-background-image="images/2ColorBeads.jpg">
                <h4>How To Measure Distances</h4>
                <svg width="100%" height="20%" style="overflow: visible;">
                   <defs>
@@ -143,7 +143,7 @@
 
                </svg>
             </section>
-            <section>
+            <section data-background-image="images/2ColorBeads.jpg">
                <h4>How To Measure Distances</h4>
                <svg width="100%" height="50%" style="overflow: visible;">
                   <g>
@@ -211,18 +211,140 @@
                   <div class="fragment" id="plot3c"></div>
                </section>
 
-               <section data-background-image="images/2ColorBeads.jpg">
+               <section data-background-image="images/2ColorBeads.jpg" data-transition="fade" data-transition-speed="slow">
                <h4>Multiple observations</h4>
                <p>Treat as individual observations, or first average positions (Vector)</p>
+               <!--
                <img style="border: 0px;" width="350" height="281" src="images/Vector.jpg" />
+               -->
+
+               <svg id="svgslide1" width="100%" height="100%" style="overflow: visible;">
+                  <defs>
+                     <radialGradient id="grad1Red" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(255,0,0); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+                     </radialGradient> 
+                     <radialGradient id="grad1Blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(0,0,255); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+    </radialGradient> 
+                  </defs>
+               </svg>
+               <script src="lib/js/snap.svg-min.js"></script> 
+               <script src="lib/js/snap-ext.svg.js"></script> 
+               <script>
+                  var paper = Snap("#svgslide1");
+                  var redCircle = paper.circle(300, 300, 300);
+                  redCircle.attr( {
+                    strokewidth: '0',
+                    fill: "url(#grad1Red)"
+                  });
+                  var blueCircle = paper.circle(600, 300, 300);
+                  blueCircle.attr( {
+                    strokewidth: '0',
+                    fill: "url(#grad1Blue)"
+                  });
+                  var atr = {
+                    class: "fragment",
+                    stroke: "#ddd"
+                  };
+                  atr['data-fragment-index'] =  "1";
+                  atr['stroke-width'] = "4";
+                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var pair1 = [];
+                  var pair2 = [];
+                  for (var i = 0; i < 5; i++) {
+                     var angle1 = Math.random() * 2 * Math.PI;
+                     var dist1 = Math.random();
+                     dist1 = Math.floor (0.5 *  radius * dist1 );
+                     pair1.push( [x1 + dist1 * Math.sin(angle1), 
+                        y1 + dist1 * Math.cos(angle1)] );
+                     var angle2 = Math.random() * 2 * Math.PI;
+                     var dist2 = Math.random();
+                     dist2 = Math.floor ( 0.5 * radius * dist2 );
+                     pair2.push( [x2 + dist2 * Math.sin(angle2), 
+                        y2 + dist2 * Math.cos(angle2)] );
+                  }
+                  var gs = [];
+                  for (var i = 0; i < 5; i++) {
+                    atr['data-fragment-index'] =  i;
+                    var c1 = paper.cross.call(paper, pair1[i][0], pair1[i][1], 40, atr);
+                    var c2 = paper.cross.call(paper, pair2[i][0], pair2[i][1], 40, atr);
+                    var line = paper.line(pair1[i][0], pair1[i][1], pair2[i][0], pair2[i][1]);
+                    line.attr(atr);
+                  }
+
+                 </script>
                </section>
+
+               <section data-background-image="images/2ColorBeads.jpg" data-transition="fade" data-transition-speed="slow">
+                  <h4>Multiple observations</h4>
+                  <p>Treat as individual observations, or first average positions (Vector)</p>
+                  <svg id="svgslide2" width="100%" height="100%" style="overflow: visible;">
+                  </svg>
+               <script>
+                  paper = Snap("#svgslide2");
+                  var redCircle = paper.circle(300, 300, 300);
+                  redCircle.attr( {
+                    strokewidth: '0',
+                    fill: 'url(#grad1Red)'
+                  });
+                  var blueCircle = paper.circle(600, 300, 300);
+                  blueCircle.attr( {
+                    strokewidth: '0',
+                    fill: 'url(#grad1Blue)'
+                  });
+                  atr = {
+                    stroke: "#fff"
+                  };
+                  atr['stroke-width'] = "4";
+                  atr['stroke-opacity'] = '0.25';
+                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var centerPair1 = [ 0, 0 ];
+                  var centerPair2 = [ 0, 0 ];
+                  for (var i = 0; i < 5; i++) {
+                    paper.cross.call(paper, pair1[i][0], pair1[i][1], 40, atr);
+                    paper.cross.call(paper, pair2[i][0], pair2[i][1], 40, atr);
+                    var line = paper.line(pair1[i][0], pair1[i][1], pair2[i][0], pair2[i][1]);
+                    line.attr(atr);
+
+                    centerPair1[0] += pair1[i][0];
+                    centerPair1[1] += pair1[i][1];
+                    centerPair2[0] += pair2[i][0];
+                    centerPair2[1] += pair2[i][1];
+                  }
+                  centerPair1[0] = centerPair1[0] / 5;
+                  centerPair1[1] = centerPair1[1] / 5;
+                  centerPair2[0] = centerPair2[0] / 5;
+                  centerPair2[1] = centerPair2[1] / 5;
+                  atr['stroke'] = '#0e0';
+                  atr['stroke-opacity'] = '1.0';
+                  paper.cross.call(paper, centerPair1[0], centerPair1[1], 40, atr);
+                  paper.cross.call(paper, centerPair2[0], centerPair2[1], 40, atr);
+                  var line = paper.line(centerPair1[0], centerPair1[1], centerPair2[0], centerPair2[1]);
+                  line.attr(atr);
+
+                  </script>
+                  </section>
 
                <section data-background-image="images/2ColorBeads.jpg">
                <h4>Multiple observations</h4>
                <p>Treat as individual observations, or first average positions (Vector)</p>
+               <br>
                <div class="fragment preload" id="plot4" style="margin: auto; width:500px; height:400px;"></div>
                <div class="fragment" id="plot4b"></div>
                <div class="fragment" id="plot4c"></div>
+               </section>
+  
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <br>
+               <div>
+               $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2 + \color{red}{&sigma;_{sample}^2 + &sigma;_{&sigma;_{sample}}^2}} $$
+               </div>
+               <br>
+               <p class="fragment">Comparing Vector-P2D and Sigma-P2D can uncover sample heterogeneity</p>
                </section>
 
                <section data-background-image="images/2ColorBeads.jpg">
