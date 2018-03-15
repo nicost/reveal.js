@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NS-FOM2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+            <section data-background-image="images/mmLogo.jpg">
+            <span class="fragment fade-out" data-fragment-index="1">
+              <h3>&mu;Manager for users</h3>
+            </span>
+            <div class="fragment current-visible" data-fragment-index="1" style="position: absolute; left: 5px; top: 5px;">
+              <img style="border: 0px;" width="637" height="659" src="images/imagej_screen.png">
+              <div style="position: fixed; top: 150px; right: 0px; width: 320px;">
+                &mu;Manager is an ImageJ plugin.  On startup, ImageJ loads a macro that starts &mu;Manager
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 5px; top: 5px;">
+              <img style="border: 0px;" width="637" height="659" src="images/splashScreen.png">
+              <div style="position: fixed; top: 150px; right: 0px; width: 320px;">
+                Profiles are useful in multi-user environments.  &mu;Manager will remember each user's choices and window positions.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 5px; top: 15px;">
+              <img style="border: 0px;" width="587" height="637" src="images/splash_hwconfig.png">
+              <div style="position: fixed; top: 150px; right: 0px; width: 360px;">
+                The Hardware Configuration file is a text file that describes the hardware and hardware settings.  Here, we use "virtual" hardware.
+              </div>
+            </div>
+            </section>
+
+            <section data-background-image="images/mmLogo.jpg">
+              <span class="fragment fade-out" data-fragment-index="1">
+                <h3>&mu;Manager Main Window</h3>
+              </span>
+              <div class="fragment current-visible" data-fragment-index="1" style="position: absolute; left: 165px; top: 15px;">
+                <img style="border: 0px;" width="644" height="247" src="images/mainWindow.png">
+                <div style="position: fixed; top: 300px; left: 165px; width: 644px;">
+                  Left side of window always the same.  Configuration settings on the right depend on hardware configuration.
+                </div>
+              </div>
+              <div class="fragment current-visible" data-fragment-index="2" style="position: absolute; left: 165px; top: 15px;">
+                <img style="border: 0px;" width="645" height="248" src="images/mainWindow_channel.png">
+                <div style="position: fixed; top: 300px; left: 165px; width: 644px;">
+                  Configuration settings are often drop-down menus.  They are tailored by the system configurator to your system and give quick access to useful hardware settings.
+                </div>
+              </div>
+              </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+            center: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+		</script>
+	</body>
+</html>
