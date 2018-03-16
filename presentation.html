@@ -21,6 +21,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+    <script src="lib/js/plotly-latest.min.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -32,9 +33,9 @@
             <ol style="line-height: 1.6">
               <li class="fragment">What is it, what does it do?</li>
               <li class="fragment">Where did it come from, where is it going?</li>
-              <li class="fragment">Global software architecture</li>
               <li class="fragment">User's prespective</li>
               <li class="fragment">Installer's perspective</li>
+              <li class="fragment">Software architecture</li>
               <li class="fragment">Extending &mu;Manager</li>
             </ol>
             <br><br>
@@ -326,9 +327,19 @@
          </div>
         </section>
 
+       <section>
+         <h3>&mu;Manager Use</h3>
+         <div id="registrations" style="position: absolute; left: 0px; top: 150px; margin: auto; width: 450px; height: 450px;"></div>
+         <div class="fragment" id="publications" style="position: absolute; left: 500px; top: 75px; margin: auto; width: 450px; height: 450px;"></div>
+         <div class="fragment" style="position:absolute; left: 500px; top: 500px;">
+           <p>3 &mu;Manager publications were cited 1120 times</p>
+         </div>
+       </section>
+
         <section data-background-image="images/mmLogo.jpg">
           <div style="position: relative; top: 25px;">
-          <h3>&mu;Manager Architecture</h3>
+            <h3>&mu;Manager Architecture</h3>
+          </div>
           <div style="position: absolute; left: 10px; top: 100px;">
             <img style="border: 0px;" width="577" height="447" src="images/softwareDesign.png">
           </div>
@@ -343,6 +354,8 @@
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/registrations.js"></script>
+    <script src="js/publications.js"></script>
 
     <script>
       // More info about config & dependencies:
