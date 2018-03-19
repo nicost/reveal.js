@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>NS-FOM2018</title>
+		<title>&mu;M-Configuration</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/sky.css">
@@ -169,18 +169,93 @@
                 Results of your hard work... Only pixel size definitions are left to be configured.
               </div>
             </div>
-              
-
            </section>
 
+          <section data-background-image="images/mmLogo.jpg">
+            <h3>&mu;Manager Pixel Size Definitions</h3>
+            <div class="fragment current-visible" style="position: absolute; left: 80px; top: 100px;">
+              <img style="border: 0px;" width="788" height="337" src="images/pixelSize.jpg">
+              <div style="position: fixed; top: 450px; left: 80px; width: 788px;">
+                Open the Pixel Size Calibration dialog.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 180px; top: 100px;">
+              <img style="border: 0px;" width="463" height="303" src="images/pixelSizeCalibration.jpg">
+              <div style="position: fixed; top: 450px; left: 80px; width: 788px;">
+                Click "New" to create a new pixel size calibration.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor2.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                The Pixel Config Editor is a bit complex.  First set the name of this new Pixel Configuration.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor3.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                Then set the Pixel size (which you should measure using a graticule.  You can estimate the pixel size using the magnification of the objective and the physical pixel size of the camera).
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor4.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                Select the properties that affect pixel size (the objective, and possible other devices that change magnification). 
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor5.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                To know how to move the stage correctly, &mu;Manager uses an affine transform.  The easiest way to set this up is to press "Calculate" first.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor6.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                Note the change in numbers of the affine transform. 
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor7.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                To get the orientation of the stage with respect to the image right, click "Measure".
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 180px; top: 100px;">
+              <img style="border: 0px;" width="507" height="297" src="images/PixelCalibratorAffine.jpg">
+              <div style="position: fixed; top: 450px; left: 80px; width: 788px;">
+                Use the "Manual-Simple" method and follow the instructions.  The "Automatic" method will determine a better affine transform (and also measure pixel size), but regularly fails.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 0px; top: 100px;">
+              <img style="border: 0px;" width="582" height="741" src="images/PixelConfigEditor8.jpg">
+              <div style="position: fixed; top: 150px; left: 595px; width: 360px;">
+                Note the change in number of the affine transform.  Press "OK" to finish defining this pixel calibration.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 180px; top: 100px;">
+              <img style="border: 0px;" width="463" height="303" src="images/pixelSizeCalibration2.jpg">
+              <div style="position: fixed; top: 450px; left: 80px; width: 788px;">
+                Success! Create more pixel size calibrations or close this dialog.
+              </div>
+            </div>
+            <div class="fragment current-visible" style="position: absolute; left: 80px; top: 100px;">
+              <img style="border: 0px;" width="790" height="342" src="images/cMainWindow6.jpg">
+              <div style="position: fixed; top: 450px; left: 80px; width: 788px;">
+                Note the indication of pixel size in the &muManager status line.
+              </div>
+            </div>
+         </section>
 
-            <section data-background-image="images/mmLogo.jpg">
+         <section data-background-image="images/mmLogo.jpg">
               <h3>More?</h3>
               <br><br>
-              <p><a href="https://micro-manager.org/wiki/Micro-Manager_User%27s_Guide">User's guide</a> (old, written for 1.4)</p>
+              <p><a href="https://micro-manager.org/wiki/Micro-Manager_Configuration_Guide">Configuration guide</a> (written for 1.4)</p>
               <p><a href="https://micro-manager.org/wiki/Micro-Manager">Website</a></p>
               <p><a href="http://micro-manager.3463995.n2.nabble.com/">Mailing list</a></p>
               <p><a href="https://open-imaging.com/">Open Imaging</a></p>
+              <p><a href="index.html">Home</a></p>
+           </section>
 
 
 			</div>
