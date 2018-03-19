@@ -93,34 +93,34 @@
   <text transform="rotate(-38, 606, 348)" xml:space="preserve" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="606" opacity="0.89" stroke-width="0" stroke="#ff0000" fill="#333333">ease of use</text>
  </g>
  <g class="fragment">
-  <title>Red Line</title>
-  <line marker-end="url(#se_marker_end_svg_red)" id="svg_4" opacity="0.99" fill="none" stroke-width="12" stroke="#ff0000" x1="736" y1="226" x2="736" y2="506" />
-  <text transform="rotate(-45 736 348)" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="736" opacity="0.99" stroke-width="0" stroke="#ff0000" fill="#333333">$$$</text>
- </g>
- <g class="fragment">
   <title>Blue Line</title>
   <line marker-end="url(#se_marker_end_svg_blue)" opacity="0.99" fill="none" stroke-width="12" stroke="#0000ff" x1="886" y1="506" x2="886" y2="226" />
   <text transform="rotate(45 886 348)" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="886" opacity="0.99" stroke-width="0" stroke="#ff0000" fill="#333333">Flexibility</text>
 </g>
+ <g class="fragment">
+  <title>Red Line</title>
+  <line marker-end="url(#se_marker_end_svg_red)" id="svg_4" opacity="0.99" fill="none" stroke-width="12" stroke="#ff0000" x1="736" y1="226" x2="736" y2="506" />
+  <text transform="rotate(-45 736 348)" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="736" opacity="0.99" stroke-width="0" stroke="#ff0000" fill="#333333">$$$</text>
+ </g>
 </svg>
         </section>
 
        <section data-background-image="images/mmLogo.jpg">
          <h3>&mu;Manager, Key Points:</h3>
          <div style="line-height: 4.0; text-align: left; position: relative; left: 0px; top: 80px;">
-            <p class="fragment">Open Source</p>
-            <div class="fragment" style="position: absolute; top: -100px; left: 400px;":>
+            <p class="fragment" data-fragment-index="1">Open Source</p>
+            <div class="fragment" data-fragment-index="1" style="position: absolute; top: -100px; left: 400px;":>
                <img style="border: 0px"; width="498" height="174" src="images/github.png">
             </div>
-            <div class="fragment" style="position: absolute; top: 40px; left: 400px;":>
+            <div class="fragment" data-fragment-index="1" style="position: absolute; top: 40px; left: 400px;":>
                > 100 code contributors
             </div>
-            <p class="fragment">Community driven</p>
-            <div class="fragment" style="position: absolute; top: 135px; left: 424px;":>
+            <p class="fragment" data-fragment-index="2">Community driven</p>
+            <div class="fragment" data-fragment-index="2" style="position: absolute; top: 135px; left: 424px;":>
                <img style="border: 0px"; width="446" height="132" src="images/website.png" />
             </div>
-            <p class="fragment">Cross-platform</p>
-            <div class="fragment" style="position: absolute; top: 285px; left: 454px;":>
+            <p class="fragment" data-fragment-index="3">Cross-platform</p>
+            <div class="fragment" data-fragment-index="3" style="position: absolute; top: 285px; left: 454px;":>
                <img style="border: 0px"; width="203" height="244" src="images/LinuxLogo.jpg" />
                <div style="position: absolute; top: 0px; left: 275px;">
                Mac
@@ -129,8 +129,8 @@
                Windows
                </div>
             </div>
-            <p class="fragment">Extensible</p>
-            <div class="fragment" style="position: absolute; top: 235px; left: 25px; color: #833;">
+            <p class="fragment" data-fragment-index="4">Extensible</p>
+            <div class="fragment" data-fragment-index="4" style="position: absolute; top: 235px; left: 25px; color: #833;">
                <div style="position: absolute; top: 0px; left: 50px;">
                Scripts 
                </div>
@@ -337,6 +337,26 @@
        </section>
 
         <section data-background-image="images/mmLogo.jpg">
+          <div style="position: absolute; top: 0px; left: 240px;">
+            <h3>&mu;Manager Support</h3>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; left: 10px; top: 75px;">
+            <a href="https://micro-manager.org">
+              <img style="border: 0px" width="892" height="670" src="images/website.jpg">
+            </a>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; left: 90px; top: 75px;">
+            <img style="border: 0px" width="793" height="616" src="images/mailingList.jpg">
+          </div>
+          <div class="fragment" style="position: absolute; left: 10px; top: 75px;">
+            <img style="border: 0px" width="594" height="275" src="images/helpAProblem.jpg">
+          </div>
+          <div class="fragment" style="position: absolute; left: 310px; top: 215px;">
+            <img style="border: 0px" width="521" height="479" src="images/reportAProblem.jpg">
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
           <div style="position: relative; top: 25px;">
             <h3>&mu;Manager Architecture</h3>
           </div>
@@ -346,7 +366,6 @@
           <div style="position: absolute; left: 32px; top: 356px;">
             <img class="fragment grow bottomapi" style="border: 0px;" width="489" height="191" src="images/bottomAPI.jpg">
           </div>
-
         </section>
 
       </div>
