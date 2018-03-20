@@ -24,6 +24,14 @@
       transform: scale(1.5) translate(200px); 
 }
 
+.reveal .slides section .fragment.grow.topapi {
+  opacity: 1;
+  visibility: inherit; }
+.reveal .slides section .fragment.grow.topapi.visible {
+      -webkit-transform: scale(2.0) translate(200px); 
+      transform: scale(2.0) translate(200px); 
+}
+
 .reveal .slides section .fragment.grow.walter {
   opacity: 1;
   visibility: inherit; }

@@ -35,8 +35,7 @@
               <li class="fragment">Where did it come from, where is it going?</li>
               <li class="fragment">User's prespective</li>
               <li class="fragment">Installer's perspective</li>
-              <li class="fragment">Software architecture</li>
-              <li class="fragment">Extending &mu;Manager</li>
+              <li class="fragment">Software architecture and Extending &mu;Manager</li>
             </ol>
             <br><br>
             <p style="text-align: right;"> Nico Stuurman, UCSF/HHMI, 2018 March 24</p>
@@ -357,7 +356,19 @@
         </section>
 
         <section data-background-image="images/mmLogo.jpg">
-          <div style="position: relative; top: 25px;">
+          <div style="position:absolute; left: 250px; top:250px;">
+            <a href="user.html">&mu;Manager User Demo</a>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <div style="position:absolute; left: 200px; top:250px;">
+            <a href="user.html">&mu;Manager Configuration Demo</a>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <div style="position: absolute; top: 0px; left: 200px;">
             <h3>&mu;Manager Architecture</h3>
           </div>
           <div style="position: absolute; left: 10px; top: 100px;">
@@ -366,6 +377,80 @@
           <div style="position: absolute; left: 32px; top: 356px;">
             <img class="fragment grow bottomapi" style="border: 0px;" width="489" height="191" src="images/bottomAPI.jpg">
           </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <div style="position: absolute; top: 0px; left: 200px;">
+            <h3>&mu;Manager Architecture</h3>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; left: 10px; top: 100px;">
+            <img style="border: 0px;" width="796" height="631" src="images/baseDevice.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; left: 10px; top: 100px;">
+            <img style="border: 0px;" width="796" height="631" src="images/cameraDevice.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; left: 60px; top: 100px;">
+            <img style="border: 0px;" width="671" height="557" src="images/libmmgrs.jpg">
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <div style="position: absolute; top: 0px; left: 200px;">
+            <h3>&mu;Manager Architecture</h3>
+          </div>
+          <div style="position: absolute; left: 10px; top: 100px;">
+            <img style="border: 0px;" width="577" height="447" src="images/softwareDesign.png">
+          </div>
+          <div style="position: absolute; left: 128px; top: 301px;">
+            <a href="https://valelab4.ucsf.edu/~MM/doc/MMCore/html/class_c_m_m_core.html">
+              <img class="fragment grow topapi" style="border: 0px;" width="245" height="94" src="images/topAPI.jpg">
+            </a>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <div style="position: absolute; top: 0px; left: 200px;">
+            <h3>&mu;Manager Architecture</h3>
+          </div>
+          <div style="position: absolute; left: 228px; top: 450px;">
+            <a href="https://valelab4.ucsf.edu/~MM/doc/MMCore/html/class_c_m_m_core.html">
+              <img style="border: 0px;" width="490" height="184" src="images/topAPI.jpg">
+            </a>
+          </div>
+          <div class="fragment" style="position: absolute; left: 5px; top: 330px">
+            <div style="position: absolute; left: 5px; top: 50px">Swig</div>
+            <div style="position: absolute; left: 150px; top: 75px">MMCoreJ_wrap.jnilib</div>
+            <div style="position: absolute; left: 200px; top: 25px">MMCoreJ.jar</div>
+            <div style="position: absolute; left: 580px; top: 50px">MMCorePy.Pi</div>
+          </div>
+          <div class="fragment" style="position: absolute; left: 5px; top: 175px">
+            <div style="position: absolute; left: 0px; top: 0px">&mu;Manager&nbsp;UI</div>
+            <div style="position: absolute; left: 350px; top: 0px">Matlab</div>
+            <div style="position: absolute; left: 630px; top: 0px">Python&nbsp;aps</div>
+            <svg style="position: absolute; top: 0px; left: 0px;" width="950px" height="400px"style="overflow: visible;">
+              <line fill="none" stroke-width="4" stroke="#00ff00" x1="120" y1="60" x2="310" y2="175" />
+              <line fill="none" stroke-width="4" stroke="#00ff00" x1="400" y1="60" x2="330" y2="175" />
+              <line fill="none" stroke-width="4" stroke="#ff0000" x1="740" y1="60" x2="680" y2="200" />
+            </svg>
+          </div>
+        </section>
+        
+        <section data-background-image="images/mmLogo.jpg">
+            <h3>&mu;Manager Architecture</h3>
+            <br>
+          <p>&mu;Manager top layer API - Java only</p>
+          <p>Much wider facilities than "device interaction only" MMCore</p>
+          <div class="fragment">
+            <p>Significant changes between <a href="https://valelab4.ucsf.edu/~MM/doc/mmstudio/org/micromanager/api/ScriptInterface.html">&mu;Manager 1.4</a> and <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">&mu;Manager 2.0</a></p>
+          </div>
+          <div class="fragment">
+            <p>Scripts interact with the MMCore API and the &mu;Manager top layer API</p>
+            <p><a href="scripts.html">Writing scripts</a></p>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>Thanks!</h3>
         </section>
 
       </div>
