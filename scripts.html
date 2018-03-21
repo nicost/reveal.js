@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>&mu;Manager scripting</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>&mu;Manager Scripting</h3>
+          <div class="fragment current-visible" style="position: absolute; left: 130px; top: 100px;">
+            <img style="border: 0px;" width="638" height="269" src="images/scriptPanelMenu.png">
+          </div>
+          <div class="fragment" style="position: absolute; left: 45px; top: 100px;">
+            <img style="border: 0px;" width="870" height="632" src="images/scriptPanel.png">
+            <svg width="100%" height="100%" style="position: absolute; top: 0px; left: 0px; overflow: visible;">
+               <g>
+                <ellipse cx="147" cy="330" rx="100" ry="250" stroke-width="4" stroke="#ff0000" fill="none"/>
+                <text transform="rotate(-65, 147, 330)" text-anchor="middle" font-family="Sans-Serif" font-size="32" x="147" y="330" stroke="#ff0000" fill="#ff0000">Script-Button Panel</text>
+              </g>
+               <g class="fragment">
+                <ellipse cx="560" cy="190" rx="250" ry="110" stroke-width="4" stroke="#ff0000" fill="none"/>
+                <text text-anchor="middle" font-family="Sans-Serif" font-size="32" x="560" y="190" stroke="#ff0000" fill="#ff0000">Editor Pane</text>
+              </g>
+               <g class="fragment">
+                <ellipse cx="560" cy="490" rx="250" ry="110" stroke-width="4" stroke="#ff0000" fill="none"/>
+                <text text-anchor="middle" font-family="Sans-Serif" font-size="32" x="560" y="490" stroke="#ff0000" fill="#ff0000">Immediate Pane (REPL)</text>
+              </g>
+            </svg>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>&mu;Manager Scripting</h3>
+          <br>
+          <div class="fragment">
+            <p>&mu;Manager scripts are written in <a href="https://en.wikipedia.org/wiki/BeanShell">Beanshell</a>, a Java-like scripting language.</p>
+            <br>
+          </div>
+          <div class="fragment">
+            <p>The predefined &mu;Manager <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html">Studio object ("mm")</a> gives access to all &mu;Manager functionality.</p>
+            <br>
+          </div>
+          <div class="fragment">
+            <p>Hardware can be accessed through the <a href="https://valelab4.ucsf.edu/~MM/doc/mmcorej/mmcorej/CMMCore.html">MMCore object ("mmc")</a>.</p>
+          </div>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>&mu;Manager Scripting</h3>
+          <br>
+          <p>In the REPL, enter:</p>
+          <code>
+            mm.live().snap(true);
+          </code>
+          <br>
+          <div class="fragment">
+            <p>Finding documentation can be difficult. Here the <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html">Studio object</a> led to the <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/SnapLiveManager.html">Live Manager</a>
+            </p>
+          </div>
+          </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>&mu;Manager Scripting</h3>
+          <p>A more complicated way to accomplish the same (copy to Editor Pane and run):</p>
+          <pre><code data-trim>
+            import mmcorej.TaggedImage;
+            import org.micromanager.data.Image;
+
+            mmc.snapImage();
+            TaggedImage tmp = mmc.getTaggedImage();
+            Image img = mm.data().convertTaggedImage(tmp);
+            mm.live().displayImage(img);
+          </code></pre>
+
+          <p>Save the script, and click "Add" on the Script Button Panel.  You can now re-open the script by clicking on the Script shortcut, and run it by double-clicking.</p>
+        </section>
+
+        <section data-background-image="images/mmLogo.jpg">
+          <h3>&mu;Manager Scripting</h3>
+          <br>
+          <p>More examples can be found in the scripts directory within the &mu;Manager dierctory.</p>
+          <p>Not all of these may work correctly, as the API is still evolving</p>
+          <p>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+            center: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
