@@ -1,11 +1,11 @@
 var data = [
   {
-  x: [3.7, 7.5, 11.2, 14.9, 18.6, 22.4],
-  y: [0.06, 0.387, 0.698, 1.204, 1.815, 2.662],
+  x: [0.37, 0.75, 1.12, 1.49, 1.86, 2.24],
+  y: [0.006, 0.0387, 0.0698, 0.1204, 0.1815, 0.2662],
   name: '\u03BC: 10.0 nm',
   error_y: {
     type: 'data',
-    array: [0.096, 0.152, 0.343, 0.360, 0.438, 0.503],
+    array: [0.0096, 0.0152, 0.0343, 0.0360, 0.0438, 0.0503],
     color: '#AAA',
     visible: true
   },
@@ -13,7 +13,7 @@ var data = [
   }
 ];
 var std_font = {
-        size: '20',                                 
+        size: '20',
         color: 'white'
 };
 var layout = {
@@ -21,7 +21,7 @@ var layout = {
   plot_bgcolor: 'rgba(0,0,0,0)',
                font: std_font,
   xaxis: {
-     title: '\u03C3<sub>d</sub> (nm)',
+     title: '\u03C3<sub>d</sub> (\u03BC)',
      titlefont: std_font,
      showgrid: false,
      tickfont: {
@@ -30,7 +30,7 @@ var layout = {
      }
   },
   yaxis: {
-     title: '[Error] (nm)',
+     title: '[Error] (\u03BC)',
      titlefont: std_font,
      tickfont: {
         size: '16',
@@ -56,10 +56,10 @@ function plot4a() {
   Plotly.animate('plot4', {
     data: [
     {
-      y: [0.06, 0.387, 0.698, 1.204, 1.815, 2.662],
+      y: [0.006, 0.0387, 0.0698, 0.1204, 0.1815, 0.2662],
       error_y: {
         type: 'data',
-        array: [0.096, 0.152, 0.343, 0.360, 0.438, 0.503],
+        array: [0.0096, 0.0152, 0.0343, 0.0360, 0.0438, 0.0503],
         color: '#AAA',
         visible: true
       }
@@ -75,7 +75,7 @@ function plot4a() {
   });
 
   var update = {
-     title: 'Vector (\u03BC = 10 nm, n=100, 10 frames)'
+     title: 'Vector (n=100, 10 frames)'
   };
   Plotly.relayout('plot4', update) 
 }
@@ -84,10 +84,10 @@ function plot4b() {
   Plotly.animate('plot4', {
     data: [
     {
-      y: [0.008, 0.116, 0.089, 0.141, 0.034, 2.044],
+      y: [0.0008, 0.0116, 0.0089, 0.0141, 0.0034, 0.2044],
       error_y: {
         type: 'data',
-        array: [0.106, 0.179, 0.378, 0.434, 0.805, 4.02],
+        array: [0.0106, 0.0179, 0.0378, 0.0434, 0.0805, 0.402],
         color: '#AAA',
         visible: true
       }
@@ -103,7 +103,7 @@ function plot4b() {
   });
 
   var update = {
-     title: 'Vector-P2D (\u03BC = 10 nm, n=100, 10 frames)'
+     title: 'Vector-P2D (n=100, 10 frames)'
   };
   Plotly.relayout('plot4', update) 
 }
@@ -112,10 +112,10 @@ function plot4c() {
   Plotly.animate('plot4', {
     data: [
     {
-      y: [0.009, 0.104, 0.11, 0.093, 0.048, 0.577],
+      y: [0.0009, 0.0104, 0.011, 0.0093, 0.0048, 0.0577],
       error_y: {
         type: 'data',
-        array: [0.090, 0.185, 0.579, 0.814, 1.248, 1.752],
+        array: [0.0090, 0.0185, 0.0579, 0.0814, 0.1248, 0.1752],
         color: '#AAA',
         visible: true
       }
@@ -131,7 +131,7 @@ function plot4c() {
   });
 
   var update = {
-       title: 'Sigma-P2D (\u03BC = 10 nm, n=1000)'
+       title: 'Sigma-P2D (n=1000)'
   };
   Plotly.relayout('plot4', update) 
 }

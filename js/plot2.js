@@ -1,11 +1,11 @@
 var data = [
   {
-  x: [3.7, 7.5, 11.2, 14.9, 18.6, 22.4],
-  y: [0.68, 3.08, 6.51, 10.51, 14.36, 18.7],
+  x: [0.37, 0.75, 1.12, 1.49, 1.86, 2.24],
+  y: [0.068, 0.308, 0.651, 1.051, 1.436, 1.87],
   name: '\u03BC: 10.0 nm',
   error_y: {
     type: 'data',
-    array: [0.11, 0.13, 0.26, 0.57, 0.39, 0.43],
+    array: [0.011, 0.013, 0.026, 0.057, 0.039, 0.043],
     color: '#AAA',
     visible: true
   },
@@ -21,7 +21,7 @@ var layout = {
   plot_bgcolor: 'rgba(0,0,0,0)',
                font: std_font,
   xaxis: {
-     title: '\u03C3<sub>d</sub> (nm)',
+     title: '\u03C3<sub>d</sub> (\u03BC)',
      titlefont: std_font,
      showgrid: false,
      tickfont: {
@@ -30,7 +30,7 @@ var layout = {
      }
   },
   yaxis: {
-     title: '[Error] (nm)',
+     title: '[Error] (\u03BC)',
      titlefont: std_font,
      tickfont: {
         size: '16',
@@ -56,10 +56,10 @@ function plotP2D() {
   Plotly.animate('plot2', {
     data: [
     {
-      y: [0.03, 0.66, 8.80, 9.66, 9.59, 9.52],
+      y: [0.003, 0.066, 0.880, 0.966, 0.959, 0.952],
       error_y: {
         type: 'data',
-        array: [0.13, 1.08, 2.66, 0.09, 0.16, 0.12],
+        array: [0.013, 0.108, 0.266, 0.009, 0.016, 0.012],
         color: '#AAA',
         visible: true
       }
@@ -75,7 +75,7 @@ function plotP2D() {
   });
 
   var update = {
-     title: 'Churchman-P2D (\u03BC = 10 nm)'
+     title: 'Churchman-P2D'
   };
   Plotly.relayout('plot2', update) 
 }
@@ -84,10 +84,10 @@ function plotAvg() {
   Plotly.animate('plot2', {
     data: [
     {
-      y: [0.68, 3.08, 6.51, 10.51, 14.36, 18.7],
+      y: [0.068, 0.308, 0.651, 1.051, 1.436, 1.87],
       error_y: {
         type: 'data',
-        array: [0.11, 0.13, 0.26, 0.57, 0.39, 0.43],
+        array: [0.011, 0.013, 0.026, 0.057, 0.039, 0.043],
         color: '#AAA',
         visible: true
       }
@@ -103,7 +103,7 @@ function plotAvg() {
   });
 
   var update = {
-       title: 'Average (\u03BC = 10 nm)'
+       title: 'Average'
   };
   Plotly.relayout('plot2', update) 
 }
