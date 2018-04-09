@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>JC-NS-20180305</title>
+		<title>JC-NS-20180409</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,60 +25,75 @@
 		<div class="reveal">
 			<div class="slides">
             <section>
-              <img width="697" height="283" src="images/Title.png"/>
+              <img width="825" height="261" src="images/Title.png"/>
             </section>
             <section>
-              <h3>Novel Light Sheet geometry</h3>
-              <img width="960" height="398" src="images/Overview.png"/>
-            </section>
-            <section>
-              <h3>Can use Oil immersion objective</h3>
-              <p style="font-size: 20px">We achieved this goal by using a tilted sheet that can access the working distance of high-NA, oil- and water-immersion objective lenses, including a 60× 1.49-NA oil-immersion objective that accepts 88% more emitted fluorescence and offers a 26% increase in native lateral resolution compared with a 25× 1.1-NA water-dipping objective.</p>
-            </section>
-            <section>
-              <h3>Light Sheet Characterization</h3>
-              <img width="960" height="350" src="images/Sheet.jpg"/>
-              <ul>
-                 <li>Sheet Width: 4.5&mu;m</li>
-                 <li>Side lobes "too low intensity to generate signal"</li>
-              </ul>
-            </section>
-            <section>
-              <h3> From the discussion:</h3>
-              <p style="font-size:20px"> Although the LITE sheet measured 4.3 &mu;m thick FWHM
-, in actual cellular imaging conditions, it behaved as if  it 
-              were thinner. Because of  the complexities of  cells, this phenom-
-              enon is difficult to measure and is best illustrated by the obser-
-              vation that focusing the detection objective (without moving the 
-              sheet) by 
-              ∼
-              1 &mu;m resulted in being outside the excitation volume. 
-              Although we have no experimental evidence for this observation, 
-              it  is  conceivable  that,  given  the  sheet  has  a  Gaussian  intensity  
-              profile,  only  the  very  peak  of   the  focal  volume  contains  a  photon
-density  adequate  for  fluorophore  excitation.  </p>
-            </section>
-            <section>
-               <img with="745" height="485" src="images/Microscope.jpg">
-            </section>
-            <section>
-               <img width="649" height="301" src="images/SampleChambers.png">
-            </section>
-            <section>
-               <img width="364" height="640" src="images/Bleaching.jpg">
-            </section>
-            <section>
-               <p>Hela cells Hec1-EGFP</p>
-               <video width="560" heigh="560" controls autoplay loop>
-                  <source src="images/Hela.mp4" type="video/mp4">
-               </video>
+              <h3>Interferometric scattering microscopy (iSCAT)</h3>
+              <div style="position: absolute; top: 150px; left: 15px;">
+                <img style="border: 0px;" width="274" height="462" src="images/iSCAT.png"/>
+              </div>
+              <div class="fragment" style="position: absolute; top: 150px; left: 400px;">
+                <img style="border: 0px;" width="303" height="185" src="images/singleMol.jpg"/>
+              </div>
+              <div class="fragment" style="position: absolute; top: 350px; left: 290px;">
+                <img style="border: 0px;" width="548" height="188" src="images/SLB.jpg"/>
+              </div>
             </section>
 
             <section>
-               <p><i>Ashbya gossypii</i> cell expressing H4-GFP</p>
-               <video width="800" height="620" controls autoplay loop>
-                  <source src="images/Agossypii.mp4" type="video/mp4">
-               </video>
+              <h3>Actin and Myosin on bare glass</h3>
+              <div style="position: absolute; top: 200px; left: 140px;">
+                <img style="border: 0px;" width="695" height="203" src="images/fig1.jpg"/>
+              </div>
+              <div style="position: absolute; top: 450px; left: 350px;">
+                Actin
+              </div>
+              <div style="position: absolute; top: 450px; left: 500px;">
+                Myosin
+              </div>
+              
+            </section>
+
+            <section>
+              <h3>SLB-linked actin can be tracked</h3>
+              <div style="position: absolute; top: 200px; left: 40px;">
+                <video width="350" height="320" controls data-autoplay>
+                  <source src="images/actinfil.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="fragment" style="position: absolute; top: 240px; left: 400px;">
+                <img style="border: 0px;" width="513" height="202" src="images/actintracking.jpg"/>
+              </div>
+            </section>
+
+            <section>
+              <h3>Myosin filaments on SLB-bound actin</h3>
+              <div style="position: absolute; top: 200px; left: 180px;">
+                <video width="580" height="296" controls data-autoplay>
+                  <source src="images/myosin.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="fragment" style="position: absolute; top: 500px; left: 50px;">
+                Tracking results: two velocity classes (one side-bound versus two sides bound), <b>longer dwell times at low ATP results in contractile network.</b>
+              </div>
+            </section>
+
+            <section>
+              <h3>Transition from remodeling to contractile state by ATP depletion</h3>
+              <div style="position: absolute; top: 130px; left: 120px;">
+                <video width="672" height="672" controls data-autoplay loop>
+                  <source src="images/remodeling.mp4" type="video/mp4">
+                </video>
+              </div>
+            </section>
+
+            <section>
+              <h3>Observation of vortices</h3>
+              <div style="position: absolute; top: 150px; left: 180px;">
+                <video width="540" height="470" controls data-autoplay loop>
+                  <source src="images/vortex.mp4" type="video/mp4">
+                </video>
+              </div>
             </section>
 
 			</div>
