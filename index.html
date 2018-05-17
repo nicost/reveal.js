@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Nico-Groupmeeting-20180216</title>
+		<title>Nico-Groupmeeting-20180518</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/custom.css">
@@ -26,136 +26,60 @@
 		<div class="reveal">
 			<div class="slides">
 
-            <section data-background-image="http://valelab4.ucsf.edu/~nstuurman/images/GroupMeeting20180216/IMG_6952.jpg">
-                  <h3>Various Microscopy Adventures</h3>
+            <section data-background-image="images/noise.jpg">
+                  <h3>Tool development</h3>
                   <br><br><br>
+                  <div style="color:red;">
                   <ul>
-                     <li>Mouse Embryo Cilia (Markus)</li>
-                     <li>Adaptive Microscopy</li>
-                     <li>&mu;Manager-2.0-&gamma;</li>
+                     <li>sCMOS camera characterization</li>
+                     <li>CRISPR screening plugin</li>
+                     <li>Image processing approaches</li>
                   </ul>
+                </div>
                   <br><br><br>
-                  <p style="text-align: right;">Nico Stuurman, 2018-02-23</p>
+                  <p style="text-align: right;">Nico Stuurman, 2018-05-18</p>
             </section>
 
-            <section>
-                <p  style="font-size:30px">Mouse embryo ~9 days, Max. Int. Proj. Arl13b-GFP</p>
-               <video width="560" height="560" controls loop>
-               <source src="https://valelab4.ucsf.edu/~nstuurman/images/GroupMeeting20180216/zStack-tl_1-proj.mp4" type="video/mp4">
-               </video>
+            <section data-background-image="images/noise.jpg">
+            <h3>Camera characterization</h3>
+            <br><br><br>
+            <ul>
+              <li class="fragment">sCMOS versus CCD</li>
+              <li class="fragment">ReadNoise and fixed pattern noise</li>
+              <li class="fragment">Electron Conversion Factor</li>
+            </ul>
             </section>
 
-
-            <section>
-                <p  style="font-size:30px">Cilia mouse embryo in 3D Viewer</p>
-               <video width="560" height="560" controls>
-               <source src="https://valelab4.ucsf.edu/~nstuurman/images/GroupMeeting20180216/MouseCilia.mp4" type="video/mp4">
-            </section>
-
-            <section>
-               <p style="font-size:30px">Adaptive Microscopy</p>
-               <p> A general framework for integration of imglib2 into image acquisition</p>
-               <div style="position:absolute; left:75px; top:225px;">
-                  <img width="225" height="225" style="border: 0px;" src="images/StephanPreibisch.jpg" style="align-left;"/>
-                  <br>
-                  Stephan Preibisch
-               </div>
-               <div style="position:absolute; right:75px; top:225px;">
-                   <img width="225" height="225" style="border: 0px;" src="images/DavidHoerl.jpg" style="align-right;"/>
-                  <br>
-                  David H&ouml;rl
-               </div>
-
-               <div style="position:absolute; left:70px; top:550px">
-               <p style="font-size:30px">BigStitcher-MM (https://github.com/PreibischLab/bigstitcher-mm)</p>
+            <section data-background-image="images/noise.jpg">
+            <h3> Measure electron conversion factor from Photon shot noise</h3>
+            DN = k * N &nbsp;&nbsp;&nbsp;&nbsp; (1)<br>
+            <div style="font-size: 24px">
+            N - number of photons<br>
+            k - electron conversion factor (ecf)<br>
+            DN - digital number<br>
+            &radic;N - photon shot noise<br>
             </div>
-               </section>
 
-
-
-            <section>
-               Why more work on &mu;Manager-2.0?
-               <div class="fragment" style="position: absolute; left: 15px; top:100px;">
-                  <img style="border: 0px;" width="260" height="146" src="images/newTIRF.jpg" />       
-               </div>
-               <div class="fragment" style="position: absolute; right: 15px; top:100px;">
-               <img style="border: 0px;" width="212" height="525" src="images/MMLocMScreenshot.jpg" />
-               </div>
-               <div class="fragment" style="position: absolute; left: 395px; top:100px;">
-               <img style="border: 0px;" width="293" height="555" src="images/AutoPhotoConverter.png" />
-               </div>
-               <div class="fragment" style="position: absolute; left: 15px; top:300px;">
-               <img style="border: 0px;" width="287" height="313" src="images/CVExample.jpg" />
-               </div>
-            </section>
-
-            <section>
-            &mu;Manager genealogie<br><br>
-            <p style="font-size: 30px">Changes to User and Programming Interface Only</p>
-            <p style="font-size: 30px"><i>Core, Devices, Acquisition Engine identical</i></p>
-
-            <div>
-               <img style="border: 0px;" width="670" height="361" src="images/MMOverview.png" />
+            <br>
+            <div class="fragment">
+            <div style="font-size: 24px">
+            If only noise is shot noise, then:<br>
+            </div>
+            &sigma;(DN) = &radic;(DN)<br>
+            <div style="font-size: 24px">
+            and:<br>
+            </div>
+            &sigma;(DN) = k * &radic;(N) &nbsp;&nbsp;&nbsp;&nbsp; (2)<br>
+            </div>
+            <br>
+            <div class="fragment">
+              so: $$k = {\sigma{DN}}^2 /  DN$$
             </div>
             </section>
 
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_Screenshot-scaled.png">
-            </div>
+            
+            
 
-            <div style="position: absolute; left: 312px; top: 553px;">
-               <img class="fragment grow large" style="border: 0px;" width="145" height="85" src="images/GearMenu.png" />
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_NewWindow-scaled.png">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_Duplicate-scaled.png">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_Export-scaled.png">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_ZProject-scaled.png">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/Gamma_SciFio-scaled.png">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 0px;">
-            <img style="border: 0px;" width="960" height"700" src="images/NanoImager.jpg">
-            </div>
-            </section>
-
-            <section> 
-            <div style="position: absolute; left: 0px; top 200px;">
-            <img style="border: 0px;" width="300" height"500" src="images/NanoSingleMolecules.jpg">
-            </div>
-            <div style="position: absolute; left: 320px; top 200px;">
-            <img style="border: 0px;" width="300" height"500" src="images/NanoImagerBeads.jpg">
-            </div>
-            <div style="position: absolute; left: 640px; top 200px;">
-            <img style="border: 0px;" width="300" height"500" src="images/alignment.jpg">
-            </div>
-            </section>
 
             <section data-background-image="http://valelab4.ucsf.edu/~nstuurman/images/GroupMeeting20170713/lab.jpg">
                   <h3>Thank you!</h3>
@@ -177,11 +101,17 @@
             center: false,
             width: 960,
             height: 700,
+            // other options ...
+            math: {
+               mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+               config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+            },
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/math/math.js', async: true }  
 				]
 			});
 		</script>
