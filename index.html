@@ -57,6 +57,7 @@
 
             <section data-background-image="images/noise.jpg">
             <h3> Measure electron conversion factor from Photon shot noise</h3>
+            <div style="position:absolute; left: 50px; top: 200px;">
             DN = k * N &nbsp;&nbsp;&nbsp;&nbsp; (1)<br>
             <div style="font-size: 24px">
             N - number of photons<br>
@@ -64,9 +65,10 @@
             DN - digital number<br>
             &radic;N - photon shot noise<br>
             </div>
+            </div>
 
             <br>
-            <div class="fragment">
+            <div class="fragment" style="position: absolute; left:500px; top 180px;">
             <div style="font-size: 24px">
             If only noise is shot noise, then:<br>
             </div>
@@ -77,7 +79,7 @@
             &sigma;(DN) = k * &radic;(N) &nbsp;&nbsp;&nbsp;&nbsp; (2)<br>
             </div>
             <br>
-            <div class="fragment">
+            <div class="fragment" style="position:absolute; left: 300px; top: 450px;">
               so: $$k = {\sigma{DN}}^2 /  DN$$
             </div>
             </section>
@@ -93,6 +95,9 @@
             <div class="fragment" style="position:absolute; left:450px; top:250px;"> 
             <img width="743" height="200" style="border: 0px; align-right;" src="images/analyzeMethod.jpg">
             </div>
+            <div class="fragment" style="position:absolute; left:450px; top:500px;"> 
+            <img width="765" height="175" style="border: 0px; align-right;" src="images/analysisProps.jpg">
+            </div>
             </section>
 
             <section>
@@ -101,14 +106,32 @@
             </section>
 
             <section>
-            <h3>Alternatives:</h3>
+            <h3>Image analysis library Alternatives:</h3>
             <img width="536" height="211" style="border: 0px; align-right;" src="images/imglib2.jpg">
             <div class="fragment">
-              <img width="594" height="215" style="border: 0px; align-right;" src="images/imgageJOps.jpg">
+              <img width="594" height="215" style="border: 0px; align-right;" src="images/imageJOps.jpg">
             </div>
-            Other java-based environments: <a href="http://iqm.sourceforge.net/">IQM</a>(dead?), <a href="http://icy.bioimageanalysis.org/">ICY</a>(api looks good, awful GUI).
+            </section>
+
+            <section>
+            <h3>Image analysis library Alternatives:</h3>
+            Other java-based environments: 
+            <ul>
+            <li><a href="http://iqm.sourceforge.net/">IQM</a>(dead?),</li>
+            <li><a href="http://icy.bioimageanalysis.org/">ICY</a>(api looks good, awful GUI).</li>
+            </ul>
             <br>
-            Other programming environments: <a href="http://scikit-image.org">Scikit-image(Python)</a>, <a href="https://opencv.org/">OpenCV</a>, has bindings to Java and Python, <a href="https://itk.org/">ITK</a> (from NLM, segementation and registration), <a href="http://www.diplib.org/news">DIPLib</a> (C/C++ library available from Matlab), <a href="https://ukoethe.github.io/vigra/">Vigra</a> (C++, good Python bindings.
+            <br>
+            <div class="fragment">
+            Other programming environments: 
+            <ul>
+            <li><a href="http://scikit-image.org">Scikit-image</a> (Python)</li>
+            <li><a href="https://opencv.org/">OpenCV</a> (has bindings to Java and Python)</li>
+            <li><a href="https://itk.org/">ITK</a> (from NLM, segementation and registration)</li>
+            <li><a href="http://www.diplib.org/news">DIPLib</a> (C/C++ library available from Matlab)</li>
+            <li><a href="https://ukoethe.github.io/vigra/">Vigra</a> (C++, good Python bindings)</li>
+            </ul>
+            </div>
             </section>
 
 
