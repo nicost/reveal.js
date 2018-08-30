@@ -24,17 +24,17 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section>
+        <section data-background-image="images/DreamCatcherAndCranes.jpg">
            <h3>Various microscopy improvements</h3>
            <br><br>
-           <ul>
+           <ul class="fragment" style="color: red;">
              <li>Organoid imaging improvements</li>
              <li>Yokogawa Super Resolution</li>
              <li>Quantitative Phase Microscopy</li>
              <li>Document filters of our microscopes</li>
              <li>GPU programming</li>
            </ul>
-           <div style="position: absolute; top: 575px; left: 450px;">
+           <div style="position: absolute; top: 600px; left: 450px;">
              <p style="text-align: right;">Nico Stuurman, 2018-08-31</p>
            </div>
         </section>
@@ -42,7 +42,10 @@
         <section>
            <p>diSPIM Organoid imaging: Decrease Spherical aberation by RI matching</p>
            <img with="281" height="82" style="border: 0px;" src="images/Iodixanol.png">
-           <p>20% Iodixanol (Optiprep) -> Ri ~ 1.36</p>
+           <div class="fragment">
+             <p>20% Iodixanol (Optiprep) -> Ri ~ 1.36</p>
+             <img with="300" height="300" style="border: 0px;" src="images/Iodixanol-structure.png">
+            </div> 
         </section>
 
         <section>
@@ -53,7 +56,7 @@
         </section>
 
         <section>
-           <p>Organoid membrane label DMEM 20% Optiprep</p>
+           <p>Organoid membrane label DMEM + 20% Optiprep</p>
            <video width="512" height="512" controls loop>
              <source src="images/OptiPrepStack.mp4">
            </video>
@@ -62,11 +65,43 @@
         <section>
            <p>diSPIM Organoid imaging: Decrease Spherical Aberation using a special lens</p>
           <img with="500" height="375" style="border: 0px;" src="images/ASI_Objective.jpg">
-
         </section>
 
-        <section>
-          <h3>Sample placement, bring sample up</h3>
+        <section>                                             
+          <p>Z-stack ASI objective</p>                        
+          <video width="600" height="600" controls loop>      
+            <source src="images/Stack_both_2-ASI.mp4">        
+          </video>                                            
+        </section>                                            
+                                                              
+        <section>                                             
+          <p>Z-stack Olympus objective</p>                    
+          <video width="600" height="600" controls loop>      
+            <source src="images/Stack_both_2-Olympust.mp4">   
+          </video>
+        </section>                                            
+
+        <section>                                             
+          <p>diSPIM: sample placement</p>                     
+          <img width="557" height="401" style="border: 0px;" src="images/diSPim-Nikon-Objectives.jpg">
+          <p style="font-size: 20px;">Olympus 20x objectives: "According to the manufacturer's drawings the objectives co-focus exactly when they touch, which also implies zero gap between objective and coverslip. However, in practice they co-focus with a gap comparable to the 40x/0.8, with ~200um between the objective bottom and coverslip."</p>
+        </section>                                            
+                                                              
+        <section>                                             
+          <p>diSPIM: sample placement</p>                     
+          <object type="image/svg" data="images/Coverslip.svg"></object>    
+        </section>                                            
+                      
+        <section>                                             
+          <p>diSPIM: sample placement, plan:</p>              
+          <div style="font-size: 24px;">                      
+            <ul>                                              
+              <li>Construct PDMS molds</li>                   
+              <li>Poor Matrigel with organoids in mold, place coverslip on top</li>
+              <li>Lift coverslip with Matrigel intact</li>    
+            </ul>                                             
+          </div>                                              
+          <object type="image/svg" data="images/NewCoverslip.svg"></object>
         </section>
 
         <section>
