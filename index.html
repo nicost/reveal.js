@@ -26,14 +26,15 @@
 			<div class="slides">
         <section data-background-image="images/DreamCatcherAndCranes.jpg">
            <h3>Various microscopy improvements</h3>
-           <br><br>
-           <ul class="fragment" style="color: red;">
-             <li>Organoid imaging improvements</li>
-             <li>Yokogawa Super Resolution</li>
-             <li>Quantitative Phase Microscopy</li>
-             <li>Document filters of our microscopes</li>
-             <li>GPU programming</li>
-           </ul>
+           <div style="position: absolute; top 50px; left: 10px;">
+              <ul class="fragment" style="color: white;">
+                <li>Organoid imaging improvements</li>
+                <li>Yokogawa Super Resolution</li>
+                <li>Quantitative Phase Microscopy</li>
+                <li>Document filters of our microscopes</li>
+                <li>GPU programming</li>
+              </ul>
+           </div>
            <div style="position: absolute; top: 600px; left: 450px;">
              <p style="text-align: right;">Nico Stuurman, 2018-08-31</p>
            </div>
@@ -159,14 +160,30 @@
 
         <section>
           <h3>Yokogawa SR: Results</h3>
+          Show comparison of three systems at same resolution
+        </section>
+
+        <section>
+          <h3>Yokogawa SR: Results</h3>
+          Show ArgoLight slide comparison
+        </section>
+
+        <section>
+          <h3>Yokogawa SR: Results</h3>
+          Video of live cell imageing using SR
         </section>
 
         <section>
           <h3>Quantitative Phase Microscopy: principle</h3>
           <p>Concept: deduce the "mass" of the sample.</p>
-          <p>Measure Phase by holographic methods or from brightfield z-stacks.</p>
-          <p>Z-stacks: Use Transport of Intensity Equation:</p>
+          <p class="fragment">Measure Phase by holographic methods or from brightfield z-stacks.</p>
+          <p class="fragment">Z-stacks: Use Transport of Intensity Equation:</p>
           <img with="512" height="92" style="border: 0px;" src="images/TIE.png">
+        </section>
+
+        <section>
+          <h3>In Focus</h3>
+          <img width="681" height="557" style="border: 0px;" src="images/RPE4-Focus.jpg">
         </section>
 
         <section>
@@ -174,11 +191,6 @@
           <video width="680" height="556" controls loop>
             <source src="images/RPE4-RawStack.mp4">
           </video>
-        </section>
-
-        <section>
-          <h3>In Focus</h3>
-          <img width="681" height="557" style="border: 0px;" src="images/RPE4-Focus.jpg">
         </section>
 
         <section>
@@ -202,8 +214,13 @@
             <source src="images/qpi-phase-dic.mp4">
           </video>
           <p style="font-size: 16px;">Zuo et al., https://dx.doi.org/10.1038/s41598-017-06837-1</p>
-
         </section>
+
+        <section>
+          <h3>Microscope filter documentation</h3>
+          <p>Talley Lambert's FPBase.org added capability to store microscope filter data and overlay with fluorophores</p>
+          <a href="https://valelab.ucsf.edu/~nico/microscopes">https://valelab.ucsf.edu/~nico</a>
+       </section>
 
         <section data-background-image="images/LabYoga.jpg">  
           <h3 style="color: red;">Thanks!</h3>
