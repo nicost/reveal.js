@@ -103,14 +103,59 @@
           </div>                                              
           <object type="image/svg" data="images/NewCoverslip.svg"></object>
         </section>
+ <section>
+          <h3>Yokogawa super-resolution demo</h3>
+          <p>Various instant super-resolution methods based on confocal re-assignmeneas</p>
+          <br>
+          <ul>                                                
+            <li>Optical Photon Reassignment (OPRA)</li>       
+            <li>instant SIM (iSIM)</li>                       
+            <li>Rescan confocal</li>                          
+            <li>Zeiss Airyscan confocal</li>                  
+            <li>Olympus and Yokogawa SR spinning disk</li>    
+          </ul>                                               
+        </section>                                            
+                                                              
+        <section>                                             
+          <p>ISR, principle:</p>
+          <img width="404" height="493" style="border: 0px;" src="images/ReassignmentPrinciple.jpg">                                          
+          <p style="font-size: 18px;"><a href="https://doi.org/10.1016/j.ymeth.2015.05.002">https://doi.org/10.1016/j.ymeth.2015.05.002</a></p>
+        </section>    
 
-        <section>
-          <h3>Yokogawa super-resolution: principle</h3>
-        </section>
+        <section>                                             
+          <p>ISR, principle:</p>                              
+          <img width="600" height="424" style="border: 0px;" src="images/OPRA-Principle.jpg">
+          <p style="font-size: 20px;">"most probable origin of the detected photons is at maximum of the joint probability function (i.e. the product of the individual probability functions) of excitation and (off-centre) detection."</p>
+          <p style="font-size: 18px;"><a href="https://doi.org/10.1186/2192-2853-2-5">https://doi.org/10.1186/2192-2853-2-5</a></p>
+        </section>  
+<section>                                             
+          <h3>Yokogawa SR: equipment</h3>                     
+          <img width="418" height="316" src="images/SR-Design1.png" style="border: 0px;">
+          <p style="font-size: 18px;"><a href="https://dx.doi.org/10.1364/oe.23.015003">https://dx.doi.org/10.1364/oe.23.015003</a></p>
+        </section>                                            
 
-        <section>
+        <section>                                             
           <h3>Yokogawa SR: equipment</h3>
+          <img width="500" height="333" style="border: 0px;" src="images/Yokogawa-SR.jpg">
+        </section>                                            
+
+        <section>                                             
+          <h3>Yokogawa SR: Results</h3>                       
+          <img width="512" height="512" style="border: 0px;" src="images/BPAE-Tub-CSU10-2.jpg">                                               
+          <p>BPAE cells MTs, CSU10</p>
         </section>
+
+        <section>
+          <h3>Yokogawa SR: Results</h3>                       
+          <img width="512" height="512" style="border: 0px;" src="images/BPAE-Tub-CSUSR-standard-2.jpg">
+          <p>BPAE cells MTs, CSUW1</p>                        
+        </section>                                            
+
+        <section>                                             
+          <h3>Yokogawa SR: Results</h3>
+          <img width="600" height="548" style="border: 0px;" src="images/BPAE-Tub-CSUSR-2.8.jpg">
+          <p>BPAE cells MTs, CSUW1SR</p>                      
+        </section>   
 
         <section>
           <h3>Yokogawa SR: Results</h3>
@@ -160,9 +205,9 @@
 
         </section>
 
-        <section>
-          <h3>QPI: Raw Data</h3>
-        </section>
+        <section data-background-image="images/LabYoga.jpg">  
+          <h3 style="color: red;">Thanks!</h3>
+        </section>  
 
 			</div>
 		</div>
@@ -175,6 +220,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        transition: 'none',
         center: false,
         width: 960,
         height: 700,
