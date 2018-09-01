@@ -270,7 +270,10 @@
         <section>
           <h3>Speed up image analysis code: GPU</h3>
           <p class="fragment">OpenCL or CUDA?</p>
-          <img class="fragment" width="126" height="154" style="border: 0px;" src="images/loic.jpg">
+          <div class="fragment">
+             <img width="126" height="154" style="border: 0px;" src="images/loic.jpg">
+             <p style="font-size: 24px;">Loic Royer</p>
+          </div>
           <p class="fragment">ClearCL facilitates using OpenCL.  Need to spend time to write simple stuff (start with flatfielding)</p>
         </section>
 
@@ -289,7 +292,7 @@
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
+		Reveal.initialize({
         transition: 'none',
         center: false,
         width: 960,
@@ -301,6 +304,19 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+         Reveal.configure({
+           keyboard: {
+             86: function vidplay() {
+               var vids = document.getElementsByTagName("video");
+               var i;
+               for (i=0; i<vids.length; i++) {
+                  var video = vids.item(i);
+                  if (video.paused == true) video.play();
+                  else video.pause();
+               }
+             }
+           }
+        });
 		</script>
 	</body>
 </html>
