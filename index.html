@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>JC-NS-20180409</title>
+		<title>JC-NS-20181022</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,77 +25,29 @@
 		<div class="reveal">
 			<div class="slides">
             <section>
-              <img width="825" height="261" src="images/Title.png"/>
+              <img width="808" height="441" src="images/Title.png"/>
             </section>
             <section>
-              <h3>Interferometric scattering microscopy (iSCAT)</h3>
-              <div style="position: absolute; top: 200px; left: 5px;">
-                <img style="border: 0px;" width="307" height="261" src="images/iSCAT.png"/>
-              </div>
-              <div class="fragment" style="position: absolute; top: 150px; left: 400px;">
-                <img style="border: 0px;" width="303" height="185" src="images/singleMol.jpg"/>
-              </div>
-              <div class="fragment" style="position: absolute; top: 350px; left: 310px;">
-                <img style="border: 0px;" width="548" height="188" src="images/SLB.jpg"/>
-              </div>
+              <img width="824" height="353" src="images/Fig1.jpg"/>
+              <br>
+              Tag: SON, labels Interchromatin Granular Clusters (aka Nuclear Speckles)
             </section>
-
             <section>
-              <h3>Actin and Myosin on bare glass</h3>
-              <div style="position: absolute; top: 200px; left: 140px;">
-                <img style="border: 0px;" width="695" height="203" src="images/fig1.jpg"/>
-              </div>
-              <div style="position: absolute; top: 450px; left: 350px;">
-                Actin
-              </div>
-              <div style="position: absolute; top: 450px; left: 500px;">
-                Myosin
-              </div>
-              
+              <img width="819" height="268" src="images/Fig4.jpg"/>
             </section>
-
             <section>
-              <h3>SLB-linked actin can be tracked</h3>
-              <div style="position: absolute; top: 200px; left: 40px;">
-                <video width="350" height="320" controls data-autoplay>
-                  <source src="images/actinfil.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="fragment" style="position: absolute; top: 240px; left: 400px;">
-                <img style="border: 0px;" width="513" height="202" src="images/actintracking.jpg"/>
-              </div>
-            </section>
-
+               <video width="748" height="724" controls loop>
+                 <source src="images/v3.mp4" type="video/mp4">
+               </video>
+           </section>
+           <section>
+              <img width="403" height="466" src="images/Fig7.jpg"/>
+           </section>
             <section>
-              <h3>Myosin filaments on SLB-bound actin</h3>
-              <div style="position: absolute; top: 200px; left: 180px;">
-                <video width="580" height="296" controls data-autoplay>
-                  <source src="images/myosin.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="fragment" style="position: absolute; top: 500px; left: 50px;">
-                Tracking results: two velocity classes (one side-bound versus two sides bound), <b>longer dwell times at low ATP results in contractile network.</b>
-              </div>
-            </section>
-
-            <section>
-              <h3>Transition from remodeling to contractile state by ATP depletion</h3>
-              <div style="position: absolute; top: 130px; left: 120px;">
-                <video width="672" height="672" controls data-autoplay loop>
-                  <source src="images/remodeling.mp4" type="video/mp4">
-                </video>
-              </div>
-            </section>
-
-            <section>
-              <h3>Observation of vortices</h3>
-              <div style="position: absolute; top: 150px; left: 180px;">
-                <video width="540" height="470" controls data-autoplay loop>
-                  <source src="images/vortex.mp4" type="video/mp4">
-                </video>
-              </div>
-            </section>
-
+               <video width="768" height="484" controls loop>
+                 <source src="images/v9.mp4" type="video/mp4">
+               </video>
+           </section>
 			</div>
 		</div>
 
@@ -107,6 +59,8 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        transition: 'none',
+        autoPlayMedia: 'false',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
