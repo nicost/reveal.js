@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Groupmeeting 2018-12-14</title>
+		<title>NS 2018-12-14</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,11 +25,12 @@
 		<div class="reveal">
 			<div class="slides">
 
- 			<section>
-          <h3>Microscopy and analysis</h3>
-          <ul>
+ 			<section data-background-image="images/ViewFromTam.jpg">
+          <h3 style="color: black;">Microscopy and analysis</h3>
+          <ul class="fragment" style="color: black">
             <li>diSPIM: organoid mounting</li>
             <li>diSPIM: refractive index matching and remote focus</li>
+            <li>OR-Gate device</li>
             <li>Live photo-bleaching and analysis</li>
           </ul>
           <div style="position: absolute; top: 575px; left: 450px;">
@@ -38,31 +39,63 @@
         </section>
 
         <section>
-           <h3>diSPIM: origanoid mounting</h3>
-            <object type="image/svg" data="images/Coverslip.svg"></object>
+           <h3>diSPIM: organoid mounting</h3>
+
+           <div style="position: absolute; top: 150px; left: 200px;">
+              <img height="400" width="500" style="border: 0px;" src="images/Coverslip.svg">
+           </div>
         </section>
 
         <section>
            <h3>Matrigel mold using PDMS</h3>
            <div>Poor Matrigel/organoids in mold, harden, invert, remove PDMS</div>
-           <h3>FAIL<h3>
+           <div class="fragment">
+           <img height="279" width="425" style="border: 0px;" src="images/mold1.jpg">
+           </div>
+
+        </section>
+        <section>
+           <h3>Matrigel mold using PDMS</h3>
+           <div>Poor Matrigel/organoids in mold, harden, invert, remove PDMS</div>
+           <img height="325" width="400" style="border: 0px;" src="images/mold2.jpg">
+           <h3 class="fragment" style="color: red;">FAIL<h3>
         </section>
             
         <section>
            <h3>diSPIM: origanoid mounting</h3>
-           <div>Oxygen plasma treat coverslip </div>
-            <object type="image/svg" data="images/Coverslip.svg"></object>
+           <div>Oxygen plasma treated coverslip </div>
+           <div>
+              <img height="400" width="500" style="border: 0px;" src="images/Coverslip.svg">
+           </div>
         </section>
         
         <section>
             <h3>diSPIM: refractive index matching and remote focus</h3>
-            insert 3D design of sample chamber
+            <video width="800" height="500" controls loop>
+               <source data-src="images/diSPIM_Sample_holder.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section>
            <h3>Design of remote focus</h3>
            Objective, remove scanner
            Reverting to current will take ~1hr
+        </section>
+
+        <section>
+           <h3>OR-Gate device</h3>
+           <br><br>
+           <ul id="fragments">
+           <li class="fragment">Hardware synchronization using electrical signals</li>
+           <li class="fragment">Problem: combining signals from multiple cameras</li>
+           <li class="fragment">Solution: Powered, logical OR gate</li>
+           <li class="fragment">Now reproducible design</li>
+           </ul>
+        </section>
+        <section>
+           <h3>OR-Gate device</h3>
+           <img width="450" height="600" style="border: 0px;" src="images/ORGate-1.jpg">
+           <img width="450" height="600" style="border: 0px;" src="images/ORGate2.jpg">
         </section>
 
         <section>
@@ -89,6 +122,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        transition: 'none',
         center: false,
         width: 960,
         height: 700,
@@ -99,6 +133,20 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		   Reveal.configure({
+           keyboard: {
+             86: function vidplay() {
+               var vids = document.getElementsByTagName("video");
+               var i;
+               for (i=0; i<vids.length; i++) {
+                  var video = vids.item(i);
+                  if (video.paused == true) video.play();
+                  else video.pause();
+               }
+             }
+           }
+        });
+
 		</script>
 	</body>
 </html>
