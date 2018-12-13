@@ -27,11 +27,11 @@
 
  			<section data-background-image="images/ViewFromTam.jpg">
           <h3 style="color: black;">Microscopy and analysis</h3>
-          <ul class="fragment" style="color: black">
-            <li>diSPIM: organoid mounting</li>
-            <li>diSPIM: refractive index matching and remote focus</li>
-            <li>OR-Gate device</li>
-            <li>Live photo-bleaching and analysis</li>
+          <ul id="fragments" style="color: black">
+            <li class="fragment">diSPIM: organoid mounting</li>
+            <li class="fragment">diSPIM: refractive index matching and remote focus</li>
+            <li class="fragment">OR-Gate device</li>
+            <li class="fragment">Live photo-bleaching and analysis</li>
           </ul>
           <div style="position: absolute; top: 575px; left: 450px;">
             <p style="text-align: right;">Nico Stuurman, 2018-12-14</p>
@@ -40,32 +40,31 @@
 
         <section>
            <h3>diSPIM: organoid mounting</h3>
-
-           <div style="position: absolute; top: 150px; left: 200px;">
-              <img height="400" width="500" style="border: 0px;" src="images/Coverslip.svg">
+           <div style="position: absolute; top: 180px; left: 250px;">
+              <img height="312" width="360" style="border: 0px;" src="images/Drop1.jpg">
            </div>
         </section>
 
         <section>
            <h3>Matrigel mold using PDMS</h3>
-           <div>Poor Matrigel/organoids in mold, harden, invert, remove PDMS</div>
+           <div>Pour Matrigel/organoids in mold, harden, invert, remove PDMS</div>
            <div class="fragment">
            <img height="279" width="425" style="border: 0px;" src="images/mold1.jpg">
            </div>
-
         </section>
+
         <section>
            <h3>Matrigel mold using PDMS</h3>
-           <div>Poor Matrigel/organoids in mold, harden, invert, remove PDMS</div>
+           <div>Pour Matrigel/organoids in mold, harden, invert, remove PDMS</div>
            <img height="325" width="400" style="border: 0px;" src="images/mold2.jpg">
            <h3 class="fragment" style="color: red;">FAIL<h3>
         </section>
             
         <section>
-           <h3>diSPIM: origanoid mounting</h3>
-           <div>Oxygen plasma treated coverslip </div>
-           <div>
-              <img height="400" width="500" style="border: 0px;" src="images/Coverslip.svg">
+           <h3>diSPIM: organoid mounting</h3>
+           <div>Solution: Oxygen plasma treated coverslip </div>
+           <div style="position: absolute; top: 250px; left: 250px;">
+              <img height="312" width="360" style="border: 0px;" src="images/drop2.jpg">
            </div>
         </section>
         
@@ -78,20 +77,39 @@
 
         <section>
            <h3>Design of remote focus</h3>
-           Objective, remove scanner
-           Reverting to current will take ~1hr
+           <video width="500" height="400" controls loop>
+             <source data-src="https://calico.github.io/remote_refocus/images/RR_animation/fast.mp4" type="video/mp4">
+           </video>
+           <div style="font-size: 15px;">
+             Millett-Sikkinget al., https://calico.github.io/remote_refocus/
+           </div>
+        </section>
+
+        <section>
+          <h3>Design of remote focus</h3>
+             <img height="173" width="975" style="border: 0px;" src="images/remoteFocusSchematic.jpg">
+             <div style="font-size: 15px;">
+               Botcherby et al., https://doi.org/10.1016/j.optcom.2007.10.007
+            </div>
+            <br>
+           <ul style="font-size: 36px;">
+             <li class="fragment">L2: Optimum mag: M(L1)/(n1/n2) ~ 16/1.33 = 12</li>
+             <li class="fragment">Design: L2=10xNA 0.4(Olympus), L3=20x0.75NA (Nikon) </li>
+             <li class="fragment">4f design: Remove scanner.  Reverting to current config will take ~ 1 hour</li>
+           </ul>
         </section>
 
         <section>
            <h3>OR-Gate device</h3>
            <br><br>
            <ul id="fragments">
-           <li class="fragment">Hardware synchronization using electrical signals</li>
+           <li>Hardware synchronization using electrical signals</li>
            <li class="fragment">Problem: combining signals from multiple cameras</li>
            <li class="fragment">Solution: Powered, logical OR gate</li>
-           <li class="fragment">Now reproducible design</li>
+           <li class="fragment">Now have reproducible design</li>
            </ul>
         </section>
+
         <section>
            <h3>OR-Gate device</h3>
            <img width="450" height="600" style="border: 0px;" src="images/ORGate-1.jpg">
@@ -103,13 +121,52 @@
             <div>Plan:</div>
             <ul>
                <li>Record "live", use "point and shoot" to bleach moving organelles</li>
-               <li>Analysis: Automatically find bleach spot, </li>
-               <li>Stage 1: Get intensity at bleach spot over time</li>
-               <li>Stage 2: Track particle, then get intensity as function of time, of bleached spt and particle</li>
-               <li>Calculate exchange within particle and between particle and outsise</li>
+               <li class="fragment">Analysis: Automatically find bleach spot, </li>
+               <li class="fragment">Stage 1: Get intensity at bleach spot over time</li>
+               <li class="fragment">Stage 2: Track particle, then get intensity as function of time, for bleached are and particle</li>
+               <li class="fragment">Calculate exchange within particle and between particle and outsise</li>
             </ul>
         </section>
 
+        <section>
+            <h3>Live photo-bleaching and analysis</h3>
+            <video width="512" height="512" controls loop>
+               <source data-src="images/pas.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section>
+           <h3>Live photo-bleaching and analysis</h3>
+           <img width="535" height="440" style="border: 0px;" src="images/pasWindow1.jpg">
+        </section>
+
+        <section>
+           <h3>Live photo-bleaching and analysis</h3>
+           <img width="535" height="440" style="border: 0px;" src="images/pasWindow2.jpg">
+        </section>
+
+        <section>
+           <h3>Live photo-bleaching and analysis</h3>
+           <img width="309" height="233" style="border: 0px;" src="images/pasLogWindow.jpg">
+           <div class="fragment">
+             <img width="793" height="151" style="border: 0px;" src="images/pasTimestamp.jpg">
+           </div>
+        </section>
+
+        <section>
+           <h3>Live photo-bleaching and analysis</h3>
+           <img width="571" height="217" style="border: 0px;" src="images/pasPlugin.jpg">
+           <div class="fragment" style="position: absolute; top: 100px; left: 190px;">
+             <img width="578" height="486" style="border: 0px;" src="images/pasCurves.jpg">
+           </div>
+           <div class="fragment" style="position: absolute; top: 600px; left: 100px;">
+             Next: track particles by cross-correlation
+           </div>
+        </section>
+
+ 			<section data-background-image="images/lab.jpg">
+        <h3 style="color: red;">Thank you all!!!</h3>
+      </section>
 
 			</div>
 		</div>
