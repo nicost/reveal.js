@@ -29,17 +29,24 @@
             </section>
 
             <section>
-              <img width="296" height="290" src="images/LaserParticle.jpg"/>
-              <div class="fragment">
+              <div style="position: absolute; top: 0px; left: 50px;">
+                <img width="296" height="290" src="images/LaserParticle.jpg"/>
+              </div>
+              <div style="position: absolute; top: 35px; left: 396px;" class="fragment">
                 <img width="412" height="221" src="images/Fig1c.jpg"/>
               </div>
-              <div class="fragment">
+              <div style="position: absolute; top: 325px; left: 0px;" class="fragment">
                 <img width="512" height="294" src="images/Fig1f-h.jpg"/>
+              </div>
+              <div style="position: absolute; top: 325px; left: 520px;" class="fragment">
+                <img width="390" height="297" src="images/Fig3a.jpg"/>
               </div>
             </section>
 
             <section>
-              <img width="390" height="297" src="images/Fig3a.jpg"/>
+              <div style="position: absolute; top: 125px; left: 5px;">
+                <img width="891" height="339" src="images/Fig2.jpg"/>
+              </div>
             </section>
 
             <section>
@@ -81,6 +88,9 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
         transition: 'none',
+        center: false,
+        width: 960,
+        height: 700, 
         autoPlayMedia: 'false',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
