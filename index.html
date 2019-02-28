@@ -78,6 +78,21 @@
 
         <section>
            <h3>diSPIM remote focus</h3>
+           <div style="position: absolute; top: 240px; left: 50px;">
+             <img width="131" height="186" style="border: 0px;" src="images/daniel1.jpg">
+             <br>
+             <div style="font-size: 18px">Daniel Elnatan</div>
+           </div>
+           <div style="position: absolute; top: 150px; left: 300px;">
+            <video width="386" height="386" controls loop>
+               <source data-src="images/averagedPSF.mp4" type="video/mp4">
+            </video>
+           </div>
+        </section>
+
+        <section>
+           <h3>diSPIM remote focus</h3>
+           <br>
             <video width="370" height="368" controls loop>
                <source data-src="images/hydra-myosinGFP_1-Slice.mp4" type="video/mp4">
             </video>
@@ -85,7 +100,7 @@
 
         <section>
            <h3>diSPIM remote focus</h3>
-            <video width="682" height="650" controls loop>
+            <video width="652" height="618" controls loop>
                <source data-src="images/hydra-myosinGFP_1-CV.mp4" type="video/mp4">
             </video>
         </section>
@@ -149,7 +164,7 @@
 
         <section>
             <h3>Live photo-bleaching and analysis</h3>
-            <video width="512" height="512" controls loop>
+            <video width="512" height="512" controls>
                <source data-src="images/pasDemo.mp4" type="video/mp4">
             </video>
         </section>
@@ -161,7 +176,7 @@
 
         <section>
             <h3>Live photo-bleaching and analysis</h3>
-            <img width="396" height="390" style="border: 0px" src="images/MMDisplayBleachTrack.jpg">
+            <img width="198" height="195" style="border: 0px" src="images/MMDisplayBleachTrack.jpg">
             <img width="680" height="561" style="border: 0px" src="images/BleachIntensityA.jpg">
         </section>
 
@@ -173,6 +188,8 @@
         <section>
             <h3>Live photo-bleaching and analysis</h3>
             <img width="670" height="416" style="border: 0px" src="images/BleachFit.jpg">
+            <div style="font-size: 28px;">$$y = a (1 - e^{(-kx + b)})$$</div>
+            <div style="font-size: 28px;">immobile fraction: 1 - a</div>
         </section>
 
         <section>
@@ -182,26 +199,27 @@
 
         <section>
            <h3>Live photo-bleaching and analysis</h3>
-           <img width="535" height="440" style="border: 0px;" src="images/pasWindow1.jpg">
+           <img width="677" height="418" style="border: 0px;" src="images/particleBleachFit.jpg">
+            <div style="font-size: 28px;">$$y = c + kx$$</div>
         </section>
 
         <section>
            <h3>Live photo-bleaching and analysis</h3>
-           <img width="309" height="233" style="border: 0px;" src="images/pasLogWindow.jpg">
-           <div class="fragment">
-             <img width="793" height="151" style="border: 0px;" src="images/pasTimestamp.jpg">
+           <div style="font-size: 32px;">n=20<br/><br/>
+             Bleach mobile fraction:  0.83 &pm; 0.16<br/><br/>
+             Bleach Spot t1/2: &nbsp;&nbsp;       2.9 &pm; 1.3s<br/><br/>
+             Bleach Spot k:  &nbsp;        \(3.0*10^{-4}\) &pm; \(1.8*10^{-4}\)</br><br/>
+             Particle k:  &nbsp;&nbsp;     \(9.3*10^{-6}\) &pm; \(1.2*10^{-5}\)<br/>
            </div>
         </section>
 
         <section>
            <h3>Live photo-bleaching and analysis</h3>
-           <img width="571" height="217" style="border: 0px;" src="images/pasPlugin.jpg">
-           <div class="fragment" style="position: absolute; top: 100px; left: 190px;">
-             <img width="578" height="486" style="border: 0px;" src="images/pasCurves.jpg">
-           </div>
-           <div class="fragment" style="position: absolute; top: 600px; left: 100px;">
-             Next: track particles by cross-correlation
-           </div>
+           <div style="font-size: 32px;">However,</div>
+            <video width="512" height="512" controls loop>
+               <source data-src="images/badPASAnalysis.mp4" type="video/mp4">
+            </video>
+
         </section>
 
  			<section data-background-image="images/lab.jpg">
@@ -223,11 +241,16 @@
         center: false,
         width: 960,
         height: 700,
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+        },
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/math/math.js', async: true }
 				]
 			});
 		   Reveal.configure({
