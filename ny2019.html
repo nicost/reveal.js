@@ -1,0 +1,771 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Nico, ny-2019</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+      <script src="lib/js/plotly-latest.min.js"></script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+            <section  data-background-image="images/ViewFromTam.jpg">
+               <h4 style="color: black;">Tools for Cell Biologists using Microscopes</h4>
+                  <div class="fragment fade-up" style="position: absolute; left: 310px; top: 125px;">
+                    <img src="images/SeriousLab2019.jpg" style="border: 0px;" width="615" height="410" />
+
+                  </div>
+               <p style="text-align: right; font-size: 24px; position: absolute; top: 610px; right: 15px;"><i>Nico Stuurman, Vale lab, UCSF/HHMI</i></p>
+            </section>
+
+
+            <section data-background-image="images/mmLogo.png">
+               <br>
+               <h4>&mu;Manager - Open Source Software For Microscopes</h4>
+                <div style="position: absolute; left: 150px; top: 150px;">
+                  <img class="plain" src="images/Micro-ManagerWindow.png" width="453" height="175" />
+                </div>
+
+                <div style="position: absolute; left: 655px; top: 150px;">
+                  <img class="plain" src="images/ImageJ.png" width="398" height="50" />
+                </div>
+
+                <div style="position: absolute; left: 125px; top: 400px; line-height: 1.5">
+                  <ul>
+                    <li class="fragment">Supports devices from >150 vendors</li>
+                    <li class="fragment">Code contributions from >100 authors</li>
+                    <li class="fragment">>40,000 registered users, >6,000 microscopes</li>
+                    <li class="fragment">>5,000 mentions (G Scholar), cited >1,500 times</li>
+                  </ul>
+                </div>
+            </section>
+
+            <section>
+              <h4>diSPIM: &mu;Manager as User Interface</h4>
+              <div style="position:absolute; top: 75px; left: 193px;">
+                <img class="plain" src="images/hariDiSPIM.jpg" width="859" height="540">
+                <div style"position: absolute; top: 425px; left: 300px;">
+                  Hari Shroff (NIH)
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h4>diSPIM: &mu;Manager as User Interface</h4>
+								<div style="position:absolute; top: 100px; left: 0px;">
+									<img style="border: 0px;" width="172" height="172" src="images/jonDaniels.jpg">
+                 <div style="font-size: 20px; position: absolute; left: 8px; top: 192px;">Jon Daniels (ASI)</div>
+              </div>
+              <div style="position:absolute; top: 260px; left: 176px;">
+                <img style="border: 0px;" width="893" height="395" src="images/diSPIM.jpg">
+              </div> 
+						</section>
+
+            <section>
+              <h4>diSPIM: Live tissue imaging</h4>
+              <div style="position:absolute; top: 50px; left: 100px;">
+                 <img style="border: 0px;" width="150" height="147" src="images/Kara.jpg">
+                 <div style="font-size: 20px; position: absolute; left: 20px; top:165px;">Kara McKinley</div>
+              </div>
+              <div style="font-size: 28px; position: absolute; left: 275px; top: 80px;">Organoid cell biology</div>
+              <div class="fragment" style="position:absolute; top: 300px; left:125px;">
+                  <img class="plain" src="images/diSPIM-Incubator-v2.jpg" width="320" height="240"/>
+                 <p style="text-align: left; font-size: 24px; position: absolute; top: 260px; left: 5px;">https://valelab.ucsf.edu/~nico</p>
+               </div>
+
+               <div class="fragment" style="position:absolute; left:500px; top:150px;">
+                <video width="512" height="512" controls autoplay loop>
+                  <source src="images/h2bmoviedispim.mp4" type="video/mp4">
+                </video>  
+               </div>
+
+               <p style="text-align: left; font-size: 24px; position: absolute; top: 635px; left: 15px;">doi: 10.7554/eLife.36739</p>
+            </section>
+
+            <section>
+              <h4>diSPIM: Live tissue imaging</h4>
+
+               <div style="position:absolute; left:150px; top:100px;">
+                <video width="512" height="512" controls loop>
+                  <source src="images/zStack-tl_1-proj.mp4" type="video/mp4">
+                </video>  
+               </div>
+               <div style="font-size: 32px; position: absolute; left: 700px; top:300px;">
+                  9 day old mouse embryo, Arl31b-GFP <br>(Markus Delling, UCSF)
+               </div>
+            </section>
+
+            <section>
+              <h4>3D Viewer in &mu;Manager</h4>
+               <div style="position:absolute; left:100px; top:100px;">
+                <video width="512" height="512" controls loop>
+                  <source src="images/3D.mp4" type="video/mp4">
+                </video>  
+               </div>
+               <div style="position: absolute; left: 700px; top:100px;">
+                  <img class="plain" width="450" height="387" src="images/3DUI.png">
+                  <div style="font-size: 32px; position: absolute; left: 0px; top:450px;">
+                     Uses ClearVolume API by Loic Royer (MPI-Dresden, BioHub-SF)
+                  </div>
+               </div>
+            </section>
+
+            <section>
+              <h4>Automated FRAP analysis</h4>
+                <div style="position:absolute; top: 60px; right: 250px;">
+                  <img style="border: 0px;" width="161" height="166" src="images/Jess.jpg">
+               </div>
+               <div style="font-size: 20px; position: absolute; right: 50px; top:100px;">Jess Sheu-Gruttadauria
+               </div>
+
+               <div style="position:absolute; left:100px; top:130px;">
+                <video width="512" height="512" controls>
+                  <source src="images/U2OS.mp4" type="video/mp4">
+                </video>  
+               </div>
+
+               <div class="fragment current-visible" style="position:absolute; top: 250px; right: 0px;">
+                  <img class="plain"  width="540" height="302" src="images/PASUI.png">
+               </div>
+
+                <div class="fragment current-visible" style="position:absolute; top: 250px; right: 0px;">
+                  <img class="plain"  width="639" height="458" src="images/PASControl.png">
+               </div>
+                <div class="fragment current-visible" style="position:absolute; top: 250px; right: 0px;">
+                  <img class="plain"  width="639" height="458" src="images/PASBleachFit.png">
+               </div>
+                <div class="fragment current-visible" style="position:absolute; top: 350px; right: 0px;">
+                  <img class="plain"  width="639" height="99" src="images/PASResult.png">
+               </div>
+
+            </section>
+
+
+             <section data-background-image="images/2ColorBeads.jpg">
+					 <h4>Nanometer accuracy measurements of distances between fluorophores</h4>
+					 <div class="fragment fade-up" style="position: absolute; left: 50px; top: 150px;">
+						<img src="images/Ron.jpg" style="border: 0px;" width="296"height="360" /><br>Ron Vale
+					</div>
+					 <div class="fragment fade-left" style="position: absolute; right: 50px; top: 150px;">
+                    <img src="images/Stefan.jpg" style="border: 0px;" width="296" height="360" /><br>Stefan Niekamp
+                </div>
+             </section>
+
+				 <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Why bother with single molecule direct distance measurements?</h4>
+
+				</section>
+
+            <section>
+              <h4>Direct distance measurements</h4>
+               <div class="fragment current-visible preload" data-fragment-index="1" style="position: absolute; left: 492px; top: 240px;">
+                 <img style="border: 0px;" width="329" height="275" src="images/kinesinCartoon.png">
+              </div>
+              <div class="fragment" data-fragment-index="2"style="position: absolute; left:722px; top: 200px;">
+                <img style="border: 0px;" width="340" height="340" src="images/2ColorBeads-1.jpg">
+             </div>
+              <div class="fragment" data-fragment-index="3" style="position: absolute; left:232px; top: 180px;">
+                <img width="360" height="360" src="images/2ColorBeadsZoom.jpg">
+              </div>
+               <svg  width="1245px" height="700px" style="overflow: visible;">
+               <g class="fragment" data-fragment-index="3">
+               <line x1="592" y1="110" x2="742" y2="145" stroke="#bb0" stroke-width="3" />
+               <line x1="592" y1="470" x2="742" y2="150" stroke="#bb0" stroke-width="3" />
+               </g>
+               </svg>
+           </section>
+
+            <section data-transition="none">
+               <h4>Direct distance measurements</h4>
+               <div style="position:absolute; left: 232px; top: 120px; width: 400px;">
+                 <div style="position: absolute; left: 20px;">
+                   MLE - Gaussian Fit
+                 </div>
+                 <div style="position:absolute; left: 0px; top: 60px;">
+                  <img width="360" height="360" src="images/2ColorBeadsFit.jpg">
+                 </div>
+               </div>
+               <div class="fragment" style="position:absolute; left: 692px; top:120px; width: 400px;">
+                 <div style="position: absolute; left: 100px;">
+                   Register
+                 </div>
+                 <div style="position:absolute; left: 0px; top: 60px;">
+                  <img width="360" height="360" src="images/2ColorBeadsFitRegistered.jpg">
+                 </div>
+               </div>
+            </section>
+
+            <section>
+               <h4>How To Measure Distances</h4>
+               <svg width="100%" height="20%" style="overflow: visible;">
+                  <defs>
+                     <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                     </filter>
+                  </defs>
+                  <circle cx="272" cy="100" r="18" stroke-width="0" fill="red" filter="url(#blur)" />
+                  <circle cx="972" cy="100" r="18" stroke-width="0" fill="blue" filter="url(#blur)" />
+                  <g class="fragment">
+                  <text x="572" y="90" fill="white"><tspan>d<tspan dy="4">1</tspan></tspan></text>
+                     <line x1="272" y1="100" x2="972" y2="100" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="266" y="106" fill="white" font-size="24">x</text>
+                     <text x="966" y="106" fill="white" font-size="24">x</text>
+
+                  </g>
+                  <g class="fragment">
+                  <text x="450" y="90" fill="white"><tspan>d<tspan dy="4">2</tspan></tspan></text>
+                     <line x1="274" y1="98" x2="976" y2="105" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="268" y="104" fill="white" font-size="24">x</text>
+                     <text x="970" y="111" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                  <text x="672" y="90" fill="white"><tspan>d<tspan dy="4">3</tspan></tspan></text>
+                     <line x1="262" y1="108" x2="960" y2="96" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="258" y="114" fill="white" font-size="24">x</text>
+                     <text x="954" y="102" fill="white" font-size="24">x</text>
+                  </g>
+               </svg>
+               <div class="fragment current-visible">$$d=\left(\dfrac{\sum_{i=1}^{n} d_i}{n}\right)$$</div>
+
+               <svg width="100%" height="20%" style="overflow: visible;">
+                  <defs>
+                     <radialGradient id="gradRed" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(255,0,0); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+                     </radialGradient>
+                     <radialGradient id="gradBlue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(0,0,255); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+    </radialGradient>
+                  </defs>
+                  <g class="fragment">
+                     <circle cx="572" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
+                     <circle cx="772" cy="150" r="200" stroke-width="0" fill="url(#gradBlue)" />
+                  </g>
+                  <g class="fragment">
+                  <text x="522" y="90" fill="white"><tspan>d<tspan dy="4">1</tspan></tspan></text>
+                     <line x1="472" y1="100" x2="872" y2="150" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="466" y="106" fill="white" font-size="24">x</text>
+                     <text x="876" y="156" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <text x="822" y="90" fill="white"><tspan>d<tspan dy="4">2</tspan></tspan></text>
+                     <line x1="622" y1="98" x2="822" y2="105" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="616" y="104" fill="white" font-size="24">x</text>
+                     <text x="816" y="111" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <text x="672" y="130" fill="white"><tspan>d<tspan dy="4">3</tspan></tspan></text>
+                     <line x1="547" y1="175" x2="847" y2="85" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="541" y="181" fill="white" font-size="24">x</text>
+                     <text x="839" y="91" fill="white" font-size="24">x</text>
+                  </g>
+                  <text class="fragment" x="972" y="200" fill="white" font-size="150">?</text>
+               </svg>
+            </section>
+
+            <section>
+               <h4>How To Measure Distances</h4>
+               <svg width="100%" height="50%" style="overflow: visible;">
+                  <g>
+                     <circle class="fragment current-visible preload" cx="572" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
+                     <circle cx="772" cy="150" r="200" stroke-width="0" fill="url(#gradBlue)" />
+                  </g>
+                  <g class="fragment">
+                     <!-- build a cross in the center -->
+                     <line x1="552" y1="150" x2="592" y2="150" stroke="white" stroke-width="5" />
+                     <line x1="572" y1="130" x2="572" y2="170" stroke="white" stroke-width="5" />
+                     <!--                     <circle cx="400" cy="150" r="200" stroke="black" stroke-width="5" stroke-dasharray="10,10" fill="none"  -->
+                     <path d="M713 9 A 200 200, 0, 0, 1, 713 291" fill="none" stroke="white" stroke-width="5" stroke-dasharray="10,10" />
+                  </g>
+
+                  <g class="fragment">
+                     <line x1="572" y1="150" x2="775" y2="125" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="597" y="131" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <line x1="572" y1="150" x2="815" y2="185" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="809" y="191" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <line x1="572" y1="150" x2="858" y2="55" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="752" y="61" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <line x1="572" y1="150" x2="829" y2="288" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="752" y="61" fill="white" font-size="24">x</text>
+                  </g>
+                  <g class="fragment">
+                     <line x1="572" y1="150" x2="829" y2="288" style="stroke:rgb(255,255,255);stroke-width:2" />
+                     <text x="823" y="294" fill="white" font-size="24">x</text>
+                  </g>
+                  <circle class="fragment" cx="572" cy="150" r="200" stroke-width="0" fill="url(#gradRed)" />
+               </svg>
+               <br><br>
+               <div class="fragment" id="plot1" style="margin: auto; width:500px; height:400px"></div>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>How To Measure Distances</h4>
+               <div style="font-size: 28px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
+                  <br>
+                  <div style="font-size: 24px;">
+                     r (measured distance), &mu; (actual distance), &sigma;<sub>d</sub> (distance uncertainty), <br>I<sub>0</sub> (modified Bessel function of integer order zero), Churchman et al, PNAS 102 (2005)
+                  </div>
+               </div>
+                  <table>
+                  <tr>
+                  <td style="vertical-align: middle;">
+                  <div class="fragment" id="plot2" style="margin: auto; width:500px; height:400px">
+                  </div>
+                  <div class="fragment" id="plot2b"></div>
+                  </td>
+                  <td class="fragment" style="vertical-align: middle;">
+                    <img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" />
+                  </td>
+                  </tr>
+                  </table>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+                  <p>DISTANCE ESTIMATE FROM P<sub>2</sub>D FIT FAILS WHEN <br> &mu; <= &sigma;<sub>d</sub></p>
+                  <table>
+                  <tr>
+                  <td style="vertical-align: middle;"><div id="plotChP2D" style="width:499px; height:450px;"></div></td>
+                  <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="446" height="350" src="images/Figure_1d.jpg" /></td>
+                  </tr>
+                  </table>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+                  <h4>Use Uncertainty Information to improve distance estimate</h4>
+                  <div>
+                  $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
+                  </div>
+                  <div class="fragment" id="plot3" style="margin: auto; width:550px; height:450px;"></div>
+                  <!--   <div class="fragment" id="plot3b"></div> -->
+                  <div class="fragment" id="plot3c"></div>
+               </section>
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Registration: Piece-Wise Affine Transform</h4>
+               <table align="center">
+                  <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="255" height="85" src="images/Slide.jpg"></td>
+                     <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="571" height="450" src="images/paff-20.jpg"></td>
+                  </tr>
+               </table>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Registration: Piece-Wise Affine Transform</h4>
+               <table align="center">
+                  <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="255" height="85" src="images/Slide.jpg"></td>
+                     <td style="vertical-align: middle;"><img style="border: 0px;" width="571" height="450" src="images/paff.jpg"></td>
+                  </tr>
+               </table>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Registration: Piece-Wise Affine Transform</h4>
+               <br>
+               <table align="center">
+                  <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="464" height="354" src="images/TSpeckHistogram.jpg"></td>
+                     <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="382" height="372" src="images/RegistrationError.jpg"></td>
+                  </tr>
+               </table>
+               </section>
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Registration: TetraSpeck bead color centers are offset</h4>
+               <br>
+               <table align="center">
+                  <tr><td style="vertical-align: middle;"><img style="border: 0px;" width="464" height="354" src="images/TSpeckHistogram.jpg"></td>
+                  <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="411" height="336" src="images/TetraspeckIndividuals.jpg"></td>
+                  </tr>
+               </table>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Validation: Kinesin bound to MicroTubules</h4>
+               <br>
+               <table align="center">
+                  <tr>
+                     <td style="vertical-align: middle;"><img style="border: 0px;" width="406" height="240" src="images/KinesinMTBound.jpg"></td>
+                  <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="594" height="454" src="images/KinesinMTBoundData2.jpg"></td>
+                  </tr>
+               </table>
+               </section>
+
+               <section data-transition="fade" data-transition-speed="slow">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <!--
+               <img style="border: 0px;" width="350" height="281" src="images/Vector.jpg" />
+               -->
+
+               <svg id="svgslide1" width="100%" height="100%" style="overflow: visible;">
+                  <defs>
+                     <radialGradient id="grad1Red" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(255,0,0); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+                     </radialGradient>
+                     <radialGradient id="grad1Blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(0,0,255); stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(33,33,33);stop-opacity:0" />
+    </radialGradient>
+                  </defs>
+               </svg>
+               <script src="lib/js/snap.svg-min.js"></script>
+               <script src="lib/js/snap-ext.svg.js"></script>
+               <script>
+                  var paper = Snap("#svgslide1");
+                  var redCircle = paper.circle(300, 300, 300);
+                  redCircle.attr( {
+                    strokewidth: '0',
+                    fill: "url(#grad1Red)"
+                  });
+                  var blueCircle = paper.circle(600, 300, 300);
+                  blueCircle.attr( {
+                    strokewidth: '0',
+                    fill: "url(#grad1Blue)"
+                  });
+                  var atr = {
+                    class: "fragment",
+                    stroke: "#ddd"
+                  };
+                  atr['data-fragment-index'] =  "1";
+                  atr['stroke-width'] = "4";
+                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var pair1 = [];
+                  var pair2 = [];
+                  for (var i = 0; i < 5; i++) {
+                     var angle1 = Math.random() * 2 * Math.PI;
+                     var dist1 = Math.random();
+                     dist1 = Math.floor (0.5 *  radius * dist1 );
+                     pair1.push( [x1 + dist1 * Math.sin(angle1),
+                        y1 + dist1 * Math.cos(angle1)] );
+                     var angle2 = Math.random() * 2 * Math.PI;
+                     var dist2 = Math.random();
+                     dist2 = Math.floor ( 0.5 * radius * dist2 );
+                     pair2.push( [x2 + dist2 * Math.sin(angle2),
+                        y2 + dist2 * Math.cos(angle2)] );
+                  }
+
+                  var gs = [];
+                  for (var i = 0; i < 5; i++) {
+                    atr['data-fragment-index'] =  i;
+                    var c1 = paper.cross.call(paper, pair1[i][0], pair1[i][1], 40, atr);
+                    var c2 = paper.cross.call(paper, pair2[i][0], pair2[i][1], 40, atr);
+                    var line = paper.line(pair1[i][0], pair1[i][1], pair2[i][0],pair2[i][1]);
+                    line.attr(atr);
+                  }
+
+                 </script>
+               </section>
+               <section data-transition="fade" data-transition-speed="slow">
+                  <h4>Multiple observations</h4>
+                  <p>Treat as individual observations, or first average positions (Vector)</p>
+                  <svg id="svgslide2" width="100%" height="100%" style="overflow: visible;">
+                  </svg>
+               <script>
+                  paper = Snap("#svgslide2");
+                  var redCircle = paper.circle(300, 300, 300);
+                  redCircle.attr( {
+                    strokewidth: '0',
+                    fill: 'url(#grad1Red)'
+                  });
+                  var blueCircle = paper.circle(600, 300, 300);
+                  blueCircle.attr( {
+                    strokewidth: '0',
+                    fill: 'url(#grad1Blue)'
+                  });
+                  atr = {
+                    stroke: "#fff"
+                  };
+                  atr['stroke-width'] = "4";
+                  atr['stroke-opacity'] = '0.25';
+                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var centerPair1 = [ 0, 0 ];
+                  var centerPair2 = [ 0, 0 ];
+                  for (var i = 0; i < 5; i++) {
+                    paper.cross.call(paper, pair1[i][0], pair1[i][1], 40, atr);
+                    paper.cross.call(paper, pair2[i][0], pair2[i][1], 40, atr);
+                    var line = paper.line(pair1[i][0], pair1[i][1], pair2[i][0],pair2[i][1]);
+                    line.attr(atr);
+
+                    centerPair1[0] += pair1[i][0];
+                    centerPair1[1] += pair1[i][1];
+                    centerPair2[0] += pair2[i][0];
+                    centerPair2[1] += pair2[i][1];
+                  }
+                  centerPair1[0] = centerPair1[0] / 5;
+                  centerPair1[1] = centerPair1[1] / 5;
+                  centerPair2[0] = centerPair2[0] / 5;
+                  centerPair2[1] = centerPair2[1] / 5;
+                  atr['stroke'] = '#0e0';
+                  atr['stroke-opacity'] = '1.0';
+                  paper.cross.call(paper, centerPair1[0], centerPair1[1], 40, atr);
+                  paper.cross.call(paper, centerPair2[0], centerPair2[1], 40, atr);
+                  var line = paper.line(centerPair1[0], centerPair1[1], centerPair2[0], centerPair2[1]);
+                  line.attr(atr);
+
+                  </script>
+                  </section>
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <br>
+               <div class="fragment preload" id="plot4" style="margin: auto; width:500px; height:400px;"></div>
+               <div class="fragment" id="plot4b"></div>
+               <div class="fragment" id="plot4c"></div>
+               </section>
+
+               <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Multiple observations</h4>
+               <p>Treat as individual observations, or first average positions (Vector)</p>
+               <br>
+               <div>
+               $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2+ &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2 + \color{red}{&sigma;_{sample}^2 }} $$
+               </div>
+               <br>
+               <p class="fragment">Comparing Vector-P2D and Sigma-P2D can uncover sample heterogeneity</p>
+               </section>
+
+            <!---
+             <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Measuring single fluoropohore distances at nm precision</h4>
+                <div style="position:absolute; top: 60px; right: 50px;">
+                  <img style="border: 0px;" width="129" height="147" src="images/Stefan-1.jpg">
+                  <div style="font-size: 20px; position: absolute; left: 5px; top: 160px;">Stefan Niekamp</div>
+               </div>
+
+               <div style="position: absolute; top: 75px; right: 200px;">
+                 <img class="plain" width="347" height="195" src="images/newTIRF.jpg">
+               </div>
+
+               <div style="position: absolute; top: 70px; left: 125px;">
+                <img style="border: 0px;" width="255" height="85" src="images/Slide.jpg">
+               </div>
+               <div class="fragment" style="position: absolute; top: 180px; left: 25px;">
+                   <img style="border: 0px;" width="571" height="450" src="images/paff-20.jpg">
+               </div>
+
+               <div class="fragment" style="position: absolute; top: 180px; left: 25px;">
+                 <img style="border: 0px;" width="571" height="450" src="images/paff.jpg">
+               </div>
+
+               <div class="fragment">
+                 <div style="font-size: 32px; position: absolute; top: 350px; right: 50px; left: 870px;">
+                   Use uncertainty information from SM fit
+                 </div>
+                 <div style="position: absolute; top: 300px; left: 700px;">
+                   <img class="plain" width="141" height="350" src="images/MMLocMScreenshot.jpg">
+                 </div>
+
+             </section>
+
+             <section data-background-image="images/2ColorBeads.jpg">
+               <h4>nm precision distance measurements: Dynein</h4>
+               <div style="font-size: 24px; position: absolute; top: 100px; left: 50px; right: 550px;">
+               Distance between AAA ring and microtubule binding 
+               domain of a dynein monomer changes depending on nucleotide state
+               </div>
+               <div style="font-size: 20px; position: absolute; top: 600px; left: 50px;">
+                 doi: 10.1073/pnas.1815826116
+               </div>
+
+               <div style="position:absolute; top: 250px; left: 0px;">
+                 <img class="plain" width="606" height="298" src="images/dyneinSchematic.png">
+               </div>
+
+               <div class="fragment" style="position: absolute; top: 100px; left: 700px;">
+                 <img class="plain" width="375" height="572" src="images/dyneinResults.png">
+               </div>
+            </section>
+
+            -->
+
+            <section>
+              <h4>Cell marking by photo-conversion</h4>
+                <div style="position:absolute; top: 60px; right: 50px;">
+                  <img style="border: 0px;" width="144" height="152" src="images/Xiaowei.jpg">
+                  <div style="font-size: 20px; position: absolute; left: 25px; top: 170px;">Xiaowei Yan</div>
+               </div>
+
+               <div style="position: absolute; top: 100px; left: 25px;">
+                 <img class="plain" width="993" height="560" src="images/DMDScreenOverview.png">
+               </div>
+            </section>
+
+            <section>
+              <h4>Cell marking by photo-conversion</h4>
+                <div style="position:absolute; top: 60px; right: 50px;">
+                  <img style="border: 0px;" width="144" height="152" src="images/Xiaowei.jpg">
+                  <div style="font-size: 20px; position: absolute; left: 25px; top: 170px;">Xiaowei Yan</div>
+               </div>
+
+               <div style="position: absolute; top: 100px; left: 400px">
+                 <img class="plain" width="310" height="410" src="images/DMDMicroscope.jpg">
+               </div>
+
+               <div class="fragment" style="position:absolute; top: 48px; left: 40px;">
+                  <img class="plain" height="652" width="296" src="images/DMDMMScreenShot.png">
+               </div>
+
+               <div class="fragment" style="position:absolute; top: 260px; right: 100px;">
+                  <img class="plain" height="410" width="410" src="images/DMDResult.jpg">
+               </div>
+            </section>
+
+
+            <section>
+              <h4>Combining TIRF and Confocal images</h4>
+              <div style="position:absolute; top: 60px; right: 50px;">
+                <img style="border: 0px;" width="142" height="159" src="images/Rui.jpg">
+                <div style="font-size: 20px; position: absolute; left: 35px; top: 177px;">Rui Dong</div>
+             </div>
+
+             <div style="position: absolute; top: 100px; left: 35px;">
+               <img class="plain" width="405" height="535" src="images/TirfConfocal.jpg">
+             </div>
+
+               <div class="fragment" style="position: absolute; left: 490px; top: 110px;">
+                <video width="512" height="522" controls loop>
+                  <source src="images/TCellConfocalTIRF.mp4" type="video/mp4">
+                </video>  
+               </div>
+            </section>
+
+
+            <section>
+               <h4>Nagging questions...</h4>
+               <div style="position: absolute; left: 200px; top: 150px; line-height: 1.6">
+               <ul>
+                  <li>Open Source, great, but...</li>
+                  <li class="fragment">Rewarding/funding of tool deployment (versus development)</li>
+                  <li class="fragment">Scattered tools: inefficiency or diversity?</li>
+               </ul>
+               </div>
+            </section>
+
+            <section data-background-image="images/LabNotSerious.jpg">
+               <h4>Thanks!</h4>
+               <div style="position: absolute; top: 550px; left: 250px; background-color: transparent;">
+                 <img style="border: 0px;" width="250" height="100" src="images/ucsf-logo.jpg">
+               </div>
+               <div style="position: absolute; top: 538px; left: 750px; background-color: transparent;">
+                 <img style="border: 0px;" width="296" height="125" src="images/HHMI-logo-color.jpg">
+               </div>
+            </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+      <script src="js/plot1.js"></script>
+      <script src="js/plot2.js"></script>
+      <script src="js/plot-chp2d.js"></script>
+      <script src="js/plot3.js"></script>
+      <script src="js/plot4.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+            // configuration settings
+            width: 1245,
+            height: 700,
+            controls: false,
+            transition: 'none',
+            center: false,
+            // other options ...
+            math: {
+               mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+               config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+            },
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+               { src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+         // from: https://github.com/hakimel/reveal.js/issues/1784
+         // automatically load the initial fragment on a slide if the fragment
+         // has been defined with the 'preload' class
+         Reveal.addEventListener('slidechanged', function(event) {
+           if (event.currentSlide.querySelectorAll('.preload[data-fragment-index="0"]').length > 0) {
+             Reveal.nextFragment();
+           }
+         });
+
+         // if the initial fragment on a slide has been defined with a 'preload' class
+         // then transition to the previous slide if the fragment is hidden
+         Reveal.addEventListener('fragmenthidden', function(event) {
+           if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+             if (event.fragment.attributes['data-fragment-index'].value == "0") {
+               Reveal.prev();
+             }
+           }
+           if (event.fragment.id == "plot2b") {
+               plotAvg();
+           }
+           if (event.fragment.id == "plot3c") {
+               plot3a();
+           }
+           if (event.fragment.id == "plot4b") {
+               plot4a();
+           }
+           if (event.fragment.id == "plot4c") {
+               plot4b();
+           }
+         });
+
+         Reveal.addEventListener('fragmentshown', function(event) {
+            if (event.fragment.id == "plot2b") {
+               plotP2D();
+            }
+            else if (event.fragment.id == "plot2") {
+               plotAvg();
+            }
+            else if (event.fragment.id == "plot3") {
+               plot3a();
+            }
+            else if (event.fragment.id == "plot3c") {
+               plot3c();
+            }
+            else if (event.fragment.id == "plot4") {
+               plot4a();
+            }
+            else if (event.fragment.id == "plot4b") {
+               plot4b();
+            }
+            else if (event.fragment.id == "plot4c") {
+               plot4c();
+            }
+         } );
+
+
+		</script>
+	</body>
+</html>
