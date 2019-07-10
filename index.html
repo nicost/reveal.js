@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>NS 2019-03-01</title>
+		<title>NS 2019-07-12</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -27,11 +27,12 @@
 
  			<section data-background-image="images/anna.jpg">
           <h3 style="color: white;">Groupmeeting 73</h3>
-          <br/><br/><br/></br></br><br/>
+          <br/><br/><br/><br/>
           <ul id="fragments" style="color: white">
             <li class="fragment">CRISPR Screen Image Analysis</li>
             <li class="fragment">Photo-bleaching</li>
             <li class="fragment">Micro-Manager Update</li>
+            <li class="fragment">Computing hardware Update</li>
           </ul>
           <div style="position: absolute; top: 575px; left: 450px;">
             <p style="text-align: right;">Nico Stuurman, 2019-07-12</p>
@@ -40,17 +41,48 @@
 
         <section>
           <h3>CRISPR-Sreen Image Analysis</h3>
+          <div style="position: absolute; top: 150px; left: 100px;">
             <img width="206" height="478" style="border: 0px" src="images/AnalyzePhotoConvert.png">
+          </div>
+          <div class="fragment" style="position: absolute; top: 100px; left: 400px;">
+            <img width="400" height="563" style="border: 0px" src="images/AnalyzePhotoConvert2.png">
+          </div>
         </section>
 
         <section>
            <h3>Image analysis Java libraries</h3>
+           <br/>
            <ul>
              <li class="fragment">ImageJ(1) - disorganized, chaotic, hard to maintain</li>
              <li class="fragment">Imglib2 - poorly documented, slow, capable</li>
              <li class="fragment">BoofCV - well organized, fast, extendable</li>
              <li class="fragment">"CliJ" - ImageJ commands executed on the GPU</li>
            </ul>
+        </section>
+
+        <section>
+          <h3>ImageJ(1) analysis code</h3>
+          <img width="680" height="469" style="border: 0px" src="images/ImageJ1Code.png">
+        </section>
+
+        <section>
+          <h3>BoofCV analysis code</h3>
+          <img width="721" height="485" style="border: 0px" src="images/BoofCVCode.png">
+        </section>
+
+        <section>
+          <h3>GPU-based image analysis code</h3>
+          <div style="position: absolute; top: 100px; left: 170px;">
+            <img width="663" height="109" style="border: 0px" src="images/CLIJ.png">
+          </div>
+          <div style="position: absolute; top: 300px; left: 70px;">
+          <ul>
+            <li class="fragment">GPU versus CPU</li>
+            <li class="fragment">GPU coding: OpenCL versus CUDA</li>
+            <li class="fragment">CLIJ: deeply intertwined with ImageJ</li>
+            <li class="fragment">Approach: port CLIJ GPU code to ClearCL</li>
+          </ul>
+          </div>
         </section>
 
         <section>
