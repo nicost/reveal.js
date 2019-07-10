@@ -25,150 +25,31 @@
 		<div class="reveal">
 			<div class="slides">
 
- 			<section data-background-image="images/allen.jpg">
-          <h3 style="color: white;">Groupmeeting 72</h3>
+ 			<section data-background-image="images/anna.jpg">
+          <h3 style="color: white;">Groupmeeting 73</h3>
           <br/><br/><br/></br></br><br/>
           <ul id="fragments" style="color: white">
-            <li class="fragment">diSPIM: refractive index matching and remote focus</li>
-            <li class="fragment">Live photo-bleaching and analysis</li>
+            <li class="fragment">CRISPR Screen Image Analysis</li>
+            <li class="fragment">Photo-bleaching</li>
+            <li class="fragment">Micro-Manager Update</li>
           </ul>
           <div style="position: absolute; top: 575px; left: 450px;">
-            <p style="text-align: right;">Nico Stuurman, 2019-03-01</p>
+            <p style="text-align: right;">Nico Stuurman, 2019-07-12</p>
           </div>
         </section>
 
         <section>
-           <h3>diSPIM: remote focus</h3>
-           <br/>
-           <p>Two goals:</p>
-           <br/>
-           <ul>
-             <li>Use Special objective (na 0.4) to reduce spherical aberration</li>
-             <li>Focus remotely to not disturb sample</li>
-           </ul>
+          <h3>CRISPR-Sreen Image Analysis</h3>
+            <img width="206" height="478" style="border: 0px" src="images/AnalyzePhotoConvert.png">
         </section>
 
         <section>
-          <h3>diSPIM: design of remote focus</h3>
-             <img height="173" width="975" style="border: 0px;" src="images/remoteFocusSchematic.jpg">
-             <div style="font-size: 15px;">
-               Botcherby et al., https://doi.org/10.1016/j.optcom.2007.10.007
-            </div>
-            <br>
-           <ul style="font-size: 36px;">
-             <li class="fragment">L2: Optimum mag: M(L1)/(n1/n2) ~ 16/1.33 = 12</li>
-             <li class="fragment">Design: L2=10xNA 0.4(Olympus), L3=20x0.75NA (Nikon) </li>
-             <li class="fragment">4f design: Remove scanner.  Reverting to current config will take ~ 1 hour</li>
-           </ul>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-           <div style="position: absolute; top: 70px; left: 180px">
-             <img width="768" height="576" style="border: 0px;" src="images/diSPIM_RF.jpg">
-           </div>
-
-           <div style="position: absolute; top: 30px; left: 0px; font-size: 16px">
-              <img width="167" height="167" style="border: 0px" src="images/JonDaniels.jpg"><br/>
-             Jon Daniels (ASI)
-           </div>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-             <img width="768" height="576" style="border: 0px;" src="images/diSPIM_SampleHolder.jpg">
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-            <video width="636" height="586" controls>
-               <source data-src="images/beads-CV.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-           <div style="position: absolute; top: 240px; left: 50px;">
-             <img width="131" height="186" style="border: 0px;" src="images/daniel1.jpg">
-             <br>
-             <div style="font-size: 18px">Daniel Elnatan</div>
-           </div>
-           <div style="position: absolute; top: 150px; left: 300px;">
-            <video width="386" height="386" controls loop>
-               <source data-src="images/averagedPSF.mp4" type="video/mp4">
-            </video>
-           </div>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-           <br>
-            <video width="470" height="468" controls loop>
-               <source data-src="images/hydra-myosinGFP_1-Slice.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-            <video width="652" height="618" controls loop>
-               <source data-src="images/hydra-myosinGFP_1-CV.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus</h3>
-            <video width="576" height="576" controls loop>
-               <source data-src="images/H2B-mCherry-lgr5-GFP-ZStack.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-           <h3>diSPIM remote focus (Optiprep)</h3>
-            <video width="576" height="576" controls loop>
-               <source data-src="images/H2B-mCherry-lgr5-GFP-Optiprep-ZStack.mp4" type="video/mp4">
-            </video>
-        </section>
-
-        <section>
-           <h3>Live photo-bleaching and analysis</h3>
-           <div style="position: absolute; top: 100px; left: 750px;">
-             <img width=200 height=150 style="border: 0px;" src="images/Jess.jpg">
-             <p style="position: relative; top: -50px; font-size: 24px;">
-                Jess Sheu-Gruttadauria 
-             </p>
-           </div>
-
-           <div class="fragment">
-            <div>Plan:</div>
-            <ul>
-              <li>Bleach <i>live</i>, using <i>point and shoot</i></li>
-               <li class="fragment">Automatically find bleach spot </li>
-               <li class="fragment">1: Get intensity at bleach spot</li>
-               <li class="fragment">2: Track particle, get intensity as function of time, for bleached area and particle</li>
-               <li class="fragment">Calculate exchange within particle and between particle and outside</li>
-            </ul>
-           </div>
-        </section>
-
-        <section>
-           <h3>Live photo-bleaching and analysis</h3>
-           <img width="571" height="217" style="border: 0px;" src="images/pasPlugin.jpg">
-           <ul>
-             <li class="fragment">Find bleach location (t-project min and avg, min / avg, gauss filter, min value)</li>
-             <li class="fragment">Find particle where bleach happened, track through the time-lapse</li>
-             <li class="fragment">Track bleach spot in particle (divide with pre-bleach, find min value)</li>
-           </ul>
-         </section>
-
-        <section>
-           <h3>Live photo-bleaching and analysis</h3>
-           <p>Sideline:</p>
-           <p>Java Image analysis "libraries":</p>
-           <br/>
+           <h3>Image analysis Java libraries</h3>
            <ul>
              <li class="fragment">ImageJ(1) - disorganized, chaotic, hard to maintain</li>
              <li class="fragment">Imglib2 - poorly documented, slow, capable</li>
              <li class="fragment">BoofCV - well organized, fast, extendable</li>
+             <li class="fragment">"CliJ" - ImageJ commands executed on the GPU</li>
            </ul>
         </section>
 
