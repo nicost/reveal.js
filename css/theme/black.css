@@ -116,6 +116,9 @@ body {
   display: block;
   margin-left: 40px; }
 
+.reveal li:not(:last-child) {
+   margin-bottom: 10px;}
+
 .reveal dt {
   font-weight: bold; }
 
