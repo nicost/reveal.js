@@ -22,7 +22,7 @@ var layout = {
   plot_bgcolor: 'rgba(0,0,0,0)',
                font: std_font,
   xaxis: {
-     title: '\u03C3<sub>d</sub> (\u03BC)',
+     title: '\u03C3<sub>d</sub> / \u03BC',
      titlefont: std_font,
      showgrid: false,
      tickfont: {
