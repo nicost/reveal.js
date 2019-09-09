@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Nico, OpenScience-2019</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+      <script src="lib/js/plotly-latest.min.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+       <section data-background-image="images/mmLogo.png">
+          <div style="position: relative; top: 25px;">
+            <h4>Microscope Automation Software</h4>
+            <div class="fragment" style="position:absolute; left: 135px; top: 100px;">
+               <img style="border:0;" width="75" height="75" src="images/Originuum---Vetor---Plano---Camera-Fotografica---1.0.0-300px.png">
+               <p>Grab and Store Images</p>
+           </div>
+           <div class="fragment" style="position: absolute; right: 135px; top: 100px;">
+              <p>Control light sources</p>
+              <img style="border:0;" width="150" height="150" src="images/blinkingLights.gif">
+           </div>
+           <div class="fragment" style="position: absolute; left: 165px; top: 320px;">
+              <img style="border: 0;" width="150" height="107" src="images/linear-motor-animation.gif">
+              <p>Control Motors</p>
+           </div>
+           <div class="fragment" style="position: absolute; right: 365px; top: 400px;">
+              <p>User-defined order</p>
+              <p>User interface</p>
+           </div>
+         </div>
+       </section>
+
+				<section data-background-image="images/mmLogo.png">
+					<br>
+          <h4>Microscope Automation Options:</h4>
+          <br>
+ <div style="line-height: 4.0; text-align: left; position: relative; left: 100px; top: 80px;">
+            <p class="fragment">Write from scratch</p>
+            <p class="fragment">Write using Toolboxes</p>
+            <p class="fragment">Vendor-neutral Software</p>
+            <p class="fragment">Vendor-specific Software</p>
+            </div>
+<svg style="position: absolute; top: 50px; left: 100px;" width="960px" height="700px"style="overflow: visible;">
+ <defs>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_green">
+   <path stroke-width="10" stroke="#00ff00" fill="#00ff00" d="m100,50l-100,40l30,-40l-30,-40z"/>
+  </marker>
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_red">               
+   <path stroke-width="10" stroke="#ff0000" fill="#ff0000" d="m100,50l-100,40l30,-40l-30,-40z"/>    
+  </marker>                                                                          
+  <marker refY="50" refX="50" markerHeight="5" markerWidth="5" viewBox="0 0 100 100" se_type="rightarrow" orient="auto" markerUnits="strokeWidth" id="se_marker_end_svg_blue">
+   <path stroke-width="10" stroke="#0000ff" fill="#0000ff" d="m100,50l-100,40l30,-40l-30,-40z"/>    
+  </marker>                                                                          
+ </defs>                                                                             
+ <g class="fragment">                                                                
+  <title>Green Line</title>                                                          
+  <line marker-end="url(#se_marker_end_svg_green)" id="svg_3" opacity="0.99" fill="none" stroke-width="12" stroke="#00ff00" x1="606" y1="226" x2="606" y2="506" />
+  <text transform="rotate(-38, 606, 348)" xml:space="preserve" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="606" opacity="0.89" stroke-width="0" stroke="#ff0000" fill="#ffffff">ease of use</text>
+ </g>                                                                                
+ <g class="fragment">                                                                
+  <title>Blue Line</title>                                                           
+  <line marker-end="url(#se_marker_end_svg_blue)" opacity="0.99" fill="none" stroke-width="12" stroke="#0000ff" x1="886" y1="506" x2="886" y2="226" />
+  <text transform="rotate(45 886 348)" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="886" opacity="0.99" stroke-width="0" stroke="#ff0000" fill="#ffffff">Flexibility</text>
+</g>                                                                                 
+ <g class="fragment">    
+  <title>Red Line</title>                                                            
+  <line marker-end="url(#se_marker_end_svg_red)" id="svg_4" opacity="0.99" fill="none" stroke-width="12" stroke="#ff0000" x1="736" y1="226" x2="736" y2="506" />                            
+  <text transform="rotate(-45 736 348)" text-anchor="middle" font-family="Serif" font-size="46" y="348" x="736" opacity="0.99" stroke-width="0" stroke="#ff0000" fill="#ffffff">$$$</text>
+ </g>                                                                                
+</svg>                                                                               
+        </section>    
+
+
+				</section>
+
+          <section data-background-image="images/mmLogo.png">
+            <br><br>
+             <h4>&mu;Manager - Open Source Software For Microscopes</h4>
+						 <br />
+             <ul style="line-height: 1.6">
+               <li class="fragment">Started in 2005 as a lab project</li>
+               <li class="fragment">Close collaboration of programmers and cell biologists</li>
+               <li class="fragment">Idealistic attempt to create better and affordable tools</li>
+               <li class="fragment">Strong focus on support (website, email, remote help)</li>
+             </ul>
+          </section>
+
+          <section data-background-image="images/mmLogo.png">
+             <br>
+             <h4>&mu;Manager - Open Source Software For Microscopes</h4>
+              <div style="position: absolute; left: 150px; top: 150px;">
+                <img class="plain" src="images/Micro-ManagerWindow.png" width="453" height="175" />
+              </div>
+
+              <div style="position: absolute; left: 655px; top: 150px;">
+                <img class="plain" src="images/ImageJ.png" width="398" height="50" />
+              </div>
+
+              <div style="position: absolute; left: 125px; top: 400px; line-height: 1.5">
+                <ul>
+                  <li class="fragment">Supports devices from >150 vendors</li>
+                  <li class="fragment">Code contributions from >100 authors</li>
+                  <li class="fragment">>40,000 registered users, >6,000 microscopes</li>
+                  <li class="fragment">>5,000 mentions (G Scholar), cited >1,600 times</li>
+                </ul>
+              </div>
+          </section>
+
+            <section>
+               <h4>Nagging questions...</h4>
+               <div style="position: absolute; left: 200px; top: 125px; line-height: 1.6">
+               Open Source, great, but...
+               <ul>
+                  <li class="fragment">Rewarding/funding of tool deployment (versus development)</li>
+                  <li class="fragment">Scattered tools: inefficient or diverse?</li>
+                  <li class="fragment">Are we really empowering scientists?</li>
+               </ul>
+               <br>
+               <br>
+               <div class="fragment">What is the best structure for a project like Micro-Manager? </div>
+               </div>
+            </section>
+
+            <section data-background-image="images/LabNotSerious.jpg">
+               <h4>Thanks!</h4>
+               <div style="position: absolute; top: 550px; left: 250px; background-color: transparent;">
+                 <img style="border: 0px;" width="250" height="100" src="images/ucsf-logo.jpg">
+               </div>
+               <div style="position: absolute; top: 538px; left: 750px; background-color: transparent;">
+                 <img style="border: 0px;" width="296" height="125" src="images/HHMI-logo-color.jpg">
+               </div>
+            </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+            // configuration settings
+            width: 1245,
+            height: 700,
+            controls: false,
+            transition: 'none',
+            center: false,
+            // other options ...
+            math: {
+               mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+               config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+            },
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+               { src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+         // from: https://github.com/hakimel/reveal.js/issues/1784
+         // automatically load the initial fragment on a slide if the fragment
+         // has been defined with the 'preload' class
+         Reveal.addEventListener('slidechanged', function(event) {
+           if (event.currentSlide.querySelectorAll('.preload[data-fragment-index="0"]').length > 0) {
+             Reveal.nextFragment();
+           }
+         });
+
+         // if the initial fragment on a slide has been defined with a 'preload' class
+         // then transition to the previous slide if the fragment is hidden
+         Reveal.addEventListener('fragmenthidden', function(event) {
+           if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+             if (event.fragment.attributes['data-fragment-index'].value == "0") {
+               Reveal.prev();
+             }
+           }
+         });
+
+		</script>
+	</body>
+</html>
