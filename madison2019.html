@@ -214,7 +214,21 @@
                  </div>
              </section>
 
-               <section data-background-image="images/2ColorBeads.jpg">
+             <section data-background-image="images/2ColorBeads.jpg">
+                <h4>Use uncertainty information to improve distance estimate</h4>
+                <div>
+                $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2 + &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2} $$
+                </div>
+                <div class="fragment">
+               <div style="font-size: 24px;">$$P_2D = \left(\dfrac{r}{&sigma;_d^2}\right)exp\left(\dfrac{-&mu;^2+r^2}{ 2&sigma;_d^2}\right)I_0\left(\dfrac{r&mu;}{&sigma;_d^2}\right)$$
+               </div>
+                <div id="plot3" style="margin: auto; width:550px; height:450px;"></div>
+                </div>
+                <!--   <div class="fragment" id="plot3b"></div> -->
+                <div class="fragment" id="plot3c"></div>
+             </section>
+
+             <section data-background-image="images/2ColorBeads.jpg">
                <h4>Validation: Kinesin bound to MicroTubules</h4>
                <br>
                <table align="center">
@@ -223,9 +237,10 @@
                   <td class="fragment" style="vertical-align: middle;"><img style="border: 0px;" width="594" height="454" src="images/KinesinMTBoundData2.jpg"></td>
                   </tr>
                </table>
-               </section>
+             </section>
 
-               <section data-transition="fade" data-transition-speed="slow">
+
+             <section data-transition="fade" data-transition-speed="slow">
                <h4>Multiple observations</h4>
                <p>Treat as individual observations, or first average positions (Vector)</p>
                <!--
@@ -248,12 +263,12 @@
                <script src="lib/js/snap-ext.svg.js"></script>
                <script>
                   var paper = Snap("#svgslide1");
-                  var redCircle = paper.circle(300, 300, 300);
+                  var redCircle = paper.circle(450, 300, 300);
                   redCircle.attr( {
                     strokewidth: '0',
                     fill: "url(#grad1Red)"
                   });
-                  var blueCircle = paper.circle(600, 300, 300);
+                  var blueCircle = paper.circle(650, 300, 300);
                   blueCircle.attr( {
                     strokewidth: '0',
                     fill: "url(#grad1Blue)"
@@ -264,7 +279,7 @@
                   };
                   atr['data-fragment-index'] =  "1";
                   atr['stroke-width'] = "4";
-                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var x1 = 450, y1 = 300, x2 = 750, y2 = 300, radius = 300;
                   var pair1 = [];
                   var pair2 = [];
                   for (var i = 0; i < 5; i++) {
@@ -298,12 +313,12 @@
                   </svg>
                <script>
                   paper = Snap("#svgslide2");
-                  var redCircle = paper.circle(300, 300, 300);
+                  var redCircle = paper.circle(450, 300, 300);
                   redCircle.attr( {
                     strokewidth: '0',
                     fill: 'url(#grad1Red)'
                   });
-                  var blueCircle = paper.circle(600, 300, 300);
+                  var blueCircle = paper.circle(750, 300, 300);
                   blueCircle.attr( {
                     strokewidth: '0',
                     fill: 'url(#grad1Blue)'
@@ -313,7 +328,7 @@
                   };
                   atr['stroke-width'] = "4";
                   atr['stroke-opacity'] = '0.25';
-                  var x1 = 300, y1 = 300, x2 = 600, y2 = 300, radius = 300;
+                  var x1 = 450, y1 = 300, x2 = 750, y2 = 300, radius = 300;
                   var centerPair1 = [ 0, 0 ];
                   var centerPair2 = [ 0, 0 ];
                   for (var i = 0; i < 5; i++) {
@@ -339,26 +354,15 @@
                   line.attr(atr);
 
                   </script>
-                  </section>
-               <section data-background-image="images/2ColorBeads.jpg">
+                </section>
+
+             <section data-background-image="images/2ColorBeads.jpg">
                <h4>Multiple observations</h4>
                <p>Treat as individual observations, or first average positions (Vector)</p>
                <br>
                <div class="fragment preload" id="plot4" style="margin: auto; width:500px; height:400px;"></div>
                <div class="fragment" id="plot4b"></div>
-               <div class="fragment" id="plot4c"></div>
-               </section>
-
-               <section data-background-image="images/2ColorBeads.jpg">
-               <h4>Multiple observations</h4>
-               <p>Treat as individual observations, or first average positions (Vector)</p>
-               <br>
-               <div>
-               $$&sigma;_d = \sqrt{&sigma;_{reg}^2 + &sigma;_{loc_1}^2 + &sigma;_{loc_2}^2+ &sigma;_{&sigma;_{loc_1}}^2 + &sigma;_{&sigma;_{loc_2}}^2 + \color{red}{&sigma;_{sample}^2 }} $$
-               </div>
-               <br>
-               <p class="fragment">Comparing Vector-P2D and Sigma-P2D can uncover sample heterogeneity</p>
-               </section>
+             </section>
 
              <section data-background-image="images/2ColorBeads.jpg">
                <h4>Validation using DNA origamis</h4>
