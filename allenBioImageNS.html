@@ -1,10 +1,9 @@
-<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Nico, Janelia-2019</title>
+		<title>Nico, Allen-2019</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/custom.css">
@@ -27,12 +26,12 @@
 		<div class="reveal">
 			<div class="slides">
             <section  data-background-image="images/ViewFromTam.jpg">
-               <h4 style="color: black;">Tools for Cell Biologists using Microscopes</h4>
+               <h4 style="color: black;">Building microscope software and hardware tools for cell biology experiments</h4>
                   <div class="fragment fade-up" style="position: absolute; left: 310px; top: 125px;">
                     <img src="images/SeriousLab2019.jpg" style="border: 0px;" width="615" height="410" />
 
                   </div>
-               <p style="text-align: right; font-size: 24px; position: absolute; top: 610px; right: 15px;"><i>Janelia Frontiers in Imaging Science Conference 2019<br>Nico Stuurman, Vale lab, UCSF/HHMI</i></p>
+               <p style="text-align: right; font-size: 24px; position: absolute; top: 610px; right: 15px;"><i>Allen Institute BioImage Informatics 2019<br>Nico Stuurman, Vale lab, UCSF/HHMI</i></p>
             </section>
 
 
@@ -91,7 +90,7 @@
                </div>
 
                <div class="fragment" style="position:absolute; left:500px; top:150px;">
-                <video width="512" height="512" controls autoplay loop>
+                <video width="512" height="512" controls loop>
                   <source src="images/h2bmoviedispim.mp4" type="video/mp4">
                 </video>  
                </div>
@@ -122,7 +121,7 @@
                <div style="position: absolute; left: 700px; top:100px;">
                   <img class="plain" width="450" height="387" src="images/3DUI.png">
                   <div style="font-size: 32px; position: absolute; left: 0px; top:450px;">
-                     Uses ClearVolume API by Loic Royer (MPI-Dresden, BioHub-SF)
+                     Uses ClearVolume API by Loic Royer (MPI-Dresden, CZ-BioHub-SF)
                   </div>
                </div>
             </section>
@@ -139,6 +138,10 @@
                 <video width="512" height="512" controls>
                   <source src="images/U2OS.mp4" type="video/mp4">
                 </video>  
+               </div>
+
+							 <div class="fragment current-visible" style="position:absolute; top: 240px; right: 0px;">
+                  <img class="plain"  width="549" height="440" src="images/Projector.png">
                </div>
 
                <div class="fragment current-visible" style="position:absolute; top: 250px; right: 0px;">
@@ -158,57 +161,6 @@
             </section>
 
             <!---
-             <section data-background-image="images/2ColorBeads.jpg">
-               <h4>Measuring single fluoropohore distances at nm precision</h4>
-                <div style="position:absolute; top: 60px; right: 50px;">
-                  <img style="border: 0px;" width="129" height="147" src="images/Stefan-1.jpg">
-                  <div style="font-size: 20px; position: absolute; left: 5px; top: 160px;">Stefan Niekamp</div>
-               </div>
-
-               <div style="position: absolute; top: 75px; right: 200px;">
-                 <img class="plain" width="347" height="195" src="images/newTIRF.jpg">
-               </div>
-
-               <div style="position: absolute; top: 70px; left: 125px;">
-                <img style="border: 0px;" width="255" height="85" src="images/Slide.jpg">
-               </div>
-               <div class="fragment" style="position: absolute; top: 180px; left: 25px;">
-                   <img style="border: 0px;" width="571" height="450" src="images/paff-20.jpg">
-               </div>
-
-               <div class="fragment" style="position: absolute; top: 180px; left: 25px;">
-                 <img style="border: 0px;" width="571" height="450" src="images/paff.jpg">
-               </div>
-
-               <div class="fragment">
-                 <div style="font-size: 32px; position: absolute; top: 350px; right: 50px; left: 870px;">
-                   Use uncertainty information from SM fit
-                 </div>
-                 <div style="position: absolute; top: 300px; left: 700px;">
-                   <img class="plain" width="141" height="350" src="images/MMLocMScreenshot.jpg">
-                 </div>
-
-             </section>
-
-             <section data-background-image="images/2ColorBeads.jpg">
-               <h4>nm precision distance measurements: Dynein</h4>
-               <div style="font-size: 24px; position: absolute; top: 100px; left: 50px; right: 550px;">
-               Distance between AAA ring and microtubule binding 
-               domain of a dynein monomer changes depending on nucleotide state
-               </div>
-               <div style="font-size: 20px; position: absolute; top: 600px; left: 50px;">
-                 doi: 10.1073/pnas.1815826116
-               </div>
-
-               <div style="position:absolute; top: 250px; left: 0px;">
-                 <img class="plain" width="606" height="298" src="images/dyneinSchematic.png">
-               </div>
-
-               <div class="fragment" style="position: absolute; top: 100px; left: 700px;">
-                 <img class="plain" width="375" height="572" src="images/dyneinResults.png">
-               </div>
-            </section>
-
             -->
 
             <section>
@@ -262,6 +214,141 @@
                </div>
             </section>
 
+            <section data-background-image="images/2ColorBeads.jpg">
+               <h4>Measuring single fluoropohore distances at nm precision</h4>
+                <div style="position:absolute; top: 60px; right: 50px;">
+                  <img style="border: 0px;" width="129" height="147" src="images/Stefan-1.jpg">
+                  <div style="font-size: 20px; position: absolute; left: 5px; top: 160px;">Stefan Niekamp</div>
+               </div>
+
+               <div style="position: absolute; top: 75px; right: 200px;">
+                 <img class="plain" width="347" height="195" src="images/newTIRF.jpg">
+               </div>
+
+               <div style="position: absolute; top: 70px; left: 125px;">
+                <img style="border: 0px;" width="255" height="85" src="images/Slide.jpg">
+               </div>
+               <div class="fragment current-visible" style="position: absolute; top: 180px; left: 25px;">
+                   <img style="border: 0px;" width="571" height="450" src="images/paff-20.jpg">
+                  <div style="font-size: 32px; position: absolute; left: 155px; top: 480px;">Affine registration</div>
+               </div>
+
+               <div class="fragment" style="position: absolute; top: 180px; left: 25px;">
+                 <img style="border: 0px;" width="571" height="450" src="images/paff.jpg">
+                  <div style="font-size: 32px; position: absolute; left: 90px; top: 480px;">Piecewise Affine registration</div>
+               </div>
+
+               <div class="fragment">
+                 <div style="font-size: 32px; position: absolute; top: 350px; right: 50px; left: 870px;">
+                   Use uncertainty information from SM fit
+                 <div id="plot3" style="margin: auto; width:375px; height:325px;"></div>
+                 <div class="fragment" id="plot3c"></div>  
+                 </div>
+                 <div style="position: absolute; top: 300px; left: 700px;">
+                   <img class="plain" width="141" height="350" src="images/MMLocMScreenshot.jpg">
+                 </div>
+               </div>
+            </section>
+
+             <section data-background-image="images/2ColorBeads.jpg">
+               <h4>nm precision distance measurements: Dynein</h4>
+               <div style="font-size: 24px; position: absolute; top: 150px; left: 00px; right: 600px;">
+               Distance between AAA ring and microtubule binding 
+               domain of a dynein monomer changes depending on nucleotide state
+               </div>
+               <div style="font-size: 28px; position: absolute; top: 575px; left: 100px;">
+                 doi: 10.1073/pnas.1815826116
+               </div>
+
+               <div style="position:absolute; top: 250px; left: 0px;">
+                 <img class="plain" width="606" height="298" src="images/dyneinSchematic.png">
+               </div>
+
+               <div class="fragment" style="position: absolute; top: 100px; left: 700px;">
+                 <img class="plain" width="375" height="572" src="images/dyneinResults.png">
+               </div>
+            </section>
+
+            <section data-background-image="images/2ColorBeads.jpg">
+              <h4>Pushing the limits: More photons please!</h4>
+              <div style="position: absolute; top: 85px; left: 275px; font-size: 42px;">
+                $$&sigma; &prop; 1 / \sqrt{N}$$
+              </div>
+              <div style="position: absolute; top: 95px; left: 475px; font-size: 22px;">(&sigma;: Localization precision, N: Number of Photons)</div>
+
+							<div class="fragment">
+								<div  style="position: absolute; left: 175px; top: 345px; font-size: 22px;">
+                <svg height="260" width="180" style="overflow: visible;">   
+                  <filter id = "filterLight">                 
+                    <feSpecularLighting result="specOut"      
+                        specularExponent="25" lighting-color="#fffffb">     
+                      <fePointLight x="70" y="70" z="300"/>   
+                    </feSpecularLighting>                     
+                    <feComposite in="SourceGraphic" in2="specOut"
+                        operator="in" k1="0" k2="1" k3="1" k4="0"/>
+                  </filter>                                   
+                  <circle cx="90" cy="90" r="175" stroke="black" stroke-width="6" fill="red" style="filter:url(#filterLight)"/>
+                </svg>                                        
+                </div>
+                <div style="position: absolute; left: 175px; top: 615px; font-size: 22px;">
+                  Quantum dots<br />                            
+                  High photon #(N) <br />
+                  Often multivalent<br />                       
+                </div>
+            </div>
+
+            <div class="fragment" >
+              <div style="position: absolute; left: 975px; top: 500px;">
+                <img style="border: 0px;" src="images/Cyanine.svg" height="75px" width="150px">
+              </div>
+              <div style="position: absolute; left: 965px; top: 615px; font-size: 22px;">
+               Organic dyes<br>                               
+               Limited photon #(N)<br>                        
+               Monovalent                                     
+              </div>
+            </div>   
+ 
+            <div class="fragment current-visible">
+              <div style="position: absolute; left: 680px; top: 515px; font-size: 64px;">?</div>                                              
+              <div style="position: absolute; left: 610px; top: 615px; font-size: 22px;">
+               Not too big<br/ >                              
+               High photon #(N)<br />                         
+               Monovalent<br />                               
+             </div>                                           
+            </div>  
+
+            <div class="fragment current-visible">            
+              <div style="position: absolute; left: 600px; top: 375px; font-size:22px;">
+              <img src="images/FC.png" width="210px" height=186px">
+              </div>
+              <div style="position: absolute; left: 630px; top: 615px; font-size: 22px;">
+               DNA Fluorocubes<br/ >                          
+               High photon #(N)<br />                         
+               Monovalent<br />                               
+             </div>                                           
+            </div> 
+
+            <div class="fragment">            
+              <div style="position: absolute; left: 975px; top: 500px;">
+                <img style="border: 0px;" src="images/CyanineSmall.png" height="75px" width="150px">
+              </div>
+              <div style="position:absolute; top: 100px; left: 100px;">                                                       
+                 <img style="border: 0px;" src="images/dynein.png" width="470px" height="706px">
+              </div>  
+              <div style="position: absolute; left: 660px; top: 455px; font-size:22px;">
+              <img style="border: 0px;" src="images/FCTrans.png" width="87px" height=110px">
+              </div>
+              <div style="position: absolute; left: 630px; top: 615px; font-size: 22px;">
+               DNA Fluorocubes<br/ >                          
+               High photon #(N)<br />                         
+               Monovalent<br />                               
+             </div>                                           
+            </div> 
+
+            </section>
+
+
+
 
             <section>
                <h4>Nagging questions...</h4>
@@ -289,6 +376,8 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+    <script src="js/plot3.js"></script>
+
 
 		<script>
 			// More info about config & dependencies:
@@ -332,7 +421,19 @@
                Reveal.prev();
              }
            }
+           if (event.fragment.id == "plot3c") {
+              plot3a();
+           }
          });
+
+				Reveal.addEventListener('fragmentshown', function(event) {
+            if (event.fragment.id == "plot3") {          
+               plot3a();                                      
+            }                                                 
+            else if (event.fragment.id == "plot3c") {         
+               plot3c();                                      
+            }
+				} );
 
 		</script>
 	</body>
