@@ -26,69 +26,36 @@
 			<div class="slides">
 
  			<section data-background-image="images/anna.jpg">
-          <h3 style="color: white;">Groupmeeting 73</h3>
+          <h3 style="color: white;">Groupmeeting 74</h3>
           <br/><br/><br/><br/>
-          <ul id="fragments" style="color: white">
+          <ul id="fragments" style="color: white; list-style-position: inside;">
             <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">CRISPR Screen Image Analysis</li>
-            <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Photo-bleaching</li>
             <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Micro-Manager Update</li>
-            <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Computing hardware Update</li>
           </ul>
           <div style="position: absolute; top: 575px; left: 450px;">
-            <p style="text-align: right;">Nico Stuurman, 2019-07-12</p>
+            <p style="text-align: right;">Nico Stuurman, 2019-10-10</p>
           </div>
         </section>
 
         <section>
-          <h3>CRISPR-Sreen Image Analysis</h3>
-          <div style="position: absolute; top: 150px; left: 100px;">
-            <img width="206" height="478" style="border: 0px" src="images/AnalyzePhotoConvert.png">
+          <h3>CRISPR-Screen Nucleo-Cytoplasmic Ratio</h3>
+          <div style="position: absolute; top: 125px; left: 30px;">
+            <img width="215" height="478" style="border: 0px" src="images/AnalyzePhotoConvert3.png">
+            <br>
+            BoofCV
           </div>
-          <div class="fragment" style="position: absolute; top: 100px; left: 400px;">
-            <img width="400" height="563" style="border: 0px" src="images/AnalyzePhotoConvert2.png">
+          <div class="fragment" style="position: absolute; top: 60px; left: 325px;">
+            <img width="820" height="692" style="border: 0px" src="images/NC-overlay.jpg">
           </div>
-        </section>
-
-        <section>
-           <h3>Image analysis Java libraries</h3>
-           <br/>
-           <ul>
-             <li class="fragment">ImageJ(1) - disorganized, chaotic, hard to maintain</li>
-             <li class="fragment">Imglib2 - poorly documented, slow, capable</li>
-             <li class="fragment">BoofCV - well organized, fast, extendable</li>
-             <li class="fragment">"CliJ" - ImageJ commands executed on the GPU</li>
-           </ul>
-        </section>
-
-        <section>
-          <h3>ImageJ(1) analysis code</h3>
-          <img width="680" height="469" style="border: 0px" src="images/ImageJ1Code.png">
-        </section>
-
-        <section>
-          <h3>BoofCV analysis code</h3>
-          <img width="721" height="485" style="border: 0px" src="images/BoofCVCode.png">
-        </section>
-
-        <section>
-          <h3>GPU-based image analysis code</h3>
-          <div style="position: absolute; top: 100px; left: 170px;">
-            <img width="663" height="109" style="border: 0px" src="images/CLIJ.png">
-          </div>
-          <div style="position: absolute; top: 300px; left: 70px;">
-          <ul>
-            <li class="fragment">GPU versus CPU</li>
-            <li class="fragment">GPU coding: OpenCL versus CUDA</li>
-            <li class="fragment">CLIJ: deeply intertwined with ImageJ</li>
-            <li class="fragment">Approach: port CLIJ GPU code to ClearCL</li>
-          </ul>
+          <div class="fragment" style="position: absolute; top: 60px; left: 325px;">
+            <img width="820" height="692" style="border: 0px" src="images/NC-masks.jpg">
           </div>
         </section>
 
         <section>
           <h3>OpenCL Java libraries and friends</h3>
           <div style="position: absolute; top: 0px; left: 0px;">
-            <img width="960" height="700" style="border: 0px;" src="images/ClearSlide.png">
+            <img width="960" height="700" style="border: 0px; background-color: transparent;" src="images/ClearSlide.png">
           </div>
           <div style="position:absolute; top: 80px; left: 700px;">
             <img width="213" height="251" style="border: 0px;" src="images/loic.jpg"/>
@@ -103,6 +70,11 @@
             Robert Haase
             </div>
           </div>
+
+          <div class="fragment" style="position:absolute; top: 200px; left: 600px;">
+            <img width="563" height="457" style="border: 0px;"  src="images/gitClearCLNS.png"/>
+          </div>
+
         </section>
 
         <section>
@@ -192,7 +164,7 @@
 			Reveal.initialize({
         transition: 'none',
         center: false,
-        width: 960,
+        width: 1245,
         height: 700,
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
