@@ -41,3 +41,11 @@
       -webkit-transform: scale(4.0) translate(-30px); 
       transform: scale(4.0) translate(-30px); 
 }
+
+.reveal .slides section .fragment.grow.bottomapi {
+  opacity: 1;
+  visibility: inherit; }
+.reveal .slides section .fragment.grow.bottomapi.visible {
+      -webkit-transform: scale(1.5) translate(200px);
+      transform: scale(1.5) translate(200px);
+}
