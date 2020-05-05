@@ -29,7 +29,7 @@ var layout = {
      title: '# of Registrations',
      titlefont: std_font,
      color: 'black',
-     range: [0, 40000],
+     range: [0, 42000],
      tickfont: {
         size: '16',
         color: 'black'

@@ -29,7 +29,7 @@ var layout = {
      title: '# of publications',
      titlefont: std_font,
      color: 'black',
-     range: [0, 4000],
+     range: [0, 5000],
      tickfont: {
         size: '16',
         color: 'black'
