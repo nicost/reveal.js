@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>NS 2020-01-17</title>
+		<title>NS 2020-08-14</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,41 +25,20 @@
 		<div class="reveal">
 			<div class="slides">
 
- 			<section data-background-image="images/DSC_2935.jpg">
+ 			<section data-background-image="images/DSC_3895.jpg">
           <br/><br/>
-          <ul id="fragments" style="color: white; list-style-position: inside;">
-            <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Janelia acquisition software meeting</li>
-            <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Micro-Manager Updates</li>
-            <li class="fragment" style="background: rgba(75, 75, 75, 0.6);">Electronic Notebooks</li>
-          </ul>
           <div style="position: absolute; top: 575px; left: 390px;">
-            <p style="text-align: right; background: rgba(75, 75, 75, 0.6);">Nico Stuurman, 2020-04-24</p>
+            <p style="text-align: right; background: rgba(75, 75, 75, 0.6);">Nico Stuurman, 2020-08-14</p>
           </div>
         </section>
 
- 			<section data-background-image="images/Janelia_dark.jpg">
-            <h4>Software for Microscopy Workshop</h4>
-            <div style="position: absolute; top: 65px; left: 30px;">
-               <img width ="200" height="200" style="border: 0px;"  src="images/Raghav.jpg">
-               <div style="position: absolute; top: 225px; left: -0px;">
-                  Raghav Chhetri
-               </div>
-            </div>
-            <div style="position: absolute; top: 450px; left: 30px;">
-               <img width ="200" height="200" style="border: 0px;"  src="images/Stephan.jpg">
-               <div style="position: absolute; top: 225px; left: -0px;">
-                  Stephan Preibisch
-               </div>
-            </div>
-            <div class="fragment" style="position: absolute; top: 175px; left: 675px;">
-               <img width ="636" height="446" style="border: 0px;"  src="images/WhiteBoard.jpg">
-            </div>
-            <div class="fragment" style="position: absolute; top: 375px; left: 300px;">
-                Follow up:</br><br>
-                White paper<br>
-                Community building
-            </div>
-         </section>
+ 			<section data-background-image="images/DSC_3891b.jpg">
+          <br/><br/>
+          <div style="position: absolute; top: 575px; left: 390px;">
+            <p style="text-align: right; background: rgba(75, 75, 75, 0.6);">Nico Stuurman, 2020-08-14</p>
+          </div>
+        </section>
+
 
         <section>
            <h4>Micro-Manager development</h4>
@@ -67,38 +46,166 @@
             <img width="550" height="600" style="border: 0px" src="images/MM-issues.png">
           </div>
           <div style="position: absolute; top: 175px; left: 675px;">
-             <ul>
-                <li class="fragment">Move mailing list to forum</li>
-                <li class="fragment">Release 2.0 ~July</li>
-                <li class="fragment">Documentation/website</li>
+             <ul class="fragment">
+                <li style="color: crimson;">Move mailing list to forum</li>
+                <li>Release 2.0 ~July</li>
+                <li>Move to new C++ version</li>
+                <li>Update build system</li>
+                <li style="color: lightblue;">Documentation/website</li>
              </ul>
         </section>
 
         <section>
-          <h4>Electronic Notebook</h4>
+          <h4>Deconvolution with Christina</h4>
           <div style="position: absolute; top: 75px; left: 30px;">
-            <img width="362" height="314" style="border: 0px" src="images/Will_Grant.jpg">
-             <div style="position: absolute; top: 335px; left: 95px;">
-                Will Grant
+            <img width="345" height="347" style="border: 0px" src="images/Christina.jpg">
+             <div style="position: absolute; top: 360px; left: 5px;">
+                Christina Gladkova 
              </div>
           </div>
-          <div class="fragment" style="position: absolute; top: 575px; left: 30px;">
-             <img width="505" height="162" style="border: 0px;" src="images/Evernote.png">
+          <div class="fragment current-visible" style="position: absolute; top: 150px; left: 420px;">
+             <img width="576" height="225" style="border: 2px;" src="images/Manish_paper.png">
           </div>
-          <div class="fragment" style="position: absolute; top: 100px; left: 530px;">
-             <img width="450" height="450" style="border: 0px;" src="images/Notion.png">
-             <div style="position: absolute; top: 475px; left: 100px;">
-                https://notion.so
+          <div class="fragment current-visible" style="position: absolute; top: 150px; left: 420px;">
+             <img width="616" height="440" style="border: 0px;" src="images/MicroVolution.jpg">
+          </div>
+        </section>
+
+        <section>
+          <h4>Live Deconvolution of Track1/MitoTracker</h4>
+          <div style="position: absolute; top: 135px; left: 160px;">
+            <img width="400" height="375" style="border: 0px" src="images/Track1_projection.jpg">
+             <div style="position: absolute; top: 400px; left: 5px;">
+                Projection of raw data 
+             </div>
+          </div>
+          <div style="position: absolute; top: 135px; left: 660px;">
+            <img width="400" height="375" style="border: 0px" src="images/Track1_decon_projection.jpg">
+             <div style="position: absolute; top: 400px; left: 5px;">
+                Projection of deconvolved data 
              </div>
           </div>
         </section>
+
+        <section>
+          <h4>Live Deconvolution of Track2MitoTracker</h4>
+          <div style="position: absolute; top: 75px; left: 100px;">
+             <video width="1024" height="512" controls autoplay loop>
+                <source src="images/Track2_TL.mp4" type="video/mp4">
+             </video>
+             <div style="position: absolute; top: 535px; left: 150px;">
+                Raw 
+             </div>
+             <div style="position: absolute; top: 535px; left: 652px;">
+                Deconvolved 
+             </div>
+          </div>
+        </section>
+
+        <section>
+          <h4>Live Deconvolution of Track2MitoTracker</h4>
+          <div style="position: absolute; top: 100px; left: 100px;">
+             <video width="1016" height="480" controls autoplay loop>
+                <source src="images/Track2_TL_Blowup.mp4" type="video/mp4">
+             </video>
+             <div style="position: absolute; top: 505px; left: 150px;">
+                Raw 
+             </div>
+             <div style="position: absolute; top: 505px; left: 652px;">
+                Deconvolved 
+             </div>
+          </div>
+        </section>
+
+        <section>
+          <h4>Tools for Nadja</h4>
+          <div style="position: absolute; top: 75px; left: 30px;">
+            <img width="340" height="322" style="border: 0px" src="images/Nadja.jpg">
+             <div style="position: absolute; top: 335px; left: 85px;">
+                Nadja Kern
+             </div>
+          </div>
+          <div style="position: absolute; top: 150px; left: 630px;">
+             <img width="357" height="343" style="border: 0px;" src="images/Nadja-Data_before.jpg">
+          </div>
+        </section>
+
+        <section>
+          <h4>Channel Corrector Micro-Manager plugin</h4>
+          <div style="position: absolute; top: 75px; left: 30px;">
+            <img width="427" height="457" style="border: 0px" src="images/CorrectChannelsPlugin.png">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+            <img width="650" height="827" style="border: 0px" src="images/Tetraspeck.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+            <img width="818" height="815" style="border: 0px" src="images/TetraspeckMag.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+            <img width="818" height="815" style="border: 0px" src="images/TetraspeckMagCorrected.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+             <img width="714" height="686" style="border: 0px;" src="images/Nadja-Data_before.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+             <img width="714" height="686" style="border: 0px;" src="images/Nadja-Data_after.jpg">
+          </div>
+        </section>
+
+        <section>
+          <h4>Fiji plugin: Spot Intensity in all channelis</h4>
+          <div style="position: absolute; top: 75px; left: 30px;">
+            <img width="433" height="366" style="border: 0px" src="images/MultiChannelSpotIntensityPlugin.png">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+             <img width="626" height="730" style="border: 0px;" src="images/Nadja-Data_spotPlugin.jpg">
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 480px;">
+             <img width="745" height="616" style="border: 0px;" src="images/Nadja-Data_final.png">
+          </div>
+        </section>
+
+        <section>
+          <h4>Tools for Iris</h4>
+          <div style="position: absolute; top: 75px; left: 30px;">
+            <img width="347" height="322" style="border: 0px" src="images/Iris.jpg">
+             <div style="position: absolute; top: 335px; left: 45px;">
+                Iris Grossman
+             </div>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 500px;">
+             <video width="768" height="768" controls autoplay loop>
+                <source src="images/Chlamy2.mp4" type="video/mp4">
+             </video>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 500px;">
+             <img width="726" height="556" style="border: 0px;" src="images/WormTrackPython.png">
+             <div style="position: absolute; top: 575px; left: 185px;">
+                MTrack2 output
+             </div>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 500px;">
+             <img width="721" height="554" style="border: 0px;" src="images/WormTrack_displacement.png">
+             <div style="position: absolute; top: 575px; left: 100px;">
+                Displacement and Direction
+             </div>
+          </div>
+          <div class="fragment current-visible" style="position: absolute; top: 75px; left: 500px;">
+             <img width="711" height="550" style="border: 0px;" src="images/WormTrack_PSD.png">
+             <div style="position: absolute; top: 575px; left: 100px;">
+                Power Spectra
+             </div>
+          </div>
+        </section>
+          
+     	<section data-background-image="images/ZoomLab.jpg">
+         <h3>Thank you al!</h3>
+      </section>
 
      	<section data-background-image="images/Lab2019Fallb.jpg">
          <h3>That was all!</h3>
-        </section>
+      </section>
 
-
-			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
