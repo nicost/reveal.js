@@ -17,105 +17,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-image="images/MM_Screenshot.png">
-               <h3>Scripting Micro-Manager</h3>
+
+				<section>
+            <h3>I2K scripting Micro-Manager workshop</h3>
+               <br/>
+               <p><a href="intro.html">Intro (Nico)</a>&nbsp;&nbsp;Intro (Henry)</p>
+               <p><a href="core_b.html">Core scripting (Beanshell)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/micro-manager/pycro-manager/blob/master/tutorial/Micro-Manager%20Core%20tutorial.ipynb">Core scripting (Python)</p>
+               <p><a href="mm_api.html">Intro to mm 2.0 api</a>&nbsp;&nbsp;&nbsp;&nbsp;Intro to PycroManager</p>
+               <p><a href="mm_api_b.html">MM API scripting (Beanshell)</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/micro-manager/pycro-manager/blob/master/tutorial/Pycro-Manager%20acquisitions%20tutorial.ipynb">PycroManager</a></p>
                <div style="position: absolute; top: 640px; left: 400px;">
-                  <p style = "text-align: right;">Nico Stuurman and Henry Pinkard, late 20202...</p>
+                  <p style = "text-align: right;">Nico Stuurman and Henry Pinkard, late 20202...</a></p>
                </div>
             </section>
 
-            <section>
-               <h3>Micro-Manager, Key Points:</h3>
-         <div style="line-height: 4.0; text-align: left;">
-            <div class="fragment">
-               <p style="position: absolute; left: 40px; top: 175px;">Open Source</p>
-               <div style="position: absolute; top: 100px; left: 300px;">
-                  <img style="border: 0px"; width="498" height="174" src="images/github.png">
-               </div>
-               <p style="position: absolute; left: 800px; top: 175px;">
-               > 150 code contributors
-               </p>
-            </div>
-            <div class="fragment">
-               <p style="position: absolute; left: 40px; top: 350px;">Community driven</p>
-               <div style="position: absolute; left: 450px; top: 300px;">
-                  <img style="border: 0px"; width="446" height="132" src="images/website.png" />
-               </div>
-            </div>
-            <div class="fragment">
-               <p style="position: absolute; left: 40px; top: 500px;">Cross-platform</p>
-               <div style="position: absolute; top: 450px; left: 350px;":>
-                  <img style="border: 0px"; width="150" height="175" src="images/LinuxLogo.jpg" />
-               </div>
-               <p style="position: absolute; left: 500px; top: 500px;">
-                  Mac, Windows</p>
-            </div>
-            <div class="fragment" style="text-align: center;">
-               <p style="position: absolute; left: 900px; top: 350px;">
-               Extensible:<br/>Script, Plugins, APIs<br/>Python, Matlab, Labview, C/C++, etc..</p>
-            </div>
-				 <div class="fragment" style="position:absolute; top: 200px; left: 100px;">
-					 <p style="transform: rotate(-25deg); font-size: 120px; color: crimson;">FREELY AVAILABLE!</p>
-				 </div>
-            </section>
 
-
-            <section>
-               <h3>Software architecture overview, 2005</h3>
-               <div>
-                    <div style="position: absolute; left: 20px; top: 180px;">
-                       <img style="border: 0px;" width="150" height="150" src="images/nenad.jpg">
-                       <div style="font-size: 20px; position: absolute; left: 8px; top: 170px;">Nenad Amodaj</div>
-                    </div>
-                 </div>
-
-                 <div class="fragment" style="position: absolute; right: 50px; top: 100px;">
-                    <img style="border: 0px;" width="569" height="70" src="images/imagej.png">
-                 </div>
-
-                 <div class="fragment" style="position: absolute; left: 350px; top: 200px;">
-                    <img style="border: 0px;" width="547" height="417" src="images/softwareDesign.png">
-                    <div style="position: absolute; left: 20px; top: 228px;">
-                       <img class="fragment grow bottomapi" style="border: 0px;" width="465" height="181" src="images/bottomAPI.jpg">
-                    </div>
-                 </div>
-                 <div style="position: absolute; left: 100px; top: 625px;">
-                    <p>Supported by the Sandler Foundation</p>
-                 </div>
-            </section>
-
-            <section>
-               <h3>Bottom (device adapter) API</h3>
-                <div class="fragment current-visible" style="position: absolute; left: 10px; top: 100px;">
-                  <img style="border: 0px;" width="796" height="631" src="images/baseDevice.jpg">
-                  <p style="position: absolute; left: 830px; top: 280px;">All&nbsp;Devices</p>
-                </div>
-                <div class="fragment current-visible" style="position: absolute; left: 10px; top: 100px;">
-                  <img style="border: 0px;" width="796" height="631" src="images/cameraDevice.jpg">
-                  <p style="position: absolute; left: 830px; top: 280px;">Cameras</p>
-                </div>
-                <div class="fragment current-visible" style="position: absolute; left: 60px; top: 100px;">
-                  <img style="border: 0px;" width="671" height="557" src="images/libmmgrs.jpg">
-                  <p style="position: absolute; left: 800px; top: 280px;">Compiled&nbsp;Binaries</p>
-                </div>
-            </section>
-
-            <section>
-               <h3>Software architecture overview, 2005</h3>
-               <div>
-                 <div style="position: absolute; left: 20px; top: 180px;">
-                    <img style="border: 0px;" width="150" height="150" src="images/nenad.jpg">
-                    <div style="font-size: 20px; position: absolute; left: 8px; top: 170px;">Nenad Amodaj</div>
-                 </div>
-              </div>
-
-              <div style="position: absolute; left: 250px; top: 200px;">
-                 <img style="border: 0px;" width="547" height="417" src="images/softwareDesign.png">
-                 <div style="position: absolute; left: 111px; top: 188px;">
-                    <img class="fragment grow topapi" style="border: 0px;" width="233" height="93" src="images/topAPI.jpg">
-                 </div>
-              </div>
-            </section>
 
 			</div>
 		</div>
@@ -151,7 +66,22 @@
                }
              }
            }
-        });
+         });
+         // automatically load the initial fragment on a slide if the fragment
+			// has been defined with the 'preload' class
+			Reveal.addEventListener('slidechanged', function(event) {
+				 Reveal.nextFragment();
+			});
+
+			// if the initial fragment on a slide has been defined with a 'preload' class
+			// then transition to the previous slide if the fragment is hidden
+			Reveal.addEventListener('fragmenthidden', function(event) {
+			  if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+				 if (event.fragment.attributes['data-fragment-index'].value == "0") {
+					Reveal.prev();
+				 }
+			  }
+});
 		</script>
 	</body>
 </html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>I2K-Core</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+		<link rel="stylesheet" href="dist/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+               <h3>Documentation</h3>
+               <br/><br/>
+               <p style="text-align: left; font-size: 26px;">The Micro-Manager wiki has a <a href="https://micro-manager.org/wiki/Micro-Manager_Programming%20Guide">Programming Guide</a>, which contains a lot of useful information. In particular, the 2.0 Core API reference on the sidebar will be helpful in this tutorial. There are two versions of this, which contain the same information, but are built for different language bindings to the core (i.e. C++ or Java). Either one can work for this tutorial since they define the same functions. But one or the other might be easier to read depending on your programming background. The <a href="https://valelab4.ucsf.edu/~MM/doc/MMCore/html/class_c_m_m_core.html">C++ Core API Reference</a> has the nice feature that the functions are grouped according to their function. The <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmcorej/mmcorej/CMMCore.html">Java Core API Reference </a>may have slightly more readable functions because the argument and return types are the ones you use in Beansheel, making it easier to figure out how to call a particular function. Refering to one (or both) of these will be useful throughout this tutorial.</p>
+            </section>
+
+            <section>
+               <h3>Micro-Manager Beanshell scripting</h3>
+               <div class="fragment current-visible" style="position: absolute; left: 130px; top: 100px;">
+                <img style="border: 0px;" width="638" height="269" src="images/scriptPanelMenu.png">
+              </div>
+              <div class="fragment" style="position: absolute; left: 0px; top: 80px;">
+                <img style="border: 0px;" width="870" height="632" src="images/scriptPanel.png">
+               <svg width="100%" height="100%" style="position: absolute; top: 0px; left: 0px; overflow: visible;">
+                  <g>
+                   <ellipse cx="147" cy="330" rx="100" ry="250" stroke-width="4" stroke="#ff0000" fill="none"/>
+                   <text transform="rotate(-65, 147, 330)" text-anchor="middle" font-family="Sans-Serif" font-size="32" x="147" y="330" stroke="#ff0000" fill="#ff0000">Script-Button Panel</text>
+                 </g>
+    <g class="fragment">
+                   <ellipse cx="560" cy="190" rx="250" ry="110" stroke-width="4" stroke="#ff0000" fill="none"/>
+                   <text text-anchor="middle" font-family="Sans-Serif" font-size="32" x="560" y="190" stroke="#ff0000" fill="#ff0000">Editor Pane</text>
+                 </g>
+                  <g class="fragment">
+                   <ellipse cx="560" cy="490" rx="250" ry="110" stroke-width="4" stroke="#ff0000" fill="none"/>
+                   <text text-anchor="middle" font-family="Sans-Serif" font-size="32" x="560" y="490" stroke="#ff0000" fill="#ff0000">Immediate Pane (REPL)</text>
+                  </g>
+                </svg>
+              </div>
+            </section>
+
+            <section>
+               <h3>Generic Microscope control</h3>
+               <p>Use the REPL to do the following:</p>
+               <div class="fragment" style="position:absolute; top: 180px; left: 40px; text-align: left;">
+                  Get the camera's current exposure:<br>
+                  <div class="fragment" style="color: grey">mmc.getExposure();<br/><br/></div> 
+                  <div class="fragment">Double the camera's current exposure:<br/></div> 
+                  <div class="fragment" style="color: grey">mmc.setExposure(2 * mmc.getExposure());<br/><br/></div> 
+               </div>
+            </section>
+
+            <section>
+               <h3>Generic Microscope control</h3>
+               <p>Shutter and Autoshutter</p>
+               <div style="position:absolute; top: 180px; left: 40px; text-align: left;">
+                  <div>Detect if autoshutter is currently on. If so, turn it off. Open the shutter, snap an image, and close the shutter.<br/></div>
+                  <div class="fragment" style="color: grey">if (mmc.getAutoShutter()) mmc.setAutoShutter(false);</br/>
+                     mmc.setShutterOpen(true);<br/>
+                     mmc.snapImage();<br/>
+                     mmc.setShutterOpen(false);<br/><br/>
+                  </div>
+                  <div class="fragment">
+                     To update the GUI to reflect the state of the hardware, use:<br>
+
+                  <div style="color: grey">mm.app().refreshGUIFromCache();</br/>
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Generic Microscope control</h3>
+               <p>XY stage position</p>
+               <div style="position:absolute; top: 180px; left: 40px; text-align: left;">
+                  <div>Figure out what position the XY stage is at, then move it to a position roughly 1000 µm away (be careful you dont smash an objective if youre on a real microscope)<br/><br/></div>
+                  <div class="fragment" style="color: grey">
+                     p = mmc.getXYStagePosition();<br/>
+                     mmc.setXYStagePosition(p.getX() + 1000.0; p.getY() + 200.0);<br/>
+                     mm.app().refreshGUIFromCache();<br/>
+
+                     </br/><br/>
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Device Properties</h3>
+               <br/>
+               <p style="text-align: left; font-size: 26px;">In addition to these generic microscope functions, micro-manager has a generic system for exposing hardware functionality through Device properties. In this system, every Device has a set of Properties which have certain allowed Values. For example, an XY stage device might have properties for accelleration and velocity, which accept positive floating point numbers as values. A Camera device might have a property for bit depth, which accepts 8, 10, 12, 14, or 16 as values. Properties can be controlled through the core. Every unique property is identified by the device name and the property name.</p>
+            </section>
+
+            <section>
+               <h3>Device Properties</h3>
+               <div style="position:absolute; top: 120px; left: 40px; text-align: left;">
+                  <div>Get the name of all currently loaded devices and show them (using <i>mm.scripter().message(name)</i>).  Note that the function to use returns a rather complex data structure, and you may need to look at the Java API to figure out how to handle it<br/><br/></div>
+                  <div class="fragment" style="color: grey">
+                     devices = mmc.getLoadedDevices();<br/>
+                     for (device: devices) <br/>
+                     &nbsp;&nbsp;&nbsp;mm.scripter().message(device);<br/>
+
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Device Properties</h3>
+               <div style="position:absolute; top: 120px; left: 40px; text-align: left;">
+                  <div>Get the name of the camera device, find the names of all its properties, and display them.<br/><br/></div>
+                  <div class="fragment" style="color: grey">
+                     camera = mmc.getCameraDevice();<br/>
+                     props = mmc.getDevicePropertyNames(camera);<br/>
+                     propString = "";<br/>
+                     for (prop: props) <br/>
+                     &nbsp;&nbsp;&nbsp;propString += prop + ", ";<br/>
+                     mm.scripter().message(propString);<br/>
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Device Properties</h3>
+               <div style="position:absolute; top: 120px; left: 40px; text-align: left;">
+                  <div>Pick an interesting property, get its current value, then set a new value<br/><br/></div>
+                  <div class="fragment" style="color: grey">
+                     mmc.getProperty(camera, "Binning");<br/>
+                     <div class="fragment">mmc.setProperty(camera, "Binning", "2");<br/>
+                        mm.app().refreshGUIFromCache();<br/></div>
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Config groups</h3>
+               <p style="text-align: left; font-size: 26px;">
+In order to avoid having to control each property individually, Config groups allow you to group multiple properties together, and define Presets, which have a single value for each property in the group. Usually, you will save these groups to a Micro-Manager configuration file, so that they will be automatically present when restarting the application. Since you're using the demo configuration here, there are already config groups defined.
+               </p>
+               <div style="position:absolute; top: 340px; left: 40px; text-align: left;">
+                  <div>Get the names of all config groups<br/><br/></div>
+                  <div class="fragment" style="color: grey">
+                     configs = mmc.getAvailableConfigGroups();<br/>
+                     configString = "";<br/>
+                     for (config: configs) configString += config + ", ";<br/>
+                     configString;<br/>
+                  </div>
+               </div>
+            </section>
+
+            <section>
+               <h3>Config groups</h3>
+               <div style="position:absolute; top: 120px; left: 40px; text-align: left;">
+                  <div>
+                     Pick a config group and find the names of all its preset values<br/>
+                  </div>
+                  <div class="fragment" style="color: grey">
+                     presets = mmc.getAvailableConfigs("Channel");<br/>
+                     presetString = "";<br/>
+                     for (preset : presets) presetString += preset + ", ";<br/>
+                     presetString;<br/><br/>
+                  </div>
+                  <div class="fragment">
+                     Change the config group to a different preset value<br/>
+                     <div class="fragment" style="color: grey">
+                        mmc.setConfig("Channel", "FITC");<br/>
+                        mm.app().refreshGUIFromCache();<br/>
+                  </div>
+               </div>
+            </section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+            transition: 'none',
+                     center: false,
+                     width: 1280,
+                     height: 720,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+         Reveal.configure({
+           keyboard: {
+             86: function vidplay() {
+               var vids = document.getElementsByTagName("video");
+               var i;
+               for (i=0; i<vids.length; i++) {
+                  var video = vids.item(i);
+                  if (video.paused == true) video.play();
+                  else video.pause();
+               }
+             }
+           }
+         });
+		</script>
+	</body>
+</html>
