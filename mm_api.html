@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>I2K-MM</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div>
+                 <div style="position: absolute; left: 20px; top: 180px;">
+                   <img style="border: 0px;" width="157" height="162" src="images/mark.jpg">
+                   <div style="font-size: 20px; position: absolute; left: 12px; top: 178px;">Mark Tsuchida</div>
+                 </div>
+               </div>
+				 <div style="position: absolute; left: 200px; top: 80px;">
+                <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">&mu;Manager 2.0</a> is very different from <a href="https://valelab4.ucsf.edu/~MM/doc/mmstudio/org/micromanager/api/ScriptInterface.html">&mu;Manager 1.4</a></p>
+             </div>
+             <div class="fragment" style="position:absolute; left: 300px; top: 150px;">
+                <ul>
+                   <li>Acquisitions</li>
+                   <li>Album</li>
+                   <li>Autofocus</li>
+                   <li>Data display</li>
+                   <li>Data storage in RAMM and on disk</li>
+                   <li>Metadata Harmonization</li>
+                   <li>PositionLists</li>
+                   <li>Quick Access Buttons</li>
+                   <li>Snapping and live mode</li>
+                   <li>User Profiles</li>
+                </ul>
+             </div>
+            </section>
+
+            <section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                  <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				</section>
+
+            <section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                  <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				 <div style="position: absolute; left: 200px; top: 80px;">
+                <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/SnapLiveManager.html">live().</a></p>
+                <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/SnapLiveManager.html">List&lt;Image&gt;&nbsp;snap(shouldDisplay)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/SnapLiveManager.html">displayImage(image)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/SnapLiveManager.html">setLiveModeOn(on)</a><br/>
+                </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: gray;">live().</p>
+                 <p style="text-align: left;"><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#album--">album().</a></p>
+                 <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Album.html">addImage(image)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Album.html">getDatastore()</a><br/>
+                 </div>
+               </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: gray;">live().</p>
+                 <p style="text-align: left; color: gray;">album().</a></p>
+                 <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">acquisitions().</a></p>
+                <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">runAcquisition()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">pauseAcquisition()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">pauseAcquisition()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">loadAquisition(String path)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#acquisitions--">attachRunnable(frame,&nbsp;position&nbsp;channel,&nbsp;slice,&nbsp;runnable)</a><br/>
+                  </div>
+             </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: Gray;">live().</p>
+                 <p style="text-align: left; color: gray;">album().</a></p>
+                 <p style="text-align: left; color: gray;">acquisitions().</a></p>
+                 <p style="text-align: left;"><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#data--">data().</a></p>
+                 <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/data/DataManager.html">Image&nbsp;convertTaggedImage(tagged)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/data/DataManager.html">Image&nbsp;createImage(pixels,width,height,bytesperPixel,numComponents,coords,metadata)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/data/DataManager.html">Datastore&nbsp;createMultipageTIFFDatastore(dir,true,false)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/data/DataManager.html">Datastore&nbsp;createRAMDatastore()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/data/DataManager.html">ImageJConverter&nbsp;ij()</a><br/>
+                 </div>
+               </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: Gray;">live().</p>
+                 <p style="text-align: left; color: gray;">album().</a></p>
+                 <p style="text-align: left; color: gray;">acquisitions().</a></p>
+                 <p style="text-align: left; color: gray;">data().</a></p>
+                 <p style="text-align: left;"><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#displays--">displays().</a></p>
+                 <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/display/DisplayManager.html">DisplayWindow&nbsp;createDisplay(DataProvider)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/display/DisplayManager.html">DataViewer&nbsp;getActiveDataViewer()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/display/DisplayManager.html">manage(dataStore)</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/display/DisplayManager.html">Datastore&nbsp;show(image)</a><br/>
+                 </div>
+               </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: Gray;">live().</p>
+                 <p style="text-align: left; color: gray;">album().</a></p>
+                 <p style="text-align: left; color: gray;">acquisitions().</a></p>
+                 <p style="text-align: left; color: gray;">data().</a></p>
+                 <p style="text-align: left; color: gray;">displays().</a></p>
+                 <p style="text-align: left;"><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#positions--">positions().</a></p>
+                 <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/PositionListManager.html">PositionList&nbsp;getPositionList()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/PositionListManager.html">markCurrentPosition()</a><br/>
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/PositionListManager.html">setPositionList(positionList)</a><br/>
+                 </div>
+               </div>
+            </section>
+
+				<section>
+               <h3>Micro-Manager Java API</h3>
+               <div style="position: absolute; left: 20px; top: 300px;">
+                   <p><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio">mm.</a></p>
+               </div>
+				   <div style="position: absolute; left: 200px; top: 80px; text-alig: left;">
+                 <p style="text-align: left; color: Gray;">live().</p>
+                 <p style="text-align: left; color: gray;">album().</a></p>
+                 <p style="text-align: left; color: gray;">acquisitions().</a></p>
+                 <p style="text-align: left; color: gray;">data().</a></p>
+                 <p style="text-align: left; color: gray;">displays().</a></p>
+                 <p style="text-align: left; color: gray;">positions().</a></p>
+                 <p style="text-align: left;"><a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/Studio.html#profile--">profile().</a></p>
+                 <div style="position: absolute; left: 300px; top: 22px; text-align: left">
+                   <a href="https://valelab4.ucsf.edu/~MM/doc-2.0.0-gamma/mmstudio/org/micromanager/UserProfile.html">MutablePropertyView&nbsp;getSettings(key)</a><br/>
+                 </div>
+               </div>
+            </section>
+
+				<section>
+               <h3>Typical MM script work-flow</h3>
+					<div style="position: absolute; top: 120px; left: 100px; white-space: no-wrap; text-align: left; font-size: 24px;">
+import org.micromanager.data.Coordinates;<br/>
+<br/>
+dirName = "C:\\tmp\\test5";<br/>
+targetStore = mm.data().createMultipageTIFFDatastore(dirName, false, false);<br/>
+<br/>
+nrT = 5;<br/>
+cb = Coordinates.builder();<br/>
+for (t=0; t < nrT; t++) { <br/>
+<div style="position: relative; top: 0px; left: 40px;">
+	imgs = mm.live().snap(true);<br/>
+	cb.c(c).t(t).z(z).p(p);<br/>
+	img = imgs.get(0).copyAtCoords(cb.build());<br/>
+	targetStore.putImage(img);<br/>
+</div>
+}<br/>
+targetStore.close();<br/>
+<br/>
+mm.scripter().message("Done");<br/>
+					</div>
+            </section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+            transition: 'none',
+                     center: false,
+                     width: 1280,
+                     height: 720,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+         Reveal.configure({
+           keyboard: {
+             86: function vidplay() {
+               var vids = document.getElementsByTagName("video");
+               var i;
+               for (i=0; i<vids.length; i++) {
+                  var video = vids.item(i);
+                  if (video.paused == true) video.play();
+                  else video.pause();
+               }
+             }
+           }
+         });
+         // automatically load the initial fragment on a slide if the fragment
+			// has been defined with the 'preload' class
+			Reveal.addEventListener('slidechanged', function(event) {
+				 Reveal.nextFragment();
+			});
+
+			// if the initial fragment on a slide has been defined with a 'preload' class
+			// then transition to the previous slide if the fragment is hidden
+			Reveal.addEventListener('fragmenthidden', function(event) {
+			  if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+				 if (event.fragment.attributes['data-fragment-index'].value == "0") {
+					Reveal.prev();
+				 }
+			  }
+});
+		</script>
+	</body>
+</html>
