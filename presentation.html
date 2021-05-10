@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Open-Hardware</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-color="rgb(40, 40, 45)">
+               <div style="position: absolute; top: 0px; left: 100px; text-align: left">
+                  <h2>Micro-Manager, Open Source Microscope control software</h2>
+               </div>
+
+               <div style="position: absolute; top: 500px; left: 100px; text-align: left">
+                  <h3 text-align: >Nico Stuurman</h3>
+                  <h3>USCF/HHMI</h3>
+               </div>
+            </section>
+
+            <section>
+               <h3>Overview</h3>
+               <div style="position: absolute; top: 100px; left: 50px;">
+                  <img style="border: 0px"; width="522" height="302" src="images/Nico_Scope.jpg">
+               </div>
+               <div style="position: absolute; top: 500px; left: 50px;">
+                  <ul>
+                     <li class="fragment">Research Specialist Ron Vale lab</li>
+                     <li class="fragment">Micro-Manager software</li>
+                     <li class="fragment">CZI Imaging Scientist Weill Neurohub</li>
+                  </ul>
+               </div>
+               <div class="fragment" style="position: absolute; top: 50px; left: 780px;">
+                  <img style="border: 0px"; width="478" height="680" src="images/SAIM.png">
+                  <a style="font-size: 15px;" href="https://doi.org/10.1038/nmeth.4030">doi.org/10.1038/nmeth.4030</a>
+               </div>
+            </section>
+
+            
+            <section>
+               <h3>Challenges</h3>
+            </section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+            transition: 'none',
+                     center: false,
+                     width: 1280,
+                     height: 720,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+
+         Reveal.configure({
+           keyboard: {
+             86: function vidplay() {
+               var vids = document.getElementsByTagName("video");
+               var i;
+               for (i=0; i<vids.length; i++) {
+                  var video = vids.item(i);
+                  if (video.paused == true) video.play();
+                  else video.pause();
+               }
+             }
+           }
+         });
+         // automatically load the initial fragment on a slide if the fragment
+			// has been defined with the 'preload' class
+			Reveal.addEventListener('slidechanged', function(event) {
+				 Reveal.nextFragment();
+			});
+
+			// if the initial fragment on a slide has been defined with a 'preload' class
+			// then transition to the previous slide if the fragment is hidden
+			Reveal.addEventListener('fragmenthidden', function(event) {
+			  if (event.fragment.hasAttribute('data-fragment-index') && event.fragment.classList.contains('preload')) {
+				 if (event.fragment.attributes['data-fragment-index'].value == "0") {
+					Reveal.prev();
+				 }
+			  }
+});
+		</script>
+	</body>
+</html>
