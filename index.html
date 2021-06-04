@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>2021-03-12</title>
+		<title>2021-06-04</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,9 +25,9 @@
 		<div class="reveal">
 			<div class="slides">
 
- 			<section data-background-image="images/DSC_7002.jpg">
-          <div style="position: absolute; top: 550px; left: 70px;">
-            <p style="text-align: right; background: rgba(75, 75, 75, 0.0); color: black">Nico Stuurman, 2020-03-12</p>
+ 			<section data-background-image="images/DSC_8284b.jpg">
+          <div style="position: absolute; top: 0px; right: 0px;">
+            <p style="text-align: left; background: rgba(75, 75, 75, 0.0); color: black">Nico Stuurman, 2020-06-04</p>
           </div>
         </section>
 
@@ -37,48 +37,29 @@
            <div style="position: absolute; top: 175px; left: 0px;">
               <img width="533" height="313" style="border: 0px" src="images/ImageSC.png">
            </div>
-           <div style="position: absolute; top: 150px; left: 600px;">
+           <div style="position: absolute; top: 170px; left: 600px;">
              <ul>
-                <li style="color: crimson;">Daily support session: <a href="https://image.sc">image.sc</a></li>
-                <li class="fragment">Release 2.0, ever?</li>
-                <li class="fragment" style="color: lightblue;">Moved valelab4 server</li>
+                <li style="color: crimson;">Daily support sessions: <a href="https://image.sc">image.sc</a></li>
+                <li class="fragment">Improve stability and speed</li>
+                <li class="fragment">Release 2.0, imminent!</li>
                 <li class="fragment" style="color: lightblue;">Move website (ongoing, next month?)</li>
-                <li class="fragment" style="color: lightblue;">Tutorial at the Advanced Imaging Meeting (AIM)</li>
+                <li class="fragment" style="color: lightblue;">Submitted CZI grant - Kevin Eliceiri PI</li>
              </ul>
           </div>
-        </section>
-
-
-        <section>
-           <h4>Micro-Manager related activities</h4>
-           <div style="position: absolute; top: 125px; left: 0px;">
-              <img width="488" height="196" style="border: 0px" src="images/PycroManager.png">
-           </div>
-           <div class="fragment" style="position: absolute; top: 350px; left: 0px;">
-              <img width="527" height="243" style="border: 0px" src="images/PycroManagerCartoon.png">
-           </div>
-
-           <div class="fragment" style="position: absolute; top: 175px; left: 600px;">
-              <img width="529" height="380" style="border: 0px" src="images/PycroCode.png">
-           </div>
-
-           <div class="fragment" style="position: absolute; top: 75px; left: 0px;">
-              <img width="537" height="610" style="border: 0px" src="images/PycroTwitter.png">
-           </div>
-        </section>
-
-        <section data-background-image="images/I2K.jpg">
-           <div style="position: absolute; top: 100px; left: 330px;">
-              <a href="https://nicost.github.io/I2K-MM">https://nicost.github.io/I2K-MM</a>
         </section>
 
         <section>
            <h4>Micro-Manager related activities</h4>
            <div style="position: absolute; top: 125px; left: 50px;">
-              <img width="496" height="396" style="border: 0px" src="images/MMWhitePaper.png">
+              <img width="488" height="428" style="border: 0px" src="images/MMWhitePaper.png"><br>
+              <a href="https://github.com/micro-manager/futureMMCore/blob/main/MMCoreDesign.pdf">MMCoreDesign.pdf</a>
            </div>
            <div class="fragment" style="position: absolute; top: 110px; left: 650px;">
               <img width="462" height="432" style="border: 0px" src="images/futureMMCore.png">
+           </div>
+           <div class="fragment" style="position: absolute; top: 550px; left: 700px;">
+              <img width="160" height="160" style="border: 0px" src="images/Henry.jpg">
+              <img width="160" height="160" style="border: 0px" src="images/Nick.jpg">
            </div>
         </section>
 
@@ -99,7 +80,6 @@
                <source src="images/U2OS.mp4" type="video/mp4">
              </video>  
             </div>
-
          </section>
 
         <section>
@@ -107,131 +87,69 @@
            <div style="position:absolute; top: 125px; left: 0px;">
               <p>Issues:</p>
               <div style="position:absolute; top: 250px; left: 0px; color: lightgreen;">
-                 Easier&nbsp;with&nbsp;air&nbsp;objectives
+                 Long-term stability
               </div>
            </div>
 
-           <div class="fragment current-visible" style="position:absolute; left:450px; top:130px;">
-             <video width="512" height="512" controls>
-               <source src="images/40xBleach_6.mp4" type="video/mp4">
+           <div class="fragment current-visible" style="position:absolute; left:250px; top:130px;">
+              <ul>
+                 <li>Fixed many memory leaks</li>
+                 <li>Bleaching no longer posts "alerts"</li>
+              </ul>
+             <video width="824" height="512" controls>
+               <source src="images/FRAPScreen.mp4" type="video/mp4">
              </video>  
-           </div>
-
-           <div class="fragment current-visible" style="position:absolute; left:445px; top:130px;">
-               <img class="plain"  width="738" height="517" src="images/40xAirBleachCurve.png">
-           </div>
-
-           <div class="fragment current-visible" style="position:absolute; left:445px; top:130px;">
-               <img class="plain"  width="738" height="517" src="images/40xOilBleachCurve.png">
-           </div>
-        </section>
-
-        <section>
-           <h3>Screening CRISPR knockouts using FRAP</h3>
-           <div style="position:absolute; top: 125px; left: 0px;">
-              <p>Issues:</p>
-              <div style="position:absolute; top: 250px; left: 0px; color: lightblue;">
-                 Manual&nbsp;bleaching is too laborious
-              </div>
-           </div>
-
-           <div class="fragment current-visible" style="position:absolute; top:100px; left:300px;">
-              <img class="plain" src="images/napari1.png" width="960" height="540">
-           </div>
-           <div class="fragment current-visible" style="position:absolute; top:100px; left:300px;">
-              <img class="plain" src="images/napari2.png" width="960" height="540">
-           </div>
-           <div class="fragment current-visible" style="position:absolute; top:100px; left:300px;">
-              <img class="plain" src="images/napari3.png" width="960" height="540">
-           </div>
-           <div class="fragment current-visible" style="position:absolute; top:100px; left:300px;">
-              <img class="plain" src="images/napari4.png" width="960" height="540">
-           </div>
-        </section>
-
-        <section>
-           <h3>Screening CRISPR knockouts using FRAP</h3>
-           <div style="position:absolute; top: 125px; left: 0px;">
-              <p>Issues:</p>
-              <div style="position:absolute; top: 250px; left: 0px; color: lightblue;">
-                 Manual&nbsp;bleaching is too laborious
-              </div>
-           </div>
-           <div style="position:absolute; left:450px; top:130px;">
-             <video width="512" height="512" controls loop>
-               <source src="images/AutoBleach.mp4" type="video/mp4">
-             </video>  
-           </div>
-        </section>
-
-        <section>
-           <h3>Screening using FRAP</h3>
-           <div style="position:absolute; top: 125px; left: 0px;">
-              <p>Issues:</p>
-              <div style="position:absolute; top: 250px; left: 0px; width: 350px; color: lighblue;">
-                 <p>Stability&nbsp;of&nbsp;alignment</p>
-              </div>
-           </div>
-           <div class="fragment" style="position:absolute; top: 100px; right: 200px;">
-               <img class="plain"  width="563" height="533" src="images/ASI_Bleacher.jpg">
-           </div>
-        </section>
-
-        <section>
-           <h3>Screening using FRAP</h3>
-           <div style="position:absolute; top: 125px; left: 0px;">
-              <p>Issues:</p>
-              <div style="position:absolute; top: 250px; left: 0px; width: 350px; color: lighblue;">
-                 <p>Stability&nbsp;of&nbsp;alignment</p>
-              </div>
-           </div>
-           <div style="position:absolute; top: 75px; left: 400px;">
-               <img class="plain"  width="780" height="622" src="images/ColBlobBleacher.png">
            </div>
         </section>
 
         <section>
            <h3>Weill Innovation Core</h3>
-          <div class="fragment" data-fragment-index="1" style="position:absolute; top: 75px; left: 50px;">
-            <img style="border: 0px;" width="190" height="166" src="images/SaulKato.jpg">
-            <div style="font-size: 20px; position: absolute; left: 60px; top:190px;">Saul Kato</div>
-          </div>
-          <div style="position:absolute; top: 75px; left: 320px;">
-            <img style="border: 0px;" width="300" height="200" src="images/WeillBuilding.jpg">
-          </div>
+           <div style="position:absolute; top: 75px; left: 320px;">
+             <img style="border: 0px;" width="300" height="200" src="images/WeillBuilding.jpg">
+           </div>
+           <div class="fragment" style="position:absolute; top: 125px; left: 0px;">
+             <img style="border: 0px;" width="432" height="576" src="images/Weill_Hall.jpg">
+           </div>
+           <div class="fragment" style="position:absolute; top: 125px; left: 600px;">
+             <img style="border: 0px;" width="576" height="432" src="images/Weill_4thFloor.jpg">
+           </div>
 
-          <div class="fragment" data-fragment-index="1" style="position:absolute; top: 75px; left: 700px;">
-            <img style="border: 0px;" width="180" height="180" src="images/jon_vanleeuwen.jpg">
-            <div style="font-size: 20px; position: absolute; left: 20px; top:200px;">Jon Van Leeuwen</div>
-          </div>
+           <div class="fragment" style="position:absolute; top: 150px; left: 250px;">
+             <img style="border: 0px;" width="754" height="524" src="images/Weill_Flex_Lab.jpg">
+           </div>
+        </section>
 
-          <div class="fragment" data-fragment-index="1" style="position:absolute; top: 75px; left: 1000px;">
-            <img style="border: 0px;" width="180" height="180" src="images/DeLaine.png">
-            <div style="font-size: 20px; position: absolute; left: 20px; top:200px;">DeLaine Larsen</div>
-          </div>
-
-          <div class="fragment" style="position:absolute; top: 300px; left: 0px;">
+        <section>
+           <h3>Weill Innovation Core</h3>
+          <div style="position:absolute; top: 75px; left: 0px;">
              <img style="border: 0px;" width="600px;" height="345px;" src="images/Stellaris_corner.jpg">
           </div>
           <div class="fragment" style="position:absolute; top: 300px; left: 620px;">
              <img style="border: 0px;" width="500px;" height="333px;" src="images/CSU-W1_Sora.png">
           </div>
-          <div class="fragment" style="position:absolute; top: 400px; left: 950px;">
+          <div class="fragment" style="position:absolute; top: 100px; left: 950px;">
              <img style="border: 0px;" width="300px;" height="153px;" src="images/LeicaThunder.jpg">
           </div>
-
-
-          </section>
+          <div class="fragment" style="position:absolute; top: 250px; left: 110px;">
+             <img style="border: 0px;" width="1142px;" height="250px;" src="images/JuniperSwitch.jpg">
+          </div>
+          <div class="fragment" style="position:absolute; top: 200px; left: 450px;">
+             <img style="border: 0px;" width="760px;" height="379px;" src="images/QFSP.png">
+          </div>
+          <div class="fragment" style="position:absolute; top: 250px; left: 50px;">
+             <img style="border: 0px;" width="550px;" height="368px;" src="images/Fiber.png">
+          </div>
+          <div class="fragment" style="position:absolute; top: 75px; left: 650px;">
+             <img style="border: 0px;" width="180px;" height="180px;" src="images/SoYeon.jpg"><br/>
+             SoYeon Kim
+          </div>
+        </section>
 
         <section>
            <h3>Weill Innovation Core obstacles</h3>
            <div style="position:absolute; top: 75px; left: 150px;">
             <img style="border: 0px;" width="900" height="608" src="images/InnovationCoreMap.png">
            </div>
-           <div class="fragment" style="position:absolute; top: 225px; left: 350px;">
-            <img style="border: 0px;" width="531" height="335" src="images/MightexPolygon.jpg">
-           </div>
-
         </section>
 
 
